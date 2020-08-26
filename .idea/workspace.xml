@@ -10,54 +10,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="421f09c6-d872-417e-8a2a-797886d5c057" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/$CACHE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/SwiftDBC.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/xcode.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.jazzy.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DocFixer/main.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySQL/include/errmsg.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySQL/include/field_types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySQL/include/my_command.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySQL/include/my_compress.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySQL/include/my_list.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySQL/include/mysql.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySQL/include/mysql/client_plugin.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySQL/include/mysql/plugin_auth_common.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySQL/include/mysql/udf_registration_types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySQL/include/mysql_com.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySQL/include/mysql_time.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySQL/include/mysql_version.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySQL/include/mysqld_error.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySQL/include/mysqlx_ername.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySQL/include/mysqlx_error.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySQL/include/mysqlx_version.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySQL/lib/libcrypto.1.1.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySQL/lib/libmysqlclient.21.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySQL/lib/libssl.1.1.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySQL/module.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.xcworkspace/xcuserdata/grhodes.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/SwiftDBC Tests.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SwiftDBC/DBDriverManager.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SwiftDBC/DataTypes.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SwiftDBC/Extensions.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLConnection.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLStatement.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/SwiftDBCMySQL.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docfixer.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBCTests/SwiftDBCTests.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBCTests/SwiftDBCTests.swift" afterDir="false" />
-    </list>
+    <list default="true" id="421f09c6-d872-417e-8a2a-797886d5c057" name="Default Changelist" comment="Initial Commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="macos_macos_x86_64" />
   <component name="Git.Settings">
@@ -110,8 +72,16 @@
       <option name="presentableId" value="Default" />
       <updated>1598356440561</updated>
       <workItem from="1598356441736" duration="28935000" />
-      <workItem from="1598438898340" duration="10282000" />
+      <workItem from="1598438898340" duration="11544000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <created>1598452724013</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1598452724013</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +99,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="744" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598366756892">
       <screen x="0" y="0" width="2560" height="1080" />
@@ -142,6 +116,10 @@
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="1018" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1598363338249" />
+    <state x="259" y="192" width="442" height="319" key="Github.ShareDialog" timestamp="1598452595825">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="259" y="192" width="442" height="319" key="Github.ShareDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1598452595825" />
     <state width="1519" height="383" key="GridCell.Tab.0.bottom" timestamp="1598392863921">
       <screen x="0" y="23" width="2560" height="1032" />
     </state>
@@ -182,5 +160,9 @@
     </state>
     <state width="1519" height="383" key="GridCell.Tab.1.right/0.0.2560.1080@0.0.2560.1080" timestamp="1598391693073" />
     <state width="1519" height="383" key="GridCell.Tab.1.right/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863918" />
+    <state x="880" y="276" key="Vcs.Push.Dialog.v2" timestamp="1598452731938">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="880" y="276" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1598452731938" />
   </component>
 </project>
