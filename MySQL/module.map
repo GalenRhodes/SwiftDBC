@@ -1,0 +1,5 @@
+module MySQL [system] {
+    header "include/mysql.h"
+    export *
+}
+

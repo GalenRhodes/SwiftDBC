@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="421f09c6-d872-417e-8a2a-797886d5c057" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/$CACHE_FILE$" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/SwiftDBC.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/xcode.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.jazzy.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DocFixer/main.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySQL/include/errmsg.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySQL/include/field_types.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySQL/include/my_command.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySQL/include/my_compress.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySQL/include/my_list.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySQL/include/mysql.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySQL/include/mysql/client_plugin.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySQL/include/mysql/plugin_auth_common.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySQL/include/mysql/udf_registration_types.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySQL/include/mysql_com.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySQL/include/mysql_time.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySQL/include/mysql_version.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySQL/include/mysqld_error.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySQL/include/mysqlx_ername.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySQL/include/mysqlx_error.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySQL/include/mysqlx_version.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySQL/lib/libcrypto.1.1.dylib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySQL/lib/libmysqlclient.21.dylib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySQL/lib/libssl.1.1.dylib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySQL/module.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.xcworkspace/xcuserdata/grhodes.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/SwiftDBC Tests.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SwiftDBC/DBDriverManager.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SwiftDBC/DataTypes.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SwiftDBC/Extensions.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLConnection.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLStatement.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/SwiftDBCMySQL.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docfixer.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBCTests/SwiftDBCTests.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBCTests/SwiftDBCTests.swift" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="macos_macos_x86_64" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1gad3tS4KoEfIY11GdWrRhYqBUu" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="manualOrder" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++/Objective-C" />
+  </component>
+  <component name="RunManager">
+    <configuration name="SwiftDBC Tests" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" REDIRECT_INPUT="false" WORKING_DIR="file://$PROJECT_DIR$/SwiftDBCTests" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SwiftDBC" TARGET_NAME="SwiftDBCTests" CONFIG_NAME="Debug" SCHEME_NAME="SwiftDBC Tests" IS_LOCATION_SIMULATION_ALLOWED="true" LOCATION_SCENARIO_ID="com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier" LOCATION_SCENARIO_TYPE="1" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="421f09c6-d872-417e-8a2a-797886d5c057" name="Default Changelist" comment="" />
+      <created>1598356440561</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598356440561</updated>
+      <workItem from="1598356441736" duration="28935000" />
+      <workItem from="1598438898340" duration="10282000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="744" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598366756892">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="744" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1598366756892" />
+    <state x="1071" y="263" key="#com.intellij.ide.util.MemberChooser" timestamp="1598363648452">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="1071" y="263" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1080@0.0.2560.1080" timestamp="1598363648452" />
+    <state x="1018" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598363338249">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="1018" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1598363338249" />
+    <state width="1519" height="383" key="GridCell.Tab.0.bottom" timestamp="1598392863921">
+      <screen x="0" y="23" width="2560" height="1032" />
+    </state>
+    <state width="1519" height="383" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1598391693075" />
+    <state width="1519" height="383" key="GridCell.Tab.0.bottom/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863921" />
+    <state width="1519" height="383" key="GridCell.Tab.0.center" timestamp="1598392863920">
+      <screen x="0" y="23" width="2560" height="1032" />
+    </state>
+    <state width="1519" height="383" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1598391693075" />
+    <state width="1519" height="383" key="GridCell.Tab.0.center/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863920" />
+    <state width="1519" height="383" key="GridCell.Tab.0.left" timestamp="1598392863920">
+      <screen x="0" y="23" width="2560" height="1032" />
+    </state>
+    <state width="1519" height="383" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1598391693074" />
+    <state width="1519" height="383" key="GridCell.Tab.0.left/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863920" />
+    <state width="1519" height="383" key="GridCell.Tab.0.right" timestamp="1598392863921">
+      <screen x="0" y="23" width="2560" height="1032" />
+    </state>
+    <state width="1519" height="383" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1598391693075" />
+    <state width="1519" height="383" key="GridCell.Tab.0.right/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863921" />
+    <state width="1519" height="383" key="GridCell.Tab.1.bottom" timestamp="1598392863919">
+      <screen x="0" y="23" width="2560" height="1032" />
+    </state>
+    <state width="1519" height="383" key="GridCell.Tab.1.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1598391693074" />
+    <state width="1519" height="383" key="GridCell.Tab.1.bottom/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863919" />
+    <state width="1519" height="383" key="GridCell.Tab.1.center" timestamp="1598392863918">
+      <screen x="0" y="23" width="2560" height="1032" />
+    </state>
+    <state width="1519" height="383" key="GridCell.Tab.1.center/0.0.2560.1080@0.0.2560.1080" timestamp="1598391693072" />
+    <state width="1519" height="383" key="GridCell.Tab.1.center/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863918" />
+    <state width="1519" height="383" key="GridCell.Tab.1.left" timestamp="1598392863917">
+      <screen x="0" y="23" width="2560" height="1032" />
+    </state>
+    <state width="1519" height="383" key="GridCell.Tab.1.left/0.0.2560.1080@0.0.2560.1080" timestamp="1598391693055" />
+    <state width="1519" height="383" key="GridCell.Tab.1.left/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863917" />
+    <state width="1519" height="383" key="GridCell.Tab.1.right" timestamp="1598392863918">
+      <screen x="0" y="23" width="2560" height="1032" />
+    </state>
+    <state width="1519" height="383" key="GridCell.Tab.1.right/0.0.2560.1080@0.0.2560.1080" timestamp="1598391693073" />
+    <state width="1519" height="383" key="GridCell.Tab.1.right/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863918" />
+  </component>
+</project>

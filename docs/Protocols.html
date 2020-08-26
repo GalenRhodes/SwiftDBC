@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Protocols  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Section/Protocols" class="dashAnchor"></a>
+    <a title="Protocols  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">SwiftDBC©</a> (14% documented)</p>
+        <p class="header-right"><a href="https://github.com/GalenRhodes/SwiftDBC"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Protocols  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/DBDriverManager.html">DBDriverManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Global%20Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Global%20Variables.html#/s:8SwiftDBC0A9DBCPrefixSSvp">SwiftDBCPrefix</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/DBError.html">DBError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/DataTypes.html">DataTypes</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSRegularExpression.html">NSRegularExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/DBConnection.html">DBConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/DBDriver.html">DBDriver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/DBStatement.html">DBStatement</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:8SwiftDBC18DBDeregisterLambdaa">DBDeregisterLambda</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Protocols</h1>
+            <p>The following protocols are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC8DBDriverP"></a>
+                    <a name="//apple_ref/swift/Protocol/DBDriver" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC8DBDriverP">DBDriver</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Protocols/DBDriver.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBDriver</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L71-L81">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC12DBConnectionP"></a>
+                    <a name="//apple_ref/swift/Protocol/DBConnection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC12DBConnectionP">DBConnection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A connection (session) with a specific database. SQL statements are executed and results are returned within the context of a
+connection.</p>
+
+<p>A Connection object&rsquo;s database is able to provide information describing its tables, its supported SQL grammar, its stored
+procedures, the capabilities of this connection, and so on. This information is obtained with the <code>metaData</code> property.</p>
+
+<p>Note: When configuring a <code>DBConnection</code>, SwiftDBC applications should use the appropriate <code>DBConnection</code> method such as setting
+the <code>autoCommit</code> property. Applications should not invoke SQL commands directly to change the connection&rsquo;s configuration when
+there is a SwiftDBC method available. By default a <code>DBConnection</code> object is in auto-commit mode, which means that it
+automatically commits changes after executing each statement. If auto-commit mode has been disabled, the method commit must be
+called explicitly in order to commit changes; otherwise, database changes will not be saved.</p>
+
+<p>A new <code>DBConnection</code> object created using the SwiftDBC API has an initially empty type map associated with it. A user may enter
+a custom mapping for a UDT in this type map. When a UDT is retrieved from a data source with the method
+<code>DBResultSet.getObject()</code>, that method will check the connection&rsquo;s type map to see if there is an entry for that UDT. If so,
+the <code>DBResultSet.getObject()</code> method will map the UDT to the class indicated. If there is no entry, the UDT will be mapped
+using the standard mapping.</p>
+
+<p>A user may create a new type map, make an entry in it, and pass it to the methods that can perform custom mapping. In this
+case, the method will use the given type map instead of the one associated with the connection.</p>
+
+                        <a href="Protocols/DBConnection.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBConnection</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L105-L117">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC11DBStatementP"></a>
+                    <a name="//apple_ref/swift/Protocol/DBStatement" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBStatementP">DBStatement</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Protocols/DBStatement.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBStatement</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L119-L147">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://blog.projectgalen.com" target="_blank" rel="external">Galen Rhodes</a>. All rights reserved. (Last updated: 2020-08-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

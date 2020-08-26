@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DBDriverManager Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/DBDriverManager" class="dashAnchor"></a>
+    <a title="DBDriverManager Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SwiftDBC©</a> (14% documented)</p>
+        <p class="header-right"><a href="https://github.com/GalenRhodes/SwiftDBC"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        DBDriverManager Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/DBDriverManager.html">DBDriverManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global%20Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:8SwiftDBC0A9DBCPrefixSSvp">SwiftDBCPrefix</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/DBError.html">DBError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DataTypes.html">DataTypes</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSRegularExpression.html">NSRegularExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/DBConnection.html">DBConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DBDriver.html">DBDriver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DBStatement.html">DBStatement</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:8SwiftDBC18DBDeregisterLambdaa">DBDeregisterLambda</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>DBDriverManager</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">DBDriverManager</span></code></pre>
+
+                </div>
+              </div>
+            <p>The driver manager. The driver manager maintains a list of currently registered drivers. When a connection to a database is
+required then a call to the driver manager&rsquo;s <code>connect(url:username:password:properties:)</code> method will locate the appropriate
+driver for the given URL and then create and return a connection object.</p>
+
+<p>Drivers are registered by calling their <code><a href="../Protocols/DBDriver.html#/s:8SwiftDBC8DBDriverP8registeryyFZ">DBDriver.register()</a></code> class method.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC15DBDriverManagerC7managerACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/manager" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC15DBDriverManagerC7managerACvpZ">manager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The shared instance of the driver manager.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt">DBDriverManager</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBDriverManager.swift#L44">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC15DBDriverManagerC8register6driver16deregisterLambdayAA0C0_p_yyctF"></a>
+                    <a name="//apple_ref/swift/Method/register(driver:deregisterLambda:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC15DBDriverManagerC8register6driver16deregisterLambdayAA0C0_p_yyctF">register(driver:deregisterLambda:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Registers a driver with the driver manager. You should not call this method directly but, rather, it should be called by
+the driver&rsquo;s <code><a href="../Protocols/DBDriver.html#/s:8SwiftDBC8DBDriverP8registeryyFZ">DBDriver.register()</a></code> class method. If the driver is already registered then this method does nothing.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">register</span><span class="p">(</span><span class="nv">driver</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DBDriver.html">DBDriver</a></span><span class="p">,</span> <span class="nv">deregisterLambda</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:8SwiftDBC18DBDeregisterLambdaa">DBDeregisterLambda</a></span> <span class="o">=</span> <span class="p">{})</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>driver</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the instance of the driver.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>deregisterLambda</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a lambda (closure) that is called when the driver is deregistered.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBDriverManager.swift#L56-L60">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC15DBDriverManagerC10deregister6driveryAA0C0_p_tF"></a>
+                    <a name="//apple_ref/swift/Method/deregister(driver:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC15DBDriverManagerC10deregister6driveryAA0C0_p_tF">deregister(driver:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deregisters the given driver. If the driver is not already registered then this method does nothing.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deregister</span><span class="p">(</span><span class="nv">driver</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DBDriver.html">DBDriver</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>driver</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the driver.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBDriverManager.swift#L67-L70">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC15DBDriverManagerC7connect3url8username8password10propertiesAA12DBConnection_pSS_SSSgAJSDySSypGtKF"></a>
+                    <a name="//apple_ref/swift/Method/connect(url:username:password:properties:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC15DBDriverManagerC7connect3url8username8password10propertiesAA12DBConnection_pSS_SSSgAJSDySSypGtKF">connect(url:username:password:properties:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Connect to a database.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    if an error occurs.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">connect</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">properties</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:])</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/DBConnection.html">DBConnection</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the URL which starts as &ldquo;SwiftDBC:&rdquo;</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>username</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the username if any.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the password if any.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>properties</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>any properties to be passed to the driver.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>the connection to the database.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBDriverManager.swift#L83-L93">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://blog.projectgalen.com" target="_blank" rel="external">Galen Rhodes</a>. All rights reserved. (Last updated: 2020-08-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

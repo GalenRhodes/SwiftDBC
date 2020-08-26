@@ -1,0 +1,12 @@
+{
+  "clean": true,
+  "sdk": "macosx",
+  "author": "Galen Rhodes",
+  "author_url": "https://blog.projectgalen.com",
+  "github_url": "https://github.com/GalenRhodes/SwiftDBC",
+  "github_file_prefix": "https://github.com/GalenRhodes/SwiftDBC/blob/master",
+  "theme": "apple",
+  "use_safe_filenames": true,
+  "undocumented_text": "",
+  "title": "SwiftDBC©",
+},
