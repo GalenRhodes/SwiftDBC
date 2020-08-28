@@ -14,7 +14,7 @@
     <a title="Protocols  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SwiftDBC©</a> (11% documented)</p>
+        <p><a href="index.html">SwiftDBC©</a> (7% documented)</p>
         <p class="header-right"><a href="https://github.com/GalenRhodes/SwiftDBC"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -76,10 +76,30 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:8SwiftDBC2ppoPyxxzSzRzlF">++(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:8SwiftDBC2ppopyxxzSzRzlF">++(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:8SwiftDBC2ssoPyxxzSzRzlF">--(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:8SwiftDBC2ssopyxxzSzRzlF">--(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Protocols/Closable.html">Closable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/DBColumnMetaData.html">DBColumnMetaData</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/DBConnection.html">DBConnection</a>
@@ -146,7 +166,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L83-L94">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L84-L95">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -176,7 +196,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L96-L106">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L97-L107">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -226,7 +246,7 @@ case, the method will use the given type map instead of the one associated with 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L130-L145">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L137-L152">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -256,7 +276,7 @@ case, the method will use the given type map instead of the one associated with 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L147-L171">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L154-L178">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -285,7 +305,37 @@ case, the method will use the given type map instead of the one associated with 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L179-L180">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L186-L187">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC16DBColumnMetaDataP"></a>
+                    <a name="//apple_ref/swift/Protocol/DBColumnMetaData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC16DBColumnMetaDataP">DBColumnMetaData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Protocols/DBColumnMetaData.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBColumnMetaData</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L189-L209">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -311,7 +361,7 @@ find out how many columns rs has and whether the first column in rs can hold a <
      let rs: DBResultSet = stmt.executeQuery(sql: "SELECT a, b, c FROM TABLE2")
      let rsmd: DBResultSetMetaData = rs.metaData
      let numberOfColumns: Int = rsmd.columnCount
-     let b: Bool = rsmd.isNullable[0]
+     let b: Bool = rsmd[0].isNullable
 </pre>
 
                         <a href="Protocols/DBResultSetMetaData.html" class="slightly-smaller">See more</a>
@@ -325,7 +375,7 @@ find out how many columns rs has and whether the first column in rs can hold a <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L194-L213">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L223-L229">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -355,7 +405,7 @@ find out how many columns rs has and whether the first column in rs can hold a <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L215-L221">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L231-L316">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

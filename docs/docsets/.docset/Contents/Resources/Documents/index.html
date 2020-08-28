@@ -13,7 +13,7 @@
     <a title="  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SwiftDBC©</a> (11% documented)</p>
+        <p><a href="index.html">SwiftDBC©</a> (7% documented)</p>
         <p class="header-right"><a href="https://github.com/GalenRhodes/SwiftDBC"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -75,10 +75,30 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:8SwiftDBC2ppoPyxxzSzRzlF">++(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:8SwiftDBC2ppopyxxzSzRzlF">++(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:8SwiftDBC2ssoPyxxzSzRzlF">--(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:8SwiftDBC2ssopyxxzSzRzlF">--(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Protocols/Closable.html">Closable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/DBColumnMetaData.html">DBColumnMetaData</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/DBConnection.html">DBConnection</a>
@@ -121,6 +141,14 @@ database access libraries.</p>
 <h1 id='api-documentation' class='heading'>API Documentation</h1>
 
 <p>Documentation of the API can be found here: <a href="http://galenrhodes.com/SwiftDBC/">SwiftDBC API</a></p>
+<h1 id='arbitrary-width-integers-aka-bigint' class='heading'>Arbitrary Width Integers (aka: BigInt)</h1>
+
+<p>For support of very large integers of arbitrary size I came across <a href="https://github.com/attaswift/BigInt">BigInt</a>. I like it because it&rsquo;s 100% pure swift without the need for external library
+dependencies and it doesn&rsquo;t use any Apple macOS specific APIs so it will build on Linux without modification.</p>
+
+<p>It is licensed under the <a href="https://github.com/attaswift/BigInt/blob/master/LICENSE.md">MIT License</a> and I am using it as-is without modification.</p>
+
+<p>It has been added to this project as a package dependency.</p>
 <h1 id='mysql-implementation' class='heading'>MySQL Implementation</h1>
 
 <p>The first database system that is implemented is MySQL.</p>

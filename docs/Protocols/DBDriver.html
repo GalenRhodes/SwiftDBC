@@ -14,7 +14,7 @@
     <a title="DBDriver Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SwiftDBC©</a> (11% documented)</p>
+        <p><a href="../index.html">SwiftDBC©</a> (7% documented)</p>
         <p class="header-right"><a href="https://github.com/GalenRhodes/SwiftDBC"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -76,10 +76,30 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:8SwiftDBC2ppoPyxxzSzRzlF">++(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:8SwiftDBC2ppopyxxzSzRzlF">++(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:8SwiftDBC2ssoPyxxzSzRzlF">--(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:8SwiftDBC2ssopyxxzSzRzlF">--(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Protocols/Closable.html">Closable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DBColumnMetaData.html">DBColumnMetaData</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/DBConnection.html">DBConnection</a>
@@ -216,9 +236,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC8DBDriverP7connect3url8username8password10propertiesAA12DBConnection_pSS_SSSgAJSDySSypGtKF"></a>
-                    <a name="//apple_ref/swift/Method/connect(url:username:password:properties:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC8DBDriverP7connect3url8username8password10propertiesAA12DBConnection_pSS_SSSgAJSDySSypGtKF">connect(url:username:password:properties:)</a>
+                    <a name="/s:8SwiftDBC8DBDriverP7connect3url8username8password8database10propertiesAA12DBConnection_pSS_SSSgA2KSDySSypGtKF"></a>
+                    <a name="//apple_ref/swift/Method/connect(url:username:password:database:properties:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC8DBDriverP7connect3url8username8password8database10propertiesAA12DBConnection_pSS_SSSgA2KSDySSypGtKF">connect(url:username:password:database:properties:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -232,7 +252,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">connect</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">properties</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/DBConnection.html">DBConnection</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">connect</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">database</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">properties</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/DBConnection.html">DBConnection</a></span></code></pre>
 
                         </div>
                       </div>
@@ -267,6 +287,38 @@
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC8DBDriverPAAE7connect3url8username8password8databaseAA12DBConnection_pSS_SSSgA2JtKF"></a>
+                    <a name="//apple_ref/swift/Method/connect(url:username:password:database:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC8DBDriverPAAE7connect3url8username8password8databaseAA12DBConnection_pSS_SSSgA2JtKF">connect(url:username:password:database:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">connect</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">database</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/DBConnection.html">DBConnection</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L110-L112">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

@@ -33,7 +33,7 @@ public typealias DBDeregisterLambda = () -> Void
 /// The driver manager. The driver manager maintains a list of currently registered drivers. When a connection to a database is
 /// required then a call to the driver manager's `connect(url:username:password:properties:)` method will locate the appropriate
 /// driver for the given URL and then create and return a connection object.
-///
+/// 
 /// Drivers are registered by calling their `DBDriver.register()` class method.
 ///
 public class DBDriverManager {
@@ -68,7 +68,7 @@ public class DBDriverManager {
     /*===========================================================================================================================*/
     /// Registers a driver with the driver manager. You should not call this method directly but, rather, it should be called by
     /// the driver's `DBDriver.register()` class method. If the driver is already registered then this method does nothing.
-    ///
+    /// 
     /// - Parameters:
     ///   - driver: the instance of the driver.
     ///   - deregisterLambda: a lambda (closure) that is called when the driver is deregistered.
@@ -81,7 +81,7 @@ public class DBDriverManager {
 
     /*===========================================================================================================================*/
     /// Deregisters the given driver. If the driver is not already registered then this method does nothing.
-    ///
+    /// 
     /// - Parameter driver: the driver.
     ///
     public func deregister(driver: DBDriver) {
@@ -91,7 +91,7 @@ public class DBDriverManager {
 
     /*===========================================================================================================================*/
     /// Connect to a database.
-    ///
+    /// 
     /// - Parameters:
     ///   - url: the URL which starts as "SwiftDBC:"
     ///   - username: the username if any.

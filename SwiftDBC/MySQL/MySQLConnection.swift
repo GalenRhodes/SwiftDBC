@@ -23,10 +23,6 @@
 import Foundation
 import MySQL
 
-let DBConnectionWillClose = Notification.Name("DBConnectionWillClose")
-let DBStatementWillClose  = Notification.Name("DBStatementWillClose")
-let DBResultSetWillClose  = Notification.Name("DBResultSetWillClose")
-
 class MySQLConnection: DBConnection {
 
     let networkTimeout:   Int                 = 30000

@@ -23,29 +23,6 @@
 import Foundation
 import MySQL
 
-let MySQLDefaultCharacterSet: String = "utf8mb4"
-let MySQLDBCPrefix:           String = "\(SwiftDBCPrefix):mysql"
-
-let _regexPfx:           String = NSRegularExpression.escapedPattern(for: MySQLDBCPrefix)
-let _regexHostNameLabel: String = "(?:[^.:?/]+)"
-let _regexHostName:      String = "\(_regexHostNameLabel)(?:\\.\(_regexHostNameLabel))*"
-let _regexIpNumber:      String = "(?:[0-9]|[1-9][0-9]|1[0-9]{2}|2(?:[0-4][0-9]|5[0-5]))"
-let _regexIpAddress:     String = "\(_regexIpNumber)(?:\\.\(_regexIpNumber)){3}"
-let _regexPort:          String = "(?:0|[1-9]|[1-9][0-9]{1,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])"
-let _regexCredentials:   String = "([^:@]+)(?:\\:([^@]+))?@"
-
-/*===============================================================================================================================*/
-/// - Group 1: username
-/// - Group 2: password
-/// - Group 3: host name/ip address
-/// - Group 4: port
-/// - Group 5: path
-/// - Group 6: query
-///
-let _regexUrl:           String = "(?:\(_regexPfx):)(?://)?(?:\(_regexCredentials))?((?:\(_regexIpAddress))|(?:\(_regexHostName)))(?:\\:(\(_regexPort)))?(/[^?]*)?(?:\\?(.+))?"
-
-@inlinable func _get(str: String, result: NSTextCheckingResult, group: Int) -> String? { ((group < result.numberOfRanges) ? str.substringWith(nsRange: result.range(at: group)) : nil) }
-
 class MySQLDriver: DBDriver {
     private(set) var majorVersion: Int = 1
     private(set) var minorVersion: Int = 0

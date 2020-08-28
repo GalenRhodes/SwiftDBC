@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>DataTypes Enumeration Reference</title>
+    <title>DBResultSet Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/DataTypes" class="dashAnchor"></a>
-    <a title="DataTypes Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Protocol/DBResultSet" class="dashAnchor"></a>
+    <a title="DBResultSet Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">SwiftDBC©</a> (7% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        DataTypes Enumeration Reference
+        DBResultSet Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -134,18 +134,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>DataTypes</h1>
+            <h1>DBResultSet</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">DataTypes</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBResultSet</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Closable.html">Closable</a></span></code></pre>
 
                 </div>
               </div>
-            <p>The labeled types below are currently supported in SwiftDBC. The types
-&lsquo;<code><a href="https://developer.apple.com/documentation/swift/array/">Array</a></code>&rsquo;, <code>DataLink</code>, <code>Distinct</code>, <code>JavaObject</code>, <code>Ref</code>,
-<code>RefCursor</code>, <code>RowId</code>, <code>SqlXml</code>, and <code>Struct</code> are mostly Oracle specific and don&rsquo;t have an equivalence in other databases. They
-are not currently supported but may be in the future because of the HUGE popularity of Oracle.</p>
-
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -153,9 +149,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO5ArrayyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Array" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO5ArrayyA2CmF">Array</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP8metaDataAA0cd4MetaF0_pvp"></a>
+                    <a name="//apple_ref/swift/Property/metaData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP8metaDataAA0cd4MetaF0_pvp">metaData</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -169,7 +165,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Array</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">metaData</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DBResultSetMetaData.html">DBResultSetMetaData</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -182,9 +178,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO3BityA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Bit" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO3BityA2CmF">Bit</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP4nextSbyKF"></a>
+                    <a name="//apple_ref/swift/Method/next()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP4nextSbyKF">next()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -198,7 +194,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Bit</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">next</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -211,9 +207,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO6BinaryyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Binary" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO6BinaryyA2CmF">Binary</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP7getDate5index10Foundation0F0VSgSi_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getDate(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getDate5index10Foundation0F0VSgSi_tKF">getDate(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -227,7 +223,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Binary</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getDate</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -240,9 +236,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO6BigIntyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/BigInt" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO6BigIntyA2CmF">BigInt</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP7getDate4name10Foundation0F0VSgSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getDate(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getDate4name10Foundation0F0VSgSS_tKF">getDate(name:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -256,7 +252,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">BigInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getDate</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -269,9 +265,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO4BlobyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Blob" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO4BlobyA2CmF">Blob</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP7getTime5index10Foundation4DateVSgSi_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getTime(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getTime5index10Foundation4DateVSgSi_tKF">getTime(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -285,7 +281,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Blob</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getTime</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -298,9 +294,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO7BooleanyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Boolean" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO7BooleanyA2CmF">Boolean</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP7getTime4name10Foundation4DateVSgSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getTime(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getTime4name10Foundation4DateVSgSS_tKF">getTime(name:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -314,7 +310,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Boolean</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getTime</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -327,9 +323,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO4CharyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Char" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO4CharyA2CmF">Char</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP12getTimestamp5index10Foundation4DateVSgSi_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getTimestamp(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP12getTimestamp5index10Foundation4DateVSgSi_tKF">getTimestamp(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -343,7 +339,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Char</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getTimestamp</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -356,9 +352,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO4ClobyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Clob" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO4ClobyA2CmF">Clob</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP12getTimestamp4name10Foundation4DateVSgSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getTimestamp(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP12getTimestamp4name10Foundation4DateVSgSS_tKF">getTimestamp(name:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -372,7 +368,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Clob</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getTimestamp</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -385,9 +381,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO0C4LinkyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/DataLink" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO0C4LinkyA2CmF">DataLink</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP8getFloat5indexSfSgSi_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getFloat(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getFloat5indexSfSgSi_tKF">getFloat(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -401,7 +397,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">DataLink</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getFloat</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Float</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -414,9 +410,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO4DateyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Date" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO4DateyA2CmF">Date</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP8getFloat4nameSfSgSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getFloat(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getFloat4nameSfSgSS_tKF">getFloat(name:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -430,7 +426,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Date</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getFloat</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Float</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -443,9 +439,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO7DecimalyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Decimal" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO7DecimalyA2CmF">Decimal</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP9getDouble5indexSdSgSi_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getDouble(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getDouble5indexSdSgSi_tKF">getDouble(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -459,7 +455,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Decimal</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getDouble</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Double</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -472,9 +468,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO8DistinctyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Distinct" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO8DistinctyA2CmF">Distinct</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP9getDouble4nameSdSgSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getDouble(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getDouble4nameSdSgSS_tKF">getDouble(name:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -488,7 +484,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Distinct</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getDouble</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Double</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -501,9 +497,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO6DoubleyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Double" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO6DoubleyA2CmF">Double</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP13getBigDecimal5indexSo9NSDecimalaSgSi_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getBigDecimal(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP13getBigDecimal5indexSo9NSDecimalaSgSi_tKF">getBigDecimal(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -517,7 +513,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Double</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBigDecimal</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Decimal</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -530,9 +526,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO5FloatyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Float" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO5FloatyA2CmF">Float</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP13getBigDecimal4nameSo9NSDecimalaSgSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getBigDecimal(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP13getBigDecimal4nameSo9NSDecimalaSgSS_tKF">getBigDecimal(name:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -546,7 +542,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Float</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBigDecimal</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Decimal</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -559,9 +555,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO7IntegeryA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Integer" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO7IntegeryA2CmF">Integer</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP7getBool5indexSSSgSi_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getBool(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getBool5indexSSSgSi_tKF">getBool(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -575,7 +571,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Integer</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBool</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -588,9 +584,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO10JavaObjectyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/JavaObject" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO10JavaObjectyA2CmF">JavaObject</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP7getBool4nameSSSgSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getBool(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getBool4nameSSSgSS_tKF">getBool(name:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -604,7 +600,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">JavaObject</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBool</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -617,9 +613,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO12LongNVarCharyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/LongNVarChar" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO12LongNVarCharyA2CmF">LongNVarChar</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP9getString5indexSSSgSi_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getString(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getString5indexSSSgSi_tKF">getString(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -633,7 +629,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">LongNVarChar</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getString</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -646,9 +642,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO11LongVarCharyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/LongVarChar" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO11LongVarCharyA2CmF">LongVarChar</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP9getString4nameSSSgSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getString(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getString4nameSSSgSS_tKF">getString(name:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -662,7 +658,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">LongVarChar</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getString</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -675,9 +671,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO13LongVarBinaryyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/LongVarBinary" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO13LongVarBinaryyA2CmF">LongVarBinary</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP7getByte5indexs4Int8VSgSi_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getByte(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getByte5indexs4Int8VSgSi_tKF">getByte(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -691,7 +687,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">LongVarBinary</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getByte</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int8</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -704,9 +700,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO5NCharyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/NChar" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO5NCharyA2CmF">NChar</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP7getByte4names4Int8VSgSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getByte(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getByte4names4Int8VSgSS_tKF">getByte(name:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -720,7 +716,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">NChar</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getByte</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int8</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -733,9 +729,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO5NClobyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/NClob" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO5NClobyA2CmF">NClob</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP8getShort5indexs5Int16VSgSi_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getShort(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getShort5indexs5Int16VSgSi_tKF">getShort(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -749,7 +745,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">NClob</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getShort</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int16</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -762,9 +758,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO4NullyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Null" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO4NullyA2CmF">Null</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP8getShort4names5Int16VSgSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getShort(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getShort4names5Int16VSgSS_tKF">getShort(name:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -778,7 +774,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Null</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getShort</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int16</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -791,9 +787,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO7NumericyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Numeric" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO7NumericyA2CmF">Numeric</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP8getSmall5indexs5Int32VSgSi_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getSmall(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getSmall5indexs5Int32VSgSi_tKF">getSmall(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -807,7 +803,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Numeric</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getSmall</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +816,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO8NVarCharyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/NVarChar" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO8NVarCharyA2CmF">NVarChar</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP8getSmall4names5Int32VSgSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getSmall(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getSmall4names5Int32VSgSS_tKF">getSmall(name:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -836,7 +832,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">NVarChar</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getSmall</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -849,9 +845,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO5OtheryA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Other" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO5OtheryA2CmF">Other</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP6getInt5indexSiSgSi_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getInt(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP6getInt5indexSiSgSi_tKF">getInt(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -865,7 +861,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Other</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getInt</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -878,9 +874,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO4RealyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Real" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO4RealyA2CmF">Real</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP6getInt4nameSiSgSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getInt(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP6getInt4nameSiSgSS_tKF">getInt(name:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -894,7 +890,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Real</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getInt</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -907,9 +903,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO3RefyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Ref" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO3RefyA2CmF">Ref</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP7getLong5indexs5Int64VSgSi_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getLong(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getLong5indexs5Int64VSgSi_tKF">getLong(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -923,7 +919,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Ref</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getLong</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -936,9 +932,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO9RefCursoryA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/RefCursor" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO9RefCursoryA2CmF">RefCursor</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP7getLong4names5Int64VSgSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getLong(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getLong4names5Int64VSgSS_tKF">getLong(name:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -952,7 +948,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">RefCursor</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getLong</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -965,9 +961,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO5RowIdyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/RowId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO5RowIdyA2CmF">RowId</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP9getBigIntyXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/getBigInt(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getBigIntyXeXeF">getBigInt(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -981,7 +977,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">RowId</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBigInt</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">BigInt</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -994,9 +990,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO8SmallIntyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/SmallInt" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO8SmallIntyA2CmF">SmallInt</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP9getBigIntyXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/getBigInt(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getBigIntyXeXeF">getBigInt(name:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1010,7 +1006,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">SmallInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBigInt</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">BigInt</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1023,9 +1019,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO6SqlXmlyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/SqlXml" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO6SqlXmlyA2CmF">SqlXml</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP8getUByte5indexs5UInt8VSgSi_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getUByte(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getUByte5indexs5UInt8VSgSi_tKF">getUByte(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1039,7 +1035,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">SqlXml</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUByte</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt8</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1052,9 +1048,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO6StructyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Struct" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO6StructyA2CmF">Struct</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP8getUByte4names5UInt8VSgSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getUByte(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getUByte4names5UInt8VSgSS_tKF">getUByte(name:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1068,7 +1064,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Struct</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUByte</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt8</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1081,9 +1077,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO4TimeyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Time" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO4TimeyA2CmF">Time</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP9getUShort5indexs6UInt16VSgSi_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getUShort(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getUShort5indexs6UInt16VSgSi_tKF">getUShort(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1097,7 +1093,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Time</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUShort</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt16</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1110,9 +1106,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO08TimeWithE4ZoneyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/TimeWithTimeZone" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO08TimeWithE4ZoneyA2CmF">TimeWithTimeZone</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP9getUShort4names6UInt16VSgSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getUShort(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getUShort4names6UInt16VSgSS_tKF">getUShort(name:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1126,7 +1122,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">TimeWithTimeZone</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUShort</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt16</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1139,9 +1135,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO9TimeStampyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/TimeStamp" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO9TimeStampyA2CmF">TimeStamp</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP9getUSmall5indexs6UInt32VSgSi_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getUSmall(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getUSmall5indexs6UInt32VSgSi_tKF">getUSmall(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1155,7 +1151,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">TimeStamp</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUSmall</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1168,9 +1164,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO013TimeStampWithE4ZoneyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/TimeStampWithTimeZone" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO013TimeStampWithE4ZoneyA2CmF">TimeStampWithTimeZone</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP9getUSmall4names6UInt32VSgSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getUSmall(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getUSmall4names6UInt32VSgSS_tKF">getUSmall(name:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1184,7 +1180,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">TimeStampWithTimeZone</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUSmall</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1197,9 +1193,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO7TinyIntyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/TinyInt" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO7TinyIntyA2CmF">TinyInt</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP7getUInt5indexSuSgSi_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getUInt(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getUInt5indexSuSgSi_tKF">getUInt(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1213,7 +1209,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">TinyInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUInt</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1226,9 +1222,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO9VarBinaryyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/VarBinary" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO9VarBinaryyA2CmF">VarBinary</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP7getUInt4nameSuSgSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getUInt(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getUInt4nameSuSgSS_tKF">getUInt(name:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1242,7 +1238,7 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">VarBinary</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUInt</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1255,9 +1251,9 @@ are not currently supported but may be in the future because of the HUGE popular
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC9DataTypesO7VarCharyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/VarChar" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC9DataTypesO7VarCharyA2CmF">VarChar</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP8getULong5indexs6UInt64VSgSi_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getULong(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getULong5indexs6UInt64VSgSi_tKF">getULong(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1271,7 +1267,94 @@ are not currently supported but may be in the future because of the HUGE popular
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">VarChar</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getULong</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt64</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC11DBResultSetP8getULong4names6UInt64VSgSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getULong(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getULong4names6UInt64VSgSS_tKF">getULong(name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getULong</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt64</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC11DBResultSetP10getUBigIntyXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/getUBigInt(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP10getUBigIntyXeXeF">getUBigInt(index:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUBigInt</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">BigUInt</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC11DBResultSetP10getUBigIntyXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/getUBigInt(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP10getUBigIntyXeXeF">getUBigInt(name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUBigInt</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">BigUInt</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>

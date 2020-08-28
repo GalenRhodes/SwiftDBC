@@ -25,14 +25,17 @@ import MySQL
 import BigInt
 
 class MySQLResultSet: DBResultSet {
+
     var isClosed: Bool       = false
     var rawData:  [MySQLRow] = []
     let stmt:     MySQLStatement
     let rs:       UnsafeMutablePointer<MYSQL_RES>
+    let metaData: DBResultSetMetaData
 
     init(_ stmt: MySQLStatement, _ rs: UnsafeMutablePointer<MYSQL_RES>) throws {
         self.stmt = stmt
         self.rs = rs
+        self.metaData = MySQLResultSetMetaData(rs: rs)
 
         NotificationCenter.default.addObserver(forName: DBStatementWillClose, object: self.stmt, queue: nil) {
             [weak self] (notice: Notification) in
@@ -40,16 +43,11 @@ class MySQLResultSet: DBResultSet {
         }
 
         let numFields: Int        = Int(mysql_num_fields(rs))
-        var row:       MYSQL_ROW? = mysql_fetch_row(self.rs)
+        var row:       MYSQL_ROW? = mysql_fetch_row(rs)
 
         defer {
-            while let _ = row { row = mysql_fetch_row(self.rs) }
-            mysql_free_result(self.rs)
-        }
-
-        for fieldNum in (0 ..< numFields) {
-            if let f: UnsafeMutablePointer<MYSQL_FIELD> = mysql_fetch_field_direct(rs, UInt32(fieldNum)) {
-            }
+            while let _ = row { row = mysql_fetch_row(rs) }
+            mysql_free_result(rs)
         }
 
         while let _row: MYSQL_ROW = row {
@@ -57,7 +55,7 @@ class MySQLResultSet: DBResultSet {
                 let rawRow = MySQLRow(row: _row, lengths: lens, colCount: numFields)
                 rawData.append(rawRow)
             }
-            row = mysql_fetch_row(self.rs)
+            row = mysql_fetch_row(rs)
         }
     }
 
@@ -73,8 +71,6 @@ class MySQLResultSet: DBResultSet {
             isClosed = true
         }
     }
-
-    private(set) var metaData: DBResultSetMetaData
 
     func next() throws -> Bool { fatalError("next() has not been implemented") }
 
@@ -100,99 +96,156 @@ class MySQLResultSet: DBResultSet {
 
     func getBigInt(index: Int) throws -> BigInt? { fatalError("getBigInt(index:) has not been implemented") }
 
-    func getBitInt(name: String) throws -> BigInt? { fatalError("getBitInt(name:) has not been implemented") }
+    func getBigInt(name: String) throws -> BigInt? { fatalError("getBigInt(name:) has not been implemented") }
 
     func getBool(index: Int) throws -> String? { fatalError("getBool(index:) has not been implemented") }
 
     func getBool(name: String) throws -> String? { fatalError("getBool(name:) has not been implemented") }
+
+    func getDate(index: Int) throws -> Date? { fatalError("getDate(index:) has not been implemented") }
+
+    func getDate(name: String) throws -> Date? { fatalError("getDate(name:) has not been implemented") }
+
+    func getTime(index: Int) throws -> Date? { fatalError("getTime(index:) has not been implemented") }
+
+    func getTime(name: String) throws -> Date? { fatalError("getTime(name:) has not been implemented") }
+
+    func getTimestamp(index: Int) throws -> Date? { fatalError("getTimestamp(index:) has not been implemented") }
+
+    func getTimestamp(name: String) throws -> Date? { fatalError("getTimestamp(name:) has not been implemented") }
+
+    func getFloat(index: Int) throws -> Float? { fatalError("getFloat(index:) has not been implemented") }
+
+    func getFloat(name: String) throws -> Float? { fatalError("getFloat(name:) has not been implemented") }
+
+    func getDouble(index: Int) throws -> Double? { fatalError("getDouble(index:) has not been implemented") }
+
+    func getDouble(name: String) throws -> Double? { fatalError("getDouble(name:) has not been implemented") }
+
+    func getBigDecimal(index: Int) throws -> Decimal? { fatalError("getBigDecimal(index:) has not been implemented") }
+
+    func getBigDecimal(name: String) throws -> Decimal? { fatalError("getBigDecimal(name:) has not been implemented") }
+
+    func getSmall(index: Int) throws -> Int32? { fatalError("getSmall(index:) has not been implemented") }
+
+    func getSmall(name: String) throws -> Int32? { fatalError("getSmall(name:) has not been implemented") }
+
+    func getUByte(index: Int) throws -> UInt8? { fatalError("getUByte(index:) has not been implemented") }
+
+    func getUByte(name: String) throws -> UInt8? { fatalError("getUByte(name:) has not been implemented") }
+
+    func getUShort(index: Int) throws -> UInt16? { fatalError("getUShort(index:) has not been implemented") }
+
+    func getUShort(name: String) throws -> UInt16? { fatalError("getUShort(name:) has not been implemented") }
+
+    func getUSmall(index: Int) throws -> UInt32? { fatalError("getUSmall(index:) has not been implemented") }
+
+    func getUSmall(name: String) throws -> UInt32? { fatalError("getUSmall(name:) has not been implemented") }
+
+    func getUInt(index: Int) throws -> UInt? { fatalError("getUInt(index:) has not been implemented") }
+
+    func getUInt(name: String) throws -> UInt? { fatalError("getUInt(name:) has not been implemented") }
+
+    func getULong(index: Int) throws -> UInt64? { fatalError("getULong(index:) has not been implemented") }
+
+    func getULong(name: String) throws -> UInt64? { fatalError("getULong(name:) has not been implemented") }
+
+    func getUBigInt(index: Int) throws -> BigUInt? { fatalError("getUBigInt(index:) has not been implemented") }
+
+    func getUBigInt(name: String) throws -> BigUInt? { fatalError("getUBigInt(name:) has not been implemented") }
 }
 
-@inlinable func testFlag(fieldValue: UInt32, flag: Int32) -> Bool { ((fieldValue & UInt32(flag)) == UInt32(flag)) }
+class MySQLColumnMetaData: DBColumnMetaData {
+    let index:           Int
+    let dataType:        DataTypes
+    let name:            String
+    let orgName:         String
+    let tableName:       String
+    let orgTableName:    String
+    let database:        String
+    let catalog:         String
+    let length:          UInt
+    let maxLength:       UInt
+    let decimalCount:    UInt
+    let isNullable:      Bool
+    let hasDefault:      Bool
+    let isAutoIncrement: Bool
+    let isUnsigned:      Bool
+    let isPrimaryKey:    Bool
+    let isUniqueKey:     Bool
+    let isIndexed:       Bool
+    let isReadOnly:      Bool
+    let charSetId:       Int
 
-@inlinable func getString(cStr: UnsafeMutablePointer<Int8>) -> String { String(cString: cStr, encoding: String.Encoding.utf8) ?? "" }
+    init(index idx: Int) {
+        catalog = ""
+        charSetId = 0
+        dataType = .VarChar
+        database = ""
+        decimalCount = 0
+        hasDefault = false
+        index = idx
+        isAutoIncrement = false
+        isIndexed = false
+        isNullable = true
+        isPrimaryKey = false
+        isReadOnly = false
+        isUniqueKey = false
+        isUnsigned = false
+        length = 0
+        maxLength = 0
+        name = ""
+        orgName = ""
+        orgTableName = ""
+        tableName = ""
+    }
+
+    init(field fld: MYSQL_FIELD, index idx: Int) {
+        let flags: UInt32 = fld.flags
+
+        catalog = getString(cStr: fld.catalog)
+        charSetId = Int(fld.charsetnr)
+        decimalCount = UInt(fld.decimals)
+        dataType = getDataType(id: fld.type, charSetId: charSetId, decDigits: decimalCount)
+        database = getString(cStr: fld.db)
+        hasDefault = !testFlag(fieldValue: flags, flag: NO_DEFAULT_VALUE_FLAG)
+        index = idx
+        isAutoIncrement = testFlag(fieldValue: flags, flag: AUTO_INCREMENT_FLAG)
+        isIndexed = testFlag(fieldValue: flags, flag: MULTIPLE_KEY_FLAG)
+        isNullable = !testFlag(fieldValue: flags, flag: NOT_NULL_FLAG)
+        isPrimaryKey = testFlag(fieldValue: flags, flag: PRI_KEY_FLAG)
+        isReadOnly = false
+        isUniqueKey = testFlag(fieldValue: flags, flag: UNIQUE_KEY_FLAG)
+        isUnsigned = testFlag(fieldValue: flags, flag: UNSIGNED_FLAG)
+        length = UInt(fld.length)
+        maxLength = UInt(fld.max_length)
+        name = getString(cStr: fld.name)
+        orgName = getString(cStr: fld.org_name)
+        orgTableName = getString(cStr: fld.org_table)
+        tableName = getString(cStr: fld.table)
+    }
+}
 
 class MySQLResultSetMetaData: DBResultSetMetaData {
 
-    private(set) var columnCount:     Int         = 0
-    private(set) var name:            [String]    = []
-    private(set) var orgName:         [String]    = []
-    private(set) var tableName:       [String]    = []
-    private(set) var orgTableName:    [String]    = []
-    private(set) var database:        [String]    = []
-    private(set) var catalog:         [String]    = []
-    private(set) var length:          [UInt]      = []
-    private(set) var maxLength:       [UInt]      = []
-    private(set) var isNullable:      [Bool]      = []
-    private(set) var hasDefault:      [Bool]      = []
-    private(set) var isAutoIncrement: [Bool]      = []
-    private(set) var isUnsigned:      [Bool]      = []
-    private(set) var isPrimaryKey:    [Bool]      = []
-    private(set) var isUniqueKey:     [Bool]      = []
-    private(set) var isIndexed:       [Bool]      = []
-    private(set) var dataType:        [DataTypes] = []
-    private(set) var charSetId:       [Int]       = []
-    private(set) var decimalCount:    [Int]       = []
+    let columnCount: Int
+    var columnInfo:  [MySQLColumnMetaData] = []
 
     init(rs: UnsafeMutablePointer<MYSQL_RES>) {
-        self.columnCount = Int(mysql_num_fields(rs))
+        columnCount = Int(mysql_num_fields(rs))
 
-        for idx: Int in (0 ..< self.columnCount) {
-            if let f: UnsafeMutablePointer<MYSQL_FIELD> = mysql_fetch_field_direct(rs, UInt32(idx)) {
-                let fld:   MYSQL_FIELD = f.pointee
-                let chrId: Int         = Int(fld.charsetnr)
-
-                charSetId.append(chrId)
-                length.append(UInt(fld.length))
-                maxLength.append(UInt(fld.max_length))
-                decimalCount.append(Int(fld.decimals))
-                isNullable.append(!testFlag(fieldValue: fld.flags, flag: NOT_NULL_FLAG))
-                hasDefault.append(!testFlag(fieldValue: fld.flags, flag: NO_DEFAULT_VALUE_FLAG))
-                isUnsigned.append(testFlag(fieldValue: fld.flags, flag: UNSIGNED_FLAG))
-                isPrimaryKey.append(testFlag(fieldValue: fld.flags, flag: PRI_KEY_FLAG))
-                isUniqueKey.append(testFlag(fieldValue: fld.flags, flag: UNIQUE_KEY_FLAG))
-                isIndexed.append(testFlag(fieldValue: fld.flags, flag: MULTIPLE_KEY_FLAG))
-                dataType.append(getDataType(id: fld.type, charSetId: chrId))
-
-                name.append(getString(cStr: fld.name))
-                orgName.append(getString(cStr: fld.org_name))
-                tableName.append(getString(cStr: fld.table))
-                orgTableName.append(getString(cStr: fld.org_table))
-                database.append(getString(cStr: fld.db))
-                catalog.append(getString(cStr: fld.catalog))
+        for i in (0 ..< columnCount) {
+            if let fld: UnsafeMutablePointer<MYSQL_FIELD> = mysql_fetch_field_direct(rs, UInt32(i)) {
+                columnInfo.append(MySQLColumnMetaData(field: fld.pointee, index: i))
+            }
+            else {
+                columnInfo.append(MySQLColumnMetaData(index: i))
             }
         }
     }
 
-    private func getDataType(id: enum_field_types, charSetId: Int) -> DataTypes {
-        //---------------------------------------------
-        // Try to get as close to a match as possible.
-        //---------------------------------------------
-        switch id { //@f:0
-            case MYSQL_TYPE_STRING    : return charSetId == 63 ? DataTypes.Binary    : DataTypes.Char    // CHAR or BINARY field
-            case MYSQL_TYPE_VAR_STRING: return charSetId == 63 ? DataTypes.VarBinary : DataTypes.VarChar // VARCHAR or VARBINARY field
-            case MYSQL_TYPE_BLOB      : return charSetId == 63 ? DataTypes.Blob      : DataTypes.Clob    // BLOB or TEXT field (use max_length to determine the maximum length)
-            case MYSQL_TYPE_TINY      : return DataTypes.TinyInt   // TINYINT field
-            case MYSQL_TYPE_SHORT     : return DataTypes.SmallInt  // SMALLINT field
-            case MYSQL_TYPE_LONG      : return DataTypes.Integer   // INTEGER field
-            case MYSQL_TYPE_INT24     : return DataTypes.Integer   // MEDIUMINT field
-            case MYSQL_TYPE_LONGLONG  : return DataTypes.BigInt    // BIGINT field
-            case MYSQL_TYPE_DECIMAL   : return DataTypes.Decimal   // DECIMAL or NUMERIC field
-            case MYSQL_TYPE_NEWDECIMAL: return DataTypes.Decimal   // Precision math DECIMAL or NUMERIC
-            case MYSQL_TYPE_FLOAT     : return DataTypes.Float     // FLOAT field
-            case MYSQL_TYPE_DOUBLE    : return DataTypes.Double    // DOUBLE or REAL field
-            case MYSQL_TYPE_BIT       : return DataTypes.Bit       // BIT field
-            case MYSQL_TYPE_TIMESTAMP : return DataTypes.TimeStamp // TIMESTAMP field
-            case MYSQL_TYPE_DATE      : return DataTypes.Date      // DATE field
-            case MYSQL_TYPE_TIME      : return DataTypes.Time      // TIME field
-            case MYSQL_TYPE_DATETIME  : return DataTypes.TimeStamp // DATETIME field
-            case MYSQL_TYPE_YEAR      : return DataTypes.Date      // YEAR field
-            case MYSQL_TYPE_SET       : return DataTypes.VarChar   // SET field
-            case MYSQL_TYPE_ENUM      : return DataTypes.VarChar   // ENUM field
-            case MYSQL_TYPE_GEOMETRY  : return DataTypes.Other     // Spatial field
-            case MYSQL_TYPE_NULL      : return DataTypes.Null      // NULL-type field
-            default                   : return DataTypes.VarChar   // VARCHAR field
-        } //@f:1
-    }
+    subscript(name: String) -> DBColumnMetaData? { fatalError("subscript(_:) has not been implemented") }
+    subscript(index: Int) -> DBColumnMetaData { fatalError("subscript(_:) has not been implemented") }
 }
 
 class MySQLRow {

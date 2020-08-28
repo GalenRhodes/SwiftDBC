@@ -14,6 +14,7 @@
 		1117D59BEF9F0FB50DDD3A28 /* MySQLStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D6E41BE400A5B6B34A70 /* MySQLStatement.swift */; };
 		1117D780478B909B31153A6B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D1B64D0BC9BBDB00B376 /* Extensions.swift */; };
 		1117D8F8FDCFE5D006B99E20 /* MySQLConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D48586EB886859139ED6 /* MySQLConnection.swift */; };
+		1117DBD1BD4C927B7B741BC1 /* MySQLTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D6E75339DBF7DA3AB6C0 /* MySQLTools.swift */; };
 		830EDA7124F67CF900B2BD00 /* mysqlx_ername.h in Headers */ = {isa = PBXBuildFile; fileRef = 830EDA6024F67CF800B2BD00 /* mysqlx_ername.h */; };
 		830EDA7224F67CF900B2BD00 /* mysql.h in Headers */ = {isa = PBXBuildFile; fileRef = 830EDA6124F67CF800B2BD00 /* mysql.h */; };
 		830EDA7324F67CF900B2BD00 /* mysql_com.h in Headers */ = {isa = PBXBuildFile; fileRef = 830EDA6224F67CF800B2BD00 /* mysql_com.h */; };
@@ -90,6 +91,7 @@
 		1117D5465EB5F4C00FCB99AF /* MySQLResultSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySQLResultSet.swift; sourceTree = "<group>"; };
 		1117D587C1728BC8B78FB3FC /* docfixer.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = docfixer.sh; sourceTree = "<group>"; };
 		1117D6E41BE400A5B6B34A70 /* MySQLStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySQLStatement.swift; sourceTree = "<group>"; };
+		1117D6E75339DBF7DA3AB6C0 /* MySQLTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySQLTools.swift; sourceTree = "<group>"; };
 		1117D79D3983856A5B2EC430 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1117DE0C1FFC5377BA07E33A /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = file.gitattributes; path = .gitattributes; sourceTree = "<group>"; };
 		830EDA6024F67CF800B2BD00 /* mysqlx_ername.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mysqlx_ername.h; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				1117D48586EB886859139ED6 /* MySQLConnection.swift */,
 				1117D6E41BE400A5B6B34A70 /* MySQLStatement.swift */,
 				1117D5465EB5F4C00FCB99AF /* MySQLResultSet.swift */,
+				1117D6E75339DBF7DA3AB6C0 /* MySQLTools.swift */,
 			);
 			path = MySQL;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				1117D59BEF9F0FB50DDD3A28 /* MySQLStatement.swift in Sources */,
 				1117D54213F1D15D13FE62B7 /* MySQLResultSet.swift in Sources */,
 				1117D2F0001CA04F94614A41 /* Conditional.swift in Sources */,
+				1117DBD1BD4C927B7B741BC1 /* MySQLTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
