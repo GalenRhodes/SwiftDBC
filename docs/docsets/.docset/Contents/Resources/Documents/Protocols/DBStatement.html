@@ -14,7 +14,7 @@
     <a title="DBStatement Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SwiftDBC©</a> (14% documented)</p>
+        <p><a href="../index.html">SwiftDBC©</a> (11% documented)</p>
         <p class="header-right"><a href="https://github.com/GalenRhodes/SwiftDBC"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -31,6 +31,9 @@
           <li class="nav-group-name">
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Conditional.html">Conditional</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Classes/DBDriverManager.html">DBDriverManager</a>
               </li>
@@ -49,6 +52,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/DBError.html">DBError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DBNextResults.html">DBNextResults</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/DataTypes.html">DataTypes</a>
@@ -73,10 +79,22 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Protocols/Closable.html">Closable</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/DBConnection.html">DBConnection</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols.html#/s:8SwiftDBC18DBDatabaseMetaDataP">DBDatabaseMetaData</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/DBDriver.html">DBDriver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DBResultSet.html">DBResultSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DBResultSetMetaData.html">DBResultSetMetaData</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/DBStatement.html">DBStatement</a>
@@ -99,7 +117,7 @@
             <h1>DBStatement</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBStatement</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBStatement</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Closable.html">Closable</a></span></code></pre>
 
                 </div>
               </div>
@@ -111,69 +129,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC11DBStatementP8isClosedSbvp"></a>
-                    <a name="//apple_ref/swift/Property/isClosed" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBStatementP8isClosedSbvp">isClosed</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p><code>true</code> if the statement is closed.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isClosed</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L124">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBStatementP5closeyyF"></a>
-                    <a name="//apple_ref/swift/Method/close()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBStatementP5closeyyF">close()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Closes the statement. Closing the statements automatically closes any open result sets created by this statement.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">close</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L129">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBStatementP7execute3sqlSbSS_tKF"></a>
+                    <a name="/s:8SwiftDBC11DBStatementP7execute3sqlAA13DBNextResultsOSS_tKF"></a>
                     <a name="//apple_ref/swift/Method/execute(sql:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBStatementP7execute3sqlSbSS_tKF">execute(sql:)</a>
+                    <a class="token" href="#/s:8SwiftDBC11DBStatementP7execute3sqlAA13DBNextResultsOSS_tKF">execute(sql:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -201,7 +159,7 @@ getResultSet or getUpdateCount to retrieve the result, and getMoreResults to mov
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">execute</span><span class="p">(</span><span class="nv">sql</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">execute</span><span class="p">(</span><span class="nv">sql</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/DBNextResults.html">DBNextResults</a></span></code></pre>
 
                         </div>
                       </div>
@@ -229,7 +187,94 @@ getResultSet or getUpdateCount to retrieve the result, and getMoreResults to mov
                         <p><code>true</code> if the first result is a ResultSet object; <code>false</code> if it is an update count or there are no results</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L146">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L164">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC11DBStatementP12getResultSetAA08DBResultF0_pSgyKF"></a>
+                    <a name="//apple_ref/swift/Method/getResultSet()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBStatementP12getResultSetAA08DBResultF0_pSgyKF">getResultSet()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getResultSet</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/DBResultSet.html">DBResultSet</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC11DBStatementP14getUpdateCountSiyKF"></a>
+                    <a name="//apple_ref/swift/Method/getUpdateCount()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBStatementP14getUpdateCountSiyKF">getUpdateCount()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUpdateCount</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC11DBStatementP14hasMoreResultsAA06DBNextF0OyKF"></a>
+                    <a name="//apple_ref/swift/Method/hasMoreResults()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBStatementP14hasMoreResultsAA06DBNextF0OyKF">hasMoreResults()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">hasMoreResults</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/DBNextResults.html">DBNextResults</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -239,7 +284,7 @@ getResultSet or getUpdateCount to retrieve the result, and getMoreResults to mov
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://blog.projectgalen.com" target="_blank" rel="external">Galen Rhodes</a>. All rights reserved. (Last updated: 2020-08-26)</p>
+          <p>&copy; 2020 <a class="link" href="https://blog.projectgalen.com" target="_blank" rel="external">Galen Rhodes</a>. All rights reserved. (Last updated: 2020-08-28)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

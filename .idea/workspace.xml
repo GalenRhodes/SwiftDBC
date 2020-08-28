@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -10,7 +13,61 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="421f09c6-d872-417e-8a2a-797886d5c057" name="Default Changelist" comment="Initial Commit" />
+    <list default="true" id="421f09c6-d872-417e-8a2a-797886d5c057" name="Default Changelist" comment="gitattributes">
+      <change afterPath="$PROJECT_DIR$/SwiftDBC/Conditional.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLResultSet.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SwiftDBC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SwiftDBC.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/SwiftDBC Tests.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/SwiftDBC Tests.xcscheme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBDriverManager.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DBDriverManager.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/DataTypes.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DataTypes.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/Extensions.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/Extensions.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLConnection.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLConnection.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLStatement.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLStatement.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/SwiftDBCMySQL.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLDriver.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBCTests/SwiftDBCTests.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBCTests/SwiftDBCTests.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Classes/DBDriverManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes/DBDriverManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Enums.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Enums.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Enums/DBError.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Enums/DBError.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Enums/DataTypes.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Enums/DataTypes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Extensions.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Extensions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Extensions/Array.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Extensions/Array.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Extensions/NSRegularExpression.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Extensions/NSRegularExpression.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Extensions/String.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Extensions/String.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Global Variables.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Global Variables.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Protocols.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Protocols.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Protocols/DBConnection.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Protocols/DBConnection.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Protocols/DBDriver.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Protocols/DBDriver.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Protocols/DBStatement.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Protocols/DBStatement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Typealiases.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Typealiases.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/badge.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/badge.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/DBDriverManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/DBDriverManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums/DBError.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums/DBError.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums/DataTypes.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums/DataTypes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions/Array.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions/Array.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions/NSRegularExpression.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions/NSRegularExpression.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions/String.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions/String.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Global Variables.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Global Variables.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBConnection.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBConnection.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBDriver.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBDriver.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBStatement.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBStatement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Typealiases.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Typealiases.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/search.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/docSet.dsidx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/docSet.dsidx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.tgz" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.tgz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/search.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/undocumented.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/undocumented.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +79,11 @@
     </option>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="macos_macos_x86_64" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -39,10 +101,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="SwiftDBC" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -57,7 +120,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++/Objective-C" />
   </component>
   <component name="RunManager">
-    <configuration name="SwiftDBC Tests" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" REDIRECT_INPUT="false" WORKING_DIR="file://$PROJECT_DIR$/SwiftDBCTests" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SwiftDBC" TARGET_NAME="SwiftDBCTests" CONFIG_NAME="Debug" SCHEME_NAME="SwiftDBC Tests" IS_LOCATION_SIMULATION_ALLOWED="true" LOCATION_SCENARIO_ID="com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier" LOCATION_SCENARIO_TYPE="1" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" TEST_MODE="SUITE_TEST">
+    <configuration name="SwiftDBC Tests" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" REDIRECT_INPUT="false" WORKING_DIR="file://$PROJECT_DIR$/SwiftDBCTests" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SwiftDBC" TARGET_NAME="SwiftDBCTests" CONFIG_NAME="Debug" SCHEME_NAME="SwiftDBC Tests" IS_LOCATION_SIMULATION_ALLOWED="true" LOCATION_SCENARIO_ID="com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier" LOCATION_SCENARIO_TYPE="1" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" TEST_CLASS="SwiftDBCTests" TEST_METHOD="testDriverManager" TEST_MODE="SUITE_TEST" XCODE_TESTS_HASH_CODE="183534994">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -72,7 +135,9 @@
       <option name="presentableId" value="Default" />
       <updated>1598356440561</updated>
       <workItem from="1598356441736" duration="28935000" />
-      <workItem from="1598438898340" duration="11544000" />
+      <workItem from="1598438898340" duration="25930000" />
+      <workItem from="1598538014319" duration="10906000" />
+      <workItem from="1598562134459" duration="29845000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1598452724013</created>
@@ -81,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598452724013</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="gitattributes">
+      <created>1598457544683</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598457544683</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,68 +173,96 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="gitattributes" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitattributes" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="744" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598366756892">
+    <state x="744" y="202" width="861" height="735" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598550389490">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="744" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1598366756892" />
-    <state x="1071" y="263" key="#com.intellij.ide.util.MemberChooser" timestamp="1598363648452">
+    <state x="744" y="202" width="861" height="735" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1598550389490" />
+    <state x="1071" y="263" width="650" height="554" key="#com.intellij.ide.util.MemberChooser" timestamp="1598632984170">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="1071" y="263" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1080@0.0.2560.1080" timestamp="1598363648452" />
-    <state x="1018" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598363338249">
+    <state x="1071" y="263" width="650" height="554" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1080@0.0.2560.1080" timestamp="1598632984170" />
+    <state x="1018" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598642417167">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="1018" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1598363338249" />
+    <state x="1018" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1598642417167" />
     <state x="259" y="192" width="442" height="319" key="Github.ShareDialog" timestamp="1598452595825">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="259" y="192" width="442" height="319" key="Github.ShareDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1598452595825" />
-    <state width="1519" height="383" key="GridCell.Tab.0.bottom" timestamp="1598392863921">
-      <screen x="0" y="23" width="2560" height="1032" />
-    </state>
-    <state width="1519" height="383" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1598391693075" />
-    <state width="1519" height="383" key="GridCell.Tab.0.bottom/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863921" />
-    <state width="1519" height="383" key="GridCell.Tab.0.center" timestamp="1598392863920">
-      <screen x="0" y="23" width="2560" height="1032" />
-    </state>
-    <state width="1519" height="383" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1598391693075" />
-    <state width="1519" height="383" key="GridCell.Tab.0.center/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863920" />
-    <state width="1519" height="383" key="GridCell.Tab.0.left" timestamp="1598392863920">
-      <screen x="0" y="23" width="2560" height="1032" />
-    </state>
-    <state width="1519" height="383" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1598391693074" />
-    <state width="1519" height="383" key="GridCell.Tab.0.left/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863920" />
-    <state width="1519" height="383" key="GridCell.Tab.0.right" timestamp="1598392863921">
-      <screen x="0" y="23" width="2560" height="1032" />
-    </state>
-    <state width="1519" height="383" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1598391693075" />
-    <state width="1519" height="383" key="GridCell.Tab.0.right/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863921" />
-    <state width="1519" height="383" key="GridCell.Tab.1.bottom" timestamp="1598392863919">
-      <screen x="0" y="23" width="2560" height="1032" />
-    </state>
-    <state width="1519" height="383" key="GridCell.Tab.1.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1598391693074" />
-    <state width="1519" height="383" key="GridCell.Tab.1.bottom/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863919" />
-    <state width="1519" height="383" key="GridCell.Tab.1.center" timestamp="1598392863918">
-      <screen x="0" y="23" width="2560" height="1032" />
-    </state>
-    <state width="1519" height="383" key="GridCell.Tab.1.center/0.0.2560.1080@0.0.2560.1080" timestamp="1598391693072" />
-    <state width="1519" height="383" key="GridCell.Tab.1.center/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863918" />
-    <state width="1519" height="383" key="GridCell.Tab.1.left" timestamp="1598392863917">
-      <screen x="0" y="23" width="2560" height="1032" />
-    </state>
-    <state width="1519" height="383" key="GridCell.Tab.1.left/0.0.2560.1080@0.0.2560.1080" timestamp="1598391693055" />
-    <state width="1519" height="383" key="GridCell.Tab.1.left/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863917" />
-    <state width="1519" height="383" key="GridCell.Tab.1.right" timestamp="1598392863918">
-      <screen x="0" y="23" width="2560" height="1032" />
-    </state>
-    <state width="1519" height="383" key="GridCell.Tab.1.right/0.0.2560.1080@0.0.2560.1080" timestamp="1598391693073" />
-    <state width="1519" height="383" key="GridCell.Tab.1.right/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863918" />
-    <state x="880" y="276" key="Vcs.Push.Dialog.v2" timestamp="1598452731938">
+    <state width="1448" height="383" key="GridCell.Tab.0.bottom" timestamp="1598559737310">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="880" y="276" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1598452731938" />
+    <state width="1448" height="383" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1598559737310" />
+    <state width="1519" height="383" key="GridCell.Tab.0.bottom/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863921" />
+    <state width="1448" height="383" key="GridCell.Tab.0.center" timestamp="1598559737309">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="1448" height="383" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1598559737309" />
+    <state width="1519" height="383" key="GridCell.Tab.0.center/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863920" />
+    <state width="1448" height="383" key="GridCell.Tab.0.left" timestamp="1598559737309">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="1448" height="383" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1598559737309" />
+    <state width="1519" height="383" key="GridCell.Tab.0.left/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863920" />
+    <state width="1448" height="383" key="GridCell.Tab.0.right" timestamp="1598559737310">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="1448" height="383" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1598559737310" />
+    <state width="1519" height="383" key="GridCell.Tab.0.right/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863921" />
+    <state width="1448" height="383" key="GridCell.Tab.1.bottom" timestamp="1598559737309">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="1448" height="383" key="GridCell.Tab.1.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1598559737309" />
+    <state width="1519" height="383" key="GridCell.Tab.1.bottom/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863919" />
+    <state width="1448" height="383" key="GridCell.Tab.1.center" timestamp="1598559737308">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="1448" height="383" key="GridCell.Tab.1.center/0.0.2560.1080@0.0.2560.1080" timestamp="1598559737308" />
+    <state width="1519" height="383" key="GridCell.Tab.1.center/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863918" />
+    <state width="1448" height="383" key="GridCell.Tab.1.left" timestamp="1598559737307">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="1448" height="383" key="GridCell.Tab.1.left/0.0.2560.1080@0.0.2560.1080" timestamp="1598559737307" />
+    <state width="1519" height="383" key="GridCell.Tab.1.left/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863917" />
+    <state width="1448" height="383" key="GridCell.Tab.1.right" timestamp="1598559737308">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="1448" height="383" key="GridCell.Tab.1.right/0.0.2560.1080@0.0.2560.1080" timestamp="1598559737308" />
+    <state width="1519" height="383" key="GridCell.Tab.1.right/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863918" />
+    <state width="177" height="538" key="HiddenNamespacesPopup" timestamp="1598544098717">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="177" height="538" key="HiddenNamespacesPopup/0.0.2560.1080@0.0.2560.1080" timestamp="1598544098717" />
+    <state x="818" y="202" key="StringManipulation.AlignToColumnsAction" timestamp="1598618242011">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="818" y="202" key="StringManipulation.AlignToColumnsAction/0.0.2560.1080@0.0.2560.1080" timestamp="1598618242011" />
+    <state x="880" y="276" key="Vcs.Push.Dialog.v2" timestamp="1598457547210">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="880" y="276" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1598457547210" />
+    <state x="842" y="194" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1598551334033">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="842" y="194" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.2560.1080@0.0.2560.1080" timestamp="1598551334033" />
+    <state width="600" height="440" key="javadoc.popup" timestamp="1598635175742">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="600" height="440" key="javadoc.popup/0.0.2560.1080@0.0.2560.1080" timestamp="1598635175742" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/SwiftDBC/MySQL/MySQLDriver.swift</url>
+          <line>64</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

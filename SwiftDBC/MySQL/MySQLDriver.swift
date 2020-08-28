@@ -35,7 +35,12 @@ let _regexPort:          String = "(?:0|[1-9]|[1-9][0-9]{1,3}|[1-5][0-9]{4}|6[0-
 let _regexCredentials:   String = "([^:@]+)(?:\\:([^@]+))?@"
 
 /*===============================================================================================================================*/
-/// Group 1: username Group 2: password Group 3: host name/ip address Group 4: port Group 5: path Group 6: query
+/// - Group 1: username
+/// - Group 2: password
+/// - Group 3: host name/ip address
+/// - Group 4: port
+/// - Group 5: path
+/// - Group 6: query
 ///
 let _regexUrl:           String = "(?:\(_regexPfx):)(?://)?(?:\(_regexCredentials))?((?:\(_regexIpAddress))|(?:\(_regexHostName)))(?:\\:(\(_regexPort)))?(/[^?]*)?(?:\\?(.+))?"
 
@@ -45,13 +50,18 @@ class MySQLDriver: DBDriver {
     private(set) var majorVersion: Int = 1
     private(set) var minorVersion: Int = 0
 
-    private static let defaultDriver: MySQLDriver = MySQLDriver()
+    static let defaultDriver: MySQLDriver = MySQLDriver()
 
-    init() {
+    private init() {
         mysql_server_init(0, nil, nil)
     }
 
     deinit {
+        print("MySQLDriver is dying...")
+    }
+
+    func releaseClientLibrary() {
+        // Release any resources used by the library.
         mysql_server_end()
     }
 
@@ -59,7 +69,7 @@ class MySQLDriver: DBDriver {
         url.hasPrefix("\(MySQLDBCPrefix):")
     }
 
-    func connect(url: String, username: String?, password: String?, properties: [String: Any]) throws -> DBConnection {
+    public func connect(url: String, username: String?, password: String?, database: String?, properties: [String: Any]) throws -> DBConnection {
         do {
             let regex: NSRegularExpression = try NSRegularExpression(pattern: "^(?:\(_regexUrl))$")
 
@@ -107,5 +117,14 @@ class MySQLDriver: DBDriver {
         return query
     }
 
-    class func register() { DBDriverManager.manager.register(driver: defaultDriver, deregisterLambda: {}) }
+    func register(driverManager: DBDriverManager) {
+        driverManager.register(driver: self, deregisterLambda: { self.releaseClientLibrary() })
+    }
+
+    /*===========================================================================================================================*/
+    /// We have this method but it's kinda pointless since the constructor for `DBDriverManager` does this part for us.
+    ///
+    class func register() {
+        defaultDriver.register(driverManager: DBDriverManager.manager)
+    }
 }

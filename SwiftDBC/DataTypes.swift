@@ -21,52 +21,77 @@
  *//************************************************************************/
 
 import Foundation
-
-public enum DataTypes {
-    case Array
-    case Bit
-    case Binary
-    case BigInt
-    case Blob
-    case Boolean
-    case Char
-    case Clob
-    case DataLink
-    case Date
-    case Decimal
-    case Distinct
-    case Double
-    case Float
-    case Integer
-    case JavaObject
-    case LongNVarChar
-    case LongVarChar
-    case LongVarBinary
-    case NChar
-    case NClob
-    case Null
-    case Numeric
-    case NVarChar
-    case Other
-    case Real
-    case Ref
-    case RefCursor
-    case RowId
-    case SmallInt
-    case SqlXml
-    case Struct
-    case Time
-    case TimeWithTimeZone
-    case TimeStamp
-    case TimeStampWithTimeZone
-    case TinyInt
-    case VarBinary
-    case VarChar
-}
+import BigInt
 
 public enum DBError: Error {
     case Connection(description: String)
     case Query(description: String)
+    case ConnectionClosed
+    case StatementClosed
+    case ResultSetClosed
+    case Commit
+    case Rollback
+}
+
+/*===============================================================================================================================*/
+/// The labeled types below are currently supported in SwiftDBC. The types
+/// '<code>[Array](https://developer.apple.com/documentation/swift/array/)</code>', `DataLink`, `Distinct`, `JavaObject`, `Ref`,
+/// `RefCursor`, `RowId`, `SqlXml`, and `Struct` are mostly Oracle specific and don't have an equivalence in other databases. They
+/// are not currently supported but may be in the future because of the HUGE popularity of Oracle.
+///
+public enum DataTypes {
+    case Array                 //
+    case Bit                   // Numeric
+    case Binary                // Binary
+    case BigInt                // Numeric
+    case Blob                  // Binary
+    case Boolean               // *Numeric  (some people consider it a numeric; others don't)
+    case Char                  // Text
+    case Clob                  // Text
+    case DataLink              //
+    case Date                  // Date/Time
+    case Decimal               // Numeric
+    case Distinct              //
+    case Double                // Numeric
+    case Float                 // Numeric
+    case Integer               // Numeric
+    case JavaObject            //
+    case LongNVarChar          // Text
+    case LongVarChar           // Text
+    case LongVarBinary         // Binary
+    case NChar                 // Text
+    case NClob                 // Text
+    case Null                  // * - (denotes no datatype)
+    case Numeric               // Numeric
+    case NVarChar              // Text
+    case Other                 //
+    case Real                  // Numeric
+    case Ref                   //
+    case RefCursor             //
+    case RowId                 //
+    case SmallInt              // Numeric
+    case SqlXml                //
+    case Struct                //
+    case Time                  // Date/Time
+    case TimeWithTimeZone      // Date/Time
+    case TimeStamp             // Date/Time
+    case TimeStampWithTimeZone // Date/Time
+    case TinyInt               // Numeric
+    case VarBinary             // Binary
+    case VarChar               // Text
+}
+
+public protocol Closable: AnyObject {
+
+    /*===========================================================================================================================*/
+    /// `true` if the statement is closed.
+    ///
+    var isClosed: Bool { get }
+
+    /*===========================================================================================================================*/
+    /// Closes the statement. Closing the statements automatically closes any open result sets created by this statement.
+    ///
+    func close()
 }
 
 public protocol DBDriver: AnyObject {
@@ -76,9 +101,15 @@ public protocol DBDriver: AnyObject {
 
     func acceptsURL(_ url: String) -> Bool
 
-    func connect(url: String, username: String?, password: String?, properties: [String: Any]) throws -> DBConnection
+    func connect(url: String, username: String?, password: String?, database: String?, properties: [String: Any]) throws -> DBConnection
 
     static func register()
+}
+
+public extension DBDriver {
+    func connect(url: String, username: String? = nil, password: String? = nil, database: String? = nil) throws -> DBConnection {
+        try connect(url: url, username: username, password: password, database: database, properties: [:])
+    }
 }
 
 /*===============================================================================================================================*/
@@ -103,32 +134,24 @@ public protocol DBDriver: AnyObject {
 /// A user may create a new type map, make an entry in it, and pass it to the methods that can perform custom mapping. In this
 /// case, the method will use the given type map instead of the one associated with the connection.
 ///
-public protocol DBConnection {
+public protocol DBConnection: Closable {
 
     var autoCommit:       Bool { get set }
     var networkTimeout:   Int { get }
-    var isClosed:         Bool { get }
     var lastErrorMessage: String { get }
     var metaData:         DBDatabaseMetaData? { get }
-
-    func close()
+    var driver:           DBDriver { get }
 
     func commit() throws
+
+    func rollback() throws
+
+    func reconnect() throws
 
     func createStatement() throws -> DBStatement
 }
 
-public protocol DBStatement {
-
-    /*===========================================================================================================================*/
-    /// `true` if the statement is closed.
-    ///
-    var isClosed: Bool { get }
-
-    /*===========================================================================================================================*/
-    /// Closes the statement. Closing the statements automatically closes any open result sets created by this statement.
-    ///
-    func close()
+public protocol DBStatement: Closable {
 
     /*===========================================================================================================================*/
     /// Executes the given SQL statement, which may return multiple results. In some (uncommon) situations, a single SQL statement
@@ -145,12 +168,81 @@ public protocol DBStatement {
     /// - Throws: if the SQL statement was invalid, the server encountered an error, or there was an I/O error communicating with
     ///           the server.
     ///
-    func execute(sql: String) throws -> Bool
+    func execute(sql: String) throws -> DBNextResults
+
+    func getResultSet() throws -> DBResultSet?
+
+    func getUpdateCount() throws -> Int
+
+    func hasMoreResults() throws -> DBNextResults
 }
 
-public protocol DBDatabaseMetaData {
+public enum DBNextResults {
+    case None
+    case ResultSet
+    case UpdateCount
 }
 
-public protocol DBResultSetMetaData {
+public protocol DBDatabaseMetaData: AnyObject {
+}
 
+/*===============================================================================================================================*/
+/// An object that can be used to get information about the types and properties of the columns in a `DBResultSet` object. The
+/// following code fragment creates the `DBResultSet` object rs, creates the `DBResultSetMetaData` object rsmd, and uses rsmd to
+/// find out how many columns rs has and whether the first column in rs can hold a `NULL` value.
+///
+/// <pre>
+///      let rs: DBResultSet = stmt.executeQuery(sql: "SELECT a, b, c FROM TABLE2")
+///      let rsmd: DBResultSetMetaData = rs.metaData
+///      let numberOfColumns: Int = rsmd.columnCount
+///      let b: Bool = rsmd.isNullable[0]
+/// </pre>
+///
+public protocol DBResultSetMetaData: AnyObject {
+    var columnCount:     Int { get }
+    var name:            [String] { get }
+    var orgName:         [String] { get }
+    var tableName:       [String] { get }
+    var orgTableName:    [String] { get }
+    var database:        [String] { get }
+    var catalog:         [String] { get }
+    var length:          [UInt] { get }
+    var maxLength:       [UInt] { get }
+    var isNullable:      [Bool] { get }
+    var hasDefault:      [Bool] { get }
+    var isAutoIncrement: [Bool] { get }
+    var isUnsigned:      [Bool] { get }
+    var isPrimaryKey:    [Bool] { get }
+    var isUniqueKey:     [Bool] { get }
+    var isIndexed:       [Bool] { get }
+    var decimalCount:    [Int] { get }
+    var dataType:        [DataTypes] { get }
+}
+
+public protocol DBResultSet: Closable {
+
+    var metaData: DBResultSetMetaData { get }
+
+    func next() throws -> Bool
+
+    func getString(index: Int) throws -> String?
+    func getString(name: String) throws -> String?
+
+    func getByte(index: Int) throws -> Int8?
+    func getByte(name: String) throws -> Int8?
+
+    func getShort(index: Int) throws -> Int16?
+    func getShort(name: String) throws -> Int16?
+
+    func getInt(index: Int) throws -> Int?
+    func getInt(name: String) throws -> Int?
+
+    func getLong(index: Int) throws -> Int64?
+    func getLong(name: String) throws -> Int64?
+
+    func getBigInt(index: Int) throws -> BigInt?
+    func getBitInt(name: String) throws -> BigInt?
+
+    func getBool(index: Int) throws -> String?
+    func getBool(name: String) throws -> String?
 }

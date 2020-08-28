@@ -25,19 +25,27 @@ import MySQL
 
 let DBConnectionWillClose = Notification.Name("DBConnectionWillClose")
 let DBStatementWillClose  = Notification.Name("DBStatementWillClose")
+let DBResultSetWillClose  = Notification.Name("DBResultSetWillClose")
 
 class MySQLConnection: DBConnection {
 
-    var isClosed:         Bool                = true
-    var autoCommit:       Bool                = false
     let networkTimeout:   Int                 = 30000
+    var isClosed:         Bool                = true
     var metaData:         DBDatabaseMetaData? = nil
+    var driver:           DBDriver { MySQLDriver.defaultDriver }
     var lastErrorMessage: String {
         if let msg: UnsafePointer<CChar> = mysql_error(mysql) {
             return String(cString: msg, encoding: String.Encoding.utf8) ?? "Unknown"
         }
         else {
             return ""
+        }
+    }
+    var autoCommit:       Bool {
+        get { _autoCommit }
+        set {
+            _autoCommit = newValue
+            mysql_autocommit(mysql, _autoCommit)
         }
     }
 
@@ -49,6 +57,8 @@ class MySQLConnection: DBConnection {
     let database: String?
     var isInit:   Bool = false
 
+    private var _autoCommit: Bool = false
+
     init(host: String, port: Int, username: String?, password: String?, database: String?, query: [String: String]) throws {
         self.host = host
         self.port = port
@@ -58,8 +68,7 @@ class MySQLConnection: DBConnection {
 
         if let m0: UnsafeMutablePointer<MYSQL> = mysql_init(nil) {
             self.mysql = m0
-            self.isInit = true
-            try reconnect()
+            try connect()
         }
         else {
             throw DBError.Connection(description: "Unable to allocate memory for database connection to: \(host):\(port)/\(database ?? "")")
@@ -67,16 +76,28 @@ class MySQLConnection: DBConnection {
     }
 
     func reconnect() throws {
+        close()
+        if let m0: UnsafeMutablePointer<MYSQL> = mysql_init(nil) {
+            self.mysql = m0
+            try connect()
+        }
+        else {
+            throw DBError.Connection(description: "Unable to allocate memory for database connection to: \(host):\(port)/\(database ?? "")")
+        }
+    }
+
+    private func connect() throws {
         var to: UInt32 = UInt32(networkTimeout / 1000)
         var rc: UInt32 = 1
 
-        close()
+        isInit = true
         mysql_options(mysql, MYSQL_SET_CHARSET_NAME, MySQLDefaultCharacterSet)
         mysql_options(mysql, MYSQL_OPT_CONNECT_TIMEOUT, &to)
         mysql_options(mysql, MYSQL_OPT_RECONNECT, &rc)
 
         if let _ = mysql_real_connect(mysql, host, username, password, database, UInt32(port), nil, CLIENT_MULTI_STATEMENTS | CLIENT_MULTI_RESULTS) {
             isClosed = false
+            autoCommit = true
             mysql_set_character_set(mysql, MySQLDefaultCharacterSet)
         }
         else {
@@ -96,10 +117,21 @@ class MySQLConnection: DBConnection {
             mysql_close(mysql)
             isInit = false
             isClosed = true
+            _autoCommit = false
         }
     }
 
-    func commit() throws {}
+    func commit() throws {
+        if !mysql_commit(mysql) {
+            throw DBError.Commit
+        }
+    }
 
-    func createStatement() throws -> DBStatement { fatalError("createStatement() has not been implemented") }
+    func rollback() throws {
+        if !mysql_rollback(mysql) {
+            throw DBError.Rollback
+        }
+    }
+
+    func createStatement() throws -> DBStatement { MySQLStatement(self) }
 }

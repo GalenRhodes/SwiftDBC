@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1117D2F0001CA04F94614A41 /* Conditional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D1F854A96951152A82DE /* Conditional.swift */; };
 		1117D340F59D6B4CC63EBCC7 /* DBDriverManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D336A48F311EDA9F19F0 /* DBDriverManager.swift */; };
-		1117D3B3FD70D3FBE6BE6B0A /* SwiftDBCMySQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D2AB0879DF8A786478A5 /* SwiftDBCMySQL.swift */; };
+		1117D3B3FD70D3FBE6BE6B0A /* MySQLDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D2AB0879DF8A786478A5 /* MySQLDriver.swift */; };
+		1117D54213F1D15D13FE62B7 /* MySQLResultSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D5465EB5F4C00FCB99AF /* MySQLResultSet.swift */; };
 		1117D59BEF9F0FB50DDD3A28 /* MySQLStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D6E41BE400A5B6B34A70 /* MySQLStatement.swift */; };
 		1117D780478B909B31153A6B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D1B64D0BC9BBDB00B376 /* Extensions.swift */; };
 		1117D8F8FDCFE5D006B99E20 /* MySQLConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D48586EB886859139ED6 /* MySQLConnection.swift */; };
@@ -79,11 +81,13 @@
 
 /* Begin PBXFileReference section */
 		1117D1B64D0BC9BBDB00B376 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		1117D2AB0879DF8A786478A5 /* SwiftDBCMySQL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDBCMySQL.swift; sourceTree = "<group>"; };
+		1117D1F854A96951152A82DE /* Conditional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conditional.swift; sourceTree = "<group>"; };
+		1117D2AB0879DF8A786478A5 /* MySQLDriver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySQLDriver.swift; sourceTree = "<group>"; };
 		1117D2F251F45848C27AD36E /* .jazzy.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .jazzy.yaml; sourceTree = "<group>"; };
 		1117D336A48F311EDA9F19F0 /* DBDriverManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBDriverManager.swift; sourceTree = "<group>"; };
 		1117D39172ECCCC0BE767CDF /* build.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
 		1117D48586EB886859139ED6 /* MySQLConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySQLConnection.swift; sourceTree = "<group>"; };
+		1117D5465EB5F4C00FCB99AF /* MySQLResultSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySQLResultSet.swift; sourceTree = "<group>"; };
 		1117D587C1728BC8B78FB3FC /* docfixer.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = docfixer.sh; sourceTree = "<group>"; };
 		1117D6E41BE400A5B6B34A70 /* MySQLStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySQLStatement.swift; sourceTree = "<group>"; };
 		1117D79D3983856A5B2EC430 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -153,9 +157,10 @@
 		1117DFEADF76D001AAC33C00 /* MySQL */ = {
 			isa = PBXGroup;
 			children = (
-				1117D2AB0879DF8A786478A5 /* SwiftDBCMySQL.swift */,
+				1117D2AB0879DF8A786478A5 /* MySQLDriver.swift */,
 				1117D48586EB886859139ED6 /* MySQLConnection.swift */,
 				1117D6E41BE400A5B6B34A70 /* MySQLStatement.swift */,
+				1117D5465EB5F4C00FCB99AF /* MySQLResultSet.swift */,
 			);
 			path = MySQL;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 				1117D336A48F311EDA9F19F0 /* DBDriverManager.swift */,
 				1117D1B64D0BC9BBDB00B376 /* Extensions.swift */,
 				1117DFEADF76D001AAC33C00 /* MySQL */,
+				1117D1F854A96951152A82DE /* Conditional.swift */,
 			);
 			path = SwiftDBC;
 			sourceTree = "<group>";
@@ -338,6 +344,9 @@
 			dependencies = (
 			);
 			name = SwiftDBC;
+			packageProductDependencies = (
+				8348A2BC24F98F5F0082E62A,
+			);
 			productName = SwiftDBC;
 			productReference = 83D2DEEA24F52E25003D6E14 /* SwiftDBC.framework */;
 			productType = "com.apple.product-type.framework";
@@ -391,6 +400,9 @@
 				Base,
 			);
 			mainGroup = 83D2DEE024F52E25003D6E14;
+			packageReferences = (
+				8348A2BB24F98F5F0082E62A,
+			);
 			productRefGroup = 83D2DEEB24F52E25003D6E14 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -435,9 +447,11 @@
 				83D2DF0524F52F2E003D6E14 /* DataTypes.swift in Sources */,
 				1117D340F59D6B4CC63EBCC7 /* DBDriverManager.swift in Sources */,
 				1117D780478B909B31153A6B /* Extensions.swift in Sources */,
-				1117D3B3FD70D3FBE6BE6B0A /* SwiftDBCMySQL.swift in Sources */,
+				1117D3B3FD70D3FBE6BE6B0A /* MySQLDriver.swift in Sources */,
 				1117D8F8FDCFE5D006B99E20 /* MySQLConnection.swift in Sources */,
 				1117D59BEF9F0FB50DDD3A28 /* MySQLStatement.swift in Sources */,
+				1117D54213F1D15D13FE62B7 /* MySQLResultSet.swift in Sources */,
+				1117D2F0001CA04F94614A41 /* Conditional.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -748,6 +762,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8348A2BB24F98F5F0082E62A = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/attaswift/BigInt.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8348A2BC24F98F5F0082E62A = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8348A2BB24F98F5F0082E62A;
+			productName = BigInt;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83D2DEE124F52E25003D6E14 /* Project object */;
 }

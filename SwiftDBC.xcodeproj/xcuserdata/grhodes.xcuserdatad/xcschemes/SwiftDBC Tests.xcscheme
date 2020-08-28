@@ -26,6 +26,11 @@
                BlueprintName = "SwiftDBCTests"
                ReferencedContainer = "container:SwiftDBC.xcodeproj">
             </BuildableReference>
+            <SelectedTests>
+               <Test
+                  Identifier = "SwiftDBCTests/testDriverManager">
+               </Test>
+            </SelectedTests>
          </TestableReference>
       </Testables>
    </TestAction>

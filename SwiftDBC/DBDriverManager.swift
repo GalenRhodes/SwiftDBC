@@ -33,22 +33,42 @@ public typealias DBDeregisterLambda = () -> Void
 /// The driver manager. The driver manager maintains a list of currently registered drivers. When a connection to a database is
 /// required then a call to the driver manager's `connect(url:username:password:properties:)` method will locate the appropriate
 /// driver for the given URL and then create and return a connection object.
-/// 
+///
 /// Drivers are registered by calling their `DBDriver.register()` class method.
 ///
-open class DBDriverManager {
+public class DBDriverManager {
 
     /*===========================================================================================================================*/
     /// The shared instance of the driver manager.
     ///
     public static let manager: DBDriverManager = DBDriverManager()
 
+    /*===========================================================================================================================*/
+    /// The list of registered drivers.
+    ///
     var driverList: [DriverItem] = []
+
+    /*===========================================================================================================================*/
+    /// Initializes the driver mananger. It's marked private because we want folks to use the singleton from the `manager` class
+    /// property.
+    ///
+    private init() {
+        MySQLDriver.defaultDriver.register(driverManager: self)
+    }
+
+    /*===========================================================================================================================*/
+    /// For some reason this is never called for a singleton when an application terminates.
+    ///
+    deinit {
+        var l: [DBDriver] = []
+        for i in driverList { l.append(i.driver) }
+        for d in l { deregister(driver: d) }
+    }
 
     /*===========================================================================================================================*/
     /// Registers a driver with the driver manager. You should not call this method directly but, rather, it should be called by
     /// the driver's `DBDriver.register()` class method. If the driver is already registered then this method does nothing.
-    /// 
+    ///
     /// - Parameters:
     ///   - driver: the instance of the driver.
     ///   - deregisterLambda: a lambda (closure) that is called when the driver is deregistered.
@@ -61,7 +81,7 @@ open class DBDriverManager {
 
     /*===========================================================================================================================*/
     /// Deregisters the given driver. If the driver is not already registered then this method does nothing.
-    /// 
+    ///
     /// - Parameter driver: the driver.
     ///
     public func deregister(driver: DBDriver) {
@@ -71,7 +91,7 @@ open class DBDriverManager {
 
     /*===========================================================================================================================*/
     /// Connect to a database.
-    /// 
+    ///
     /// - Parameters:
     ///   - url: the URL which starts as "SwiftDBC:"
     ///   - username: the username if any.
@@ -80,19 +100,17 @@ open class DBDriverManager {
     /// - Returns: the connection to the database.
     /// - Throws: if an error occurs.
     ///
-    public func connect(url: String, username: String? = nil, password: String? = nil, properties: [String:Any] = [:]) throws -> DBConnection {
+    public func connect(url: String, username: String? = nil, password: String? = nil, properties: [String: Any] = [:]) throws -> DBConnection {
         if url.hasPrefix("\(SwiftDBCPrefix):") {
             for item: DriverItem in driverList {
                 if item.driver.acceptsURL(url) {
-                    return try item.driver.connect(url: url, username: username, password: password, properties: properties)
+                    return try item.driver.connect(url: url, username: username, password: password, database: nil, properties: properties)
                 }
             }
         }
 
         throw DBError.Connection(description: "URL not recognized by any registered drivers: \(url)")
     }
-
-    private init() {}
 }
 
 class DriverItem {

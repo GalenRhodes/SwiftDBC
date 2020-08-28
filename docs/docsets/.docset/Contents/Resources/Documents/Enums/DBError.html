@@ -14,7 +14,7 @@
     <a title="DBError Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SwiftDBC©</a> (14% documented)</p>
+        <p><a href="../index.html">SwiftDBC©</a> (11% documented)</p>
         <p class="header-right"><a href="https://github.com/GalenRhodes/SwiftDBC"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -31,6 +31,9 @@
           <li class="nav-group-name">
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Conditional.html">Conditional</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Classes/DBDriverManager.html">DBDriverManager</a>
               </li>
@@ -49,6 +52,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/DBError.html">DBError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DBNextResults.html">DBNextResults</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/DataTypes.html">DataTypes</a>
@@ -73,10 +79,22 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Protocols/Closable.html">Closable</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/DBConnection.html">DBConnection</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols.html#/s:8SwiftDBC18DBDatabaseMetaDataP">DBDatabaseMetaData</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/DBDriver.html">DBDriver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DBResultSet.html">DBResultSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DBResultSetMetaData.html">DBResultSetMetaData</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/DBStatement.html">DBStatement</a>
@@ -166,12 +184,157 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC7DBErrorO16ConnectionClosedyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/ConnectionClosed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC7DBErrorO16ConnectionClosedyA2CmF">ConnectionClosed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">ConnectionClosed</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC7DBErrorO15StatementClosedyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/StatementClosed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC7DBErrorO15StatementClosedyA2CmF">StatementClosed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">StatementClosed</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC7DBErrorO15ResultSetClosedyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/ResultSetClosed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC7DBErrorO15ResultSetClosedyA2CmF">ResultSetClosed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">ResultSetClosed</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC7DBErrorO6CommityA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/Commit" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC7DBErrorO6CommityA2CmF">Commit</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Commit</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC7DBErrorO8RollbackyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/Rollback" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC7DBErrorO8RollbackyA2CmF">Rollback</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Rollback</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://blog.projectgalen.com" target="_blank" rel="external">Galen Rhodes</a>. All rights reserved. (Last updated: 2020-08-26)</p>
+          <p>&copy; 2020 <a class="link" href="https://blog.projectgalen.com" target="_blank" rel="external">Galen Rhodes</a>. All rights reserved. (Last updated: 2020-08-28)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

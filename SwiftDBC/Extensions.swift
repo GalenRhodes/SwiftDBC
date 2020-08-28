@@ -22,6 +22,19 @@
 
 import Foundation
 
+prefix operator ++
+prefix operator --
+postfix operator ++
+postfix operator --
+
+@inlinable @discardableResult public prefix func ++ <T>(num: inout T) -> T where T: BinaryInteger { num += 1; return num }
+
+@inlinable @discardableResult public prefix func -- <T>(num: inout T) -> T where T: BinaryInteger { num -= 1; return num }
+
+@inlinable @discardableResult public postfix func ++ <T>(num: inout T) -> T where T: BinaryInteger { let _num = num; ++num; return _num }
+
+@inlinable @discardableResult public postfix func -- <T>(num: inout T) -> T where T: BinaryInteger { let _num = num; --num; return _num }
+
 extension String {
 
     @inlinable func substringWith(nsRange: NSRange) -> String? {

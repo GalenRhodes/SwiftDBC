@@ -1,6 +1,34 @@
 {
   "warnings": [
     {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/Conditional.swift",
+      "line": 25,
+      "symbol": "Conditional",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/Conditional.swift",
+      "line": 29,
+      "symbol": "Conditional.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/Conditional.swift",
+      "line": 31,
+      "symbol": "Conditional.withLock(lambda:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/Conditional.swift",
+      "line": 40,
+      "symbol": "Conditional.withLockWait(cond:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DBDriverManager.swift",
       "line": 25,
       "symbol": "SwiftDBCPrefix",
@@ -10,400 +38,652 @@
     {
       "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
       "line": 25,
-      "symbol": "DataTypes",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 26,
-      "symbol": "DataTypes.Array",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 27,
-      "symbol": "DataTypes.Bit",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 28,
-      "symbol": "DataTypes.Binary",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 29,
-      "symbol": "DataTypes.BigInt",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 30,
-      "symbol": "DataTypes.Blob",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 31,
-      "symbol": "DataTypes.Boolean",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 32,
-      "symbol": "DataTypes.Char",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 33,
-      "symbol": "DataTypes.Clob",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 34,
-      "symbol": "DataTypes.DataLink",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 35,
-      "symbol": "DataTypes.Date",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 36,
-      "symbol": "DataTypes.Decimal",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 37,
-      "symbol": "DataTypes.Distinct",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 38,
-      "symbol": "DataTypes.Double",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 39,
-      "symbol": "DataTypes.Float",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 40,
-      "symbol": "DataTypes.Integer",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 41,
-      "symbol": "DataTypes.JavaObject",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 42,
-      "symbol": "DataTypes.LongNVarChar",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 43,
-      "symbol": "DataTypes.LongVarChar",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 44,
-      "symbol": "DataTypes.LongVarBinary",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 45,
-      "symbol": "DataTypes.NChar",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 46,
-      "symbol": "DataTypes.NClob",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 47,
-      "symbol": "DataTypes.Null",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 48,
-      "symbol": "DataTypes.Numeric",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 49,
-      "symbol": "DataTypes.NVarChar",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 50,
-      "symbol": "DataTypes.Other",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 51,
-      "symbol": "DataTypes.Real",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 52,
-      "symbol": "DataTypes.Ref",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 53,
-      "symbol": "DataTypes.RefCursor",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 54,
-      "symbol": "DataTypes.RowId",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 55,
-      "symbol": "DataTypes.SmallInt",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 56,
-      "symbol": "DataTypes.SqlXml",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 57,
-      "symbol": "DataTypes.Struct",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 58,
-      "symbol": "DataTypes.Time",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 59,
-      "symbol": "DataTypes.TimeWithTimeZone",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 60,
-      "symbol": "DataTypes.TimeStamp",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 61,
-      "symbol": "DataTypes.TimeStampWithTimeZone",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 62,
-      "symbol": "DataTypes.TinyInt",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 63,
-      "symbol": "DataTypes.VarBinary",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 64,
-      "symbol": "DataTypes.VarChar",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 67,
       "symbol": "DBError",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 68,
+      "line": 26,
       "symbol": "DBError.Connection(description:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 69,
+      "line": 27,
       "symbol": "DBError.Query(description:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 28,
+      "symbol": "DBError.ConnectionClosed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 29,
+      "symbol": "DBError.StatementClosed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 30,
+      "symbol": "DBError.ResultSetClosed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 31,
+      "symbol": "DBError.Commit",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 32,
+      "symbol": "DBError.Rollback",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 42,
+      "symbol": "DataTypes.Array",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 43,
+      "symbol": "DataTypes.Bit",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 44,
+      "symbol": "DataTypes.Binary",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 45,
+      "symbol": "DataTypes.BigInt",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 46,
+      "symbol": "DataTypes.Blob",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 47,
+      "symbol": "DataTypes.Boolean",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 48,
+      "symbol": "DataTypes.Char",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 49,
+      "symbol": "DataTypes.Clob",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 50,
+      "symbol": "DataTypes.DataLink",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 51,
+      "symbol": "DataTypes.Date",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 52,
+      "symbol": "DataTypes.Decimal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 53,
+      "symbol": "DataTypes.Distinct",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 54,
+      "symbol": "DataTypes.Double",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 55,
+      "symbol": "DataTypes.Float",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 56,
+      "symbol": "DataTypes.Integer",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 57,
+      "symbol": "DataTypes.JavaObject",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 58,
+      "symbol": "DataTypes.LongNVarChar",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 59,
+      "symbol": "DataTypes.LongVarChar",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 60,
+      "symbol": "DataTypes.LongVarBinary",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 61,
+      "symbol": "DataTypes.NChar",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 62,
+      "symbol": "DataTypes.NClob",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 63,
+      "symbol": "DataTypes.Null",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 64,
+      "symbol": "DataTypes.Numeric",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 65,
+      "symbol": "DataTypes.NVarChar",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 66,
+      "symbol": "DataTypes.Other",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 67,
+      "symbol": "DataTypes.Real",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 68,
+      "symbol": "DataTypes.Ref",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 69,
+      "symbol": "DataTypes.RefCursor",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 70,
+      "symbol": "DataTypes.RowId",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
       "line": 71,
+      "symbol": "DataTypes.SmallInt",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 72,
+      "symbol": "DataTypes.SqlXml",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 73,
+      "symbol": "DataTypes.Struct",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 74,
+      "symbol": "DataTypes.Time",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 75,
+      "symbol": "DataTypes.TimeWithTimeZone",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 76,
+      "symbol": "DataTypes.TimeStamp",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 77,
+      "symbol": "DataTypes.TimeStampWithTimeZone",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 78,
+      "symbol": "DataTypes.TinyInt",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 79,
+      "symbol": "DataTypes.VarBinary",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 80,
+      "symbol": "DataTypes.VarChar",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 83,
+      "symbol": "Closable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 96,
       "symbol": "DBDriver",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 73,
+      "line": 98,
       "symbol": "DBDriver.majorVersion",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 74,
+      "line": 99,
       "symbol": "DBDriver.minorVersion",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 76,
+      "line": 101,
       "symbol": "DBDriver.acceptsURL(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 78,
+      "line": 103,
       "symbol": "DBDriver.connect(url:username:password:properties:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 80,
+      "line": 105,
       "symbol": "DBDriver.register()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 107,
+      "line": 132,
       "symbol": "DBConnection.autoCommit",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 108,
+      "line": 133,
       "symbol": "DBConnection.networkTimeout",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 109,
-      "symbol": "DBConnection.isClosed",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 110,
+      "line": 134,
       "symbol": "DBConnection.lastErrorMessage",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 112,
-      "symbol": "DBConnection.close()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "line": 135,
+      "symbol": "DBConnection.metaData",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 114,
+      "line": 136,
+      "symbol": "DBConnection.driver",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 138,
       "symbol": "DBConnection.commit()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 116,
+      "line": 140,
+      "symbol": "DBConnection.rollback()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 142,
+      "symbol": "DBConnection.reconnect()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 144,
       "symbol": "DBConnection.createStatement()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
-      "line": 119,
+      "line": 147,
       "symbol": "DBStatement",
       "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 166,
+      "symbol": "DBStatement.getResultSet()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 168,
+      "symbol": "DBStatement.getUpdateCount()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 170,
+      "symbol": "DBStatement.hasMoreResults()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 173,
+      "symbol": "DBNextResults",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 174,
+      "symbol": "DBNextResults.None",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 175,
+      "symbol": "DBNextResults.ResultSet",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 176,
+      "symbol": "DBNextResults.UpdateCount",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 179,
+      "symbol": "DBDatabaseMetaData",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 195,
+      "symbol": "DBResultSetMetaData.columnCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 196,
+      "symbol": "DBResultSetMetaData.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 197,
+      "symbol": "DBResultSetMetaData.orgName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 198,
+      "symbol": "DBResultSetMetaData.tableName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 199,
+      "symbol": "DBResultSetMetaData.orgTableName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 200,
+      "symbol": "DBResultSetMetaData.database",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 201,
+      "symbol": "DBResultSetMetaData.catalog",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 202,
+      "symbol": "DBResultSetMetaData.length",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 203,
+      "symbol": "DBResultSetMetaData.maxLength",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 204,
+      "symbol": "DBResultSetMetaData.isNullable",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 205,
+      "symbol": "DBResultSetMetaData.hasDefault",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 206,
+      "symbol": "DBResultSetMetaData.isAutoIncrement",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 207,
+      "symbol": "DBResultSetMetaData.isUnsigned",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 208,
+      "symbol": "DBResultSetMetaData.isPrimaryKey",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 209,
+      "symbol": "DBResultSetMetaData.isUniqueKey",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 210,
+      "symbol": "DBResultSetMetaData.isIndexed",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 211,
+      "symbol": "DBResultSetMetaData.decimalCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 212,
+      "symbol": "DBResultSetMetaData.dataType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 215,
+      "symbol": "DBResultSet",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 217,
+      "symbol": "DBResultSet.metaData",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/DataTypes.swift",
+      "line": 219,
+      "symbol": "DBResultSet.next()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
