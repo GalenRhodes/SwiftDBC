@@ -23,25 +23,31 @@
 import Foundation
 import MySQL
 
-let DBConnectionWillClose = Notification.Name("DBConnectionWillClose")
-let DBStatementWillClose  = Notification.Name("DBStatementWillClose")
-let DBResultSetWillClose  = Notification.Name("DBResultSetWillClose")
+@usableFromInline let DBConnectionWillClose = Notification.Name("DBConnectionWillClose")
+@usableFromInline let DBStatementWillClose  = Notification.Name("DBStatementWillClose")
+@usableFromInline let DBResultSetWillClose  = Notification.Name("DBResultSetWillClose")
 
-let MySQLDefaultCharacterSet: String = "utf8mb4"
-let MySQLDBCPrefix:           String = "\(SwiftDBCPrefix):mysql"
+@usableFromInline let cCharAlignment: Int = MemoryLayout<CChar>.alignment
+@usableFromInline let MySQLDefaultCharacterSet: String = "utf8mb4"
+@usableFromInline let MySQLDBCPrefix:           String = "\(SwiftDBCPrefix):mysql"
 
-@inlinable func _get(str: String, result: NSTextCheckingResult, group: Int) -> String? { ((group < result.numberOfRanges) ? str.substringWith(nsRange: result.range(at: group)) : nil) }
+@inlinable func _get(str: String, result: NSTextCheckingResult, group: Int) -> String? {
+    ((group < result.numberOfRanges) ? str.substringWith(nsRange: result.range(at: group)) : nil)
+}
 
 @inlinable func testFlag(fieldValue: UInt32, flag: Int32) -> Bool {
     let i: UInt32 = UInt32(flag)
     return ((fieldValue & i) == i)
 }
 
-@inlinable func getString(cStr: UnsafeMutablePointer<Int8>) -> String {
-    String(cString: UnsafePointer<CChar>(cStr), encoding: String.Encoding.utf8) ?? ""
+@inlinable func getString(cStr: UnsafeMutablePointer<CChar>, length: Int) -> String {
+    let mp: UnsafeMutableRawPointer = UnsafeMutableRawPointer.allocate(byteCount: (length + 1), alignment: cCharAlignment);
+    mp.initializeMemory(as: CChar.self, from: UnsafePointer<CChar>(cStr), count: length)
+    mp.storeBytes(of: CChar(0), toByteOffset: length, as: CChar.self)
+    return String(bytesNoCopy: mp, length: length, encoding: String.Encoding.utf8, freeWhenDone: true) ?? ""
 }
 
-func getDataType(id: enum_field_types, charSetId: Int, decDigits dc: UInt) -> DataTypes {
+@usableFromInline func getDataType(id: enum_field_types, charSetId: Int, decDigits dc: UInt) -> DataTypes {
     //---------------------------------------------
     // Try to get as close to a match as possible.
     //---------------------------------------------

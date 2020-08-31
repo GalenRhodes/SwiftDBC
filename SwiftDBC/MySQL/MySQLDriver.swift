@@ -33,15 +33,6 @@ class MySQLDriver: DBDriver {
         mysql_server_init(0, nil, nil)
     }
 
-    deinit {
-        print("MySQLDriver is dying...")
-    }
-
-    func releaseClientLibrary() {
-        // Release any resources used by the library.
-        mysql_server_end()
-    }
-
     func acceptsURL(_ url: String) -> Bool {
         url.hasPrefix("\(MySQLDBCPrefix):")
     }
@@ -95,7 +86,7 @@ class MySQLDriver: DBDriver {
     }
 
     func register(driverManager: DBDriverManager) {
-        driverManager.register(driver: self, deregisterLambda: { self.releaseClientLibrary() })
+        driverManager.register(driver: self, deregisterLambda: { mysql_server_end() })
     }
 
     /*===========================================================================================================================*/

@@ -248,7 +248,7 @@ class SwiftDBCTests: XCTestCase {
 
     func testDriverManager() throws {
         let url: String = "swiftdbc:mysql://grhodes-dev:Leising1970!@goober:3306/RHODES"
-        let conn: DBConnection = try DBDriverManager.manager.connect(url: url)
+        let _: DBConnection = try DBDriverManager.manager.connect(url: url)
         print("Success!")
     }
 

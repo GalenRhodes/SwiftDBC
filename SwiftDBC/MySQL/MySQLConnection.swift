@@ -62,8 +62,8 @@ class MySQLConnection: DBConnection {
         self.password = password
         self.database = database
 
-        if let m0: UnsafeMutablePointer<MYSQL> = mysql_init(nil) {
-            self.mysql = m0
+        if let _mysql: UnsafeMutablePointer<MYSQL> = mysql_init(nil) {
+            self.mysql = _mysql
             try connect()
         }
         else {
@@ -84,7 +84,7 @@ class MySQLConnection: DBConnection {
 
     private func connect() throws {
         var to: UInt32 = UInt32(networkTimeout / 1000)
-        var rc: UInt32 = 1
+        var rc: Bool   = true
 
         isInit = true
         mysql_options(mysql, MYSQL_SET_CHARSET_NAME, MySQLDefaultCharacterSet)
@@ -129,5 +129,7 @@ class MySQLConnection: DBConnection {
         }
     }
 
-    func createStatement() throws -> DBStatement { MySQLStatement(self) }
+    func createStatement() throws -> DBStatement {
+        MySQLStatement(self)
+    }
 }

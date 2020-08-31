@@ -122,9 +122,7 @@ class MySQLStatement: DBStatement {
 
     private func processStatementResults(result: UnsafeMutablePointer<MYSQL_RES>?) -> MultiResultBlock {
         if let result: UnsafeMutablePointer<MYSQL_RES> = result {
-            do { return MultiResultBlock(resultSet: try MySQLResultSet(self, result)) }
-            catch let e as DBError { return MultiResultBlock(error: e) }
-            catch { return MultiResultBlock(error: DBError.Query(description: "Unknown Error")) }
+            return MultiResultBlock(resultSet: MySQLResultSet(self, result))
         }
         else if mysql_field_count(conn.mysql) == 0 {
             return MultiResultBlock(updateCount: mysql_affected_rows(conn.mysql))
