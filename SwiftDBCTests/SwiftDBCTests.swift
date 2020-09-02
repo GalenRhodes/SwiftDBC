@@ -258,7 +258,7 @@ class SwiftDBCTests: XCTestCase {
                     print("-----------------------------------------------------------------------")
                     while try rs.hasNextRow() {
                         for i in (0 ..< rs.metaData.columnCount) {
-                            print("\(rs.metaData[i].name): \"\((try rs.getString(index: i)) ?? "-ERR-")\"")
+                            print("\(rs.metaData[i].name): \"\((try rs.getString(index: i)) ?? "")\"")
                         }
                         print("-----------------------------------------------------------------------")
                     }
