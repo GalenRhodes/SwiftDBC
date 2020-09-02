@@ -55,7 +55,7 @@ class MySQLResultSet: DBResultSet {
 
     var wasNextCalled: Bool = false
 
-    let lock: NSRecursiveLock = NSRecursiveLock()
+    let lock: RecursiveLock = RecursiveLock()
 
     /*===========================================================================================================================*/
     /// Initializes this result set by reading all of the rows returned by the database.

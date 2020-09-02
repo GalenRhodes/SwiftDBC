@@ -24,6 +24,7 @@
 		1117DD2D149866F0205E2877 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D44CDDCBF58E136D2F89 /* Extensions.swift */; };
 		1117DDFB029CACACC49237DC /* DBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D675CF52BB254A620CBF /* DBError.swift */; };
 		1117DF899AEC832F8DF48C87 /* DBConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117DB6E82154001664799F4 /* DBConnection.swift */; };
+		1117DFB341B01D30F6959C21 /* RecursiveLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D6C58A7C3ABD9082C7A0 /* RecursiveLock.swift */; };
 		830EDA7124F67CF900B2BD00 /* mysqlx_ername.h in Headers */ = {isa = PBXBuildFile; fileRef = 830EDA6024F67CF800B2BD00 /* mysqlx_ername.h */; };
 		830EDA7224F67CF900B2BD00 /* mysql.h in Headers */ = {isa = PBXBuildFile; fileRef = 830EDA6124F67CF800B2BD00 /* mysql.h */; };
 		830EDA7324F67CF900B2BD00 /* mysql_com.h in Headers */ = {isa = PBXBuildFile; fileRef = 830EDA6224F67CF800B2BD00 /* mysql_com.h */; };
@@ -101,6 +102,7 @@
 		1117D4FC94C2A099B546F07F /* DBTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBTools.swift; sourceTree = "<group>"; };
 		1117D5465EB5F4C00FCB99AF /* MySQLResultSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySQLResultSet.swift; sourceTree = "<group>"; };
 		1117D675CF52BB254A620CBF /* DBError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBError.swift; sourceTree = "<group>"; };
+		1117D6C58A7C3ABD9082C7A0 /* RecursiveLock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecursiveLock.swift; sourceTree = "<group>"; };
 		1117D6E41BE400A5B6B34A70 /* MySQLStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySQLStatement.swift; sourceTree = "<group>"; };
 		1117D6E75339DBF7DA3AB6C0 /* MySQLTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySQLTools.swift; sourceTree = "<group>"; };
 		1117D735E14C8BF1AFD3E6BE /* MySQLResultSetMetaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySQLResultSetMetaData.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				1117DBA6FE815A9EAFA98985 /* Conditional.swift */,
 				1117D44CDDCBF58E136D2F89 /* Extensions.swift */,
 				1117D4FC94C2A099B546F07F /* DBTools.swift */,
+				1117D6C58A7C3ABD9082C7A0 /* RecursiveLock.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				1117D4579C1380B9A318C786 /* Conditional.swift in Sources */,
 				1117DD2D149866F0205E2877 /* Extensions.swift in Sources */,
 				1117D8A8F5367BF6DB998170 /* DBTools.swift in Sources */,
+				1117DFB341B01D30F6959C21 /* RecursiveLock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,7 +13,7 @@
     <a title="  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SwiftDBC©</a> (8% documented)</p>
+        <p><a href="index.html">SwiftDBC©</a> (7% documented)</p>
         <p class="header-right"><a href="https://github.com/GalenRhodes/SwiftDBC"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -35,6 +35,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/DBDriverManager.html">DBDriverManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RecursiveLock.html">RecursiveLock</a>
               </li>
             </ul>
           </li>
@@ -65,9 +68,6 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Extensions/Array.html">Array</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/NSRecursiveLock.html">NSRecursiveLock</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/NSRegularExpression.html">NSRegularExpression</a>
@@ -145,12 +145,79 @@
 <h1 id='mysql-implementation' class='heading'>MySQL Implementation</h1>
 
 <p>The first database system that is implemented is MySQL.</p>
-<h3 id='mysql-dependency' class='heading'>MySQL Dependency</h3>
+<h2 id='mysql-dependency' class='heading'>MySQL Dependency</h2>
 
 <p>Naturally there is a dependency on the MySQL libraries. Currently, the MySQL 8.0.19 for Mac OS X client libraries <em>(libcrypto.1.1.dylib, libmysqlclient.2.1.dylib, and libssl.1.1.dylib)</em> are included in this project and I&rsquo;m embedding those libraries into the Framework object and linking against them. If you&rsquo;re building this on Linux you&rsquo;ll need to install the client library and link against those instead.</p>
 <h1 id='help-appreciated' class='heading'>Help Appreciated!</h1>
 
 <p>If some industrious folks want to fork this project and start working on support for other databases such as <em>(but not limited to)</em> Oracle, Postgre, Microsoft SQL Server, etc. Please feel free and I&rsquo;ll gladly consider your pull requests! 😎</p>
+<h1 id='swifty-stuff' class='heading'>Swifty Stuff</h1>
+
+<p>Here&rsquo;s just a few of the places where I&rsquo;ve taken advantage of Swift&rsquo;s features.</p>
+<h2 id='nsrecursivelock-gt-recursivelock' class='heading'>NSRecursiveLock -&gt; RecursiveLock</h2>
+
+<p>Even though they&rsquo;ve included a version of <a href="https://developer.apple.com/documentation/foundation/nsrecursivelock">NSRecursiveLock</a> in the open source version of Swift I still get nervous that one day all the NS* classes will suddenly disappear. So I created a wrapper around NSRecursiveLock called simply &ldquo;RecursiveLock&rdquo;. That way if I suddenly have to recreate it at least I won&rsquo;t have to rename it.</p>
+
+<p>Also as part of RecursiveLock I&rsquo;ve create a method called:</p>
+
+<pre>func withLock&lt;T&gt;(_ lambda: () throws -> T) rethrows -> T</pre>
+
+<p>So that rather than the standard design pattern of:</p>
+
+<pre>
+do {
+    lock.lock()
+    defer { lock.unlock() }
+    /* Do something here. */
+}
+</pre>
+
+<p>We can now just do this:</p>
+
+<pre>
+lock.withLock { /* Do something here. */ }
+</pre>
+
+<p>It will even allow returned values and throws.</p>
+
+<pre>
+let val = try lock.withLock { try iReturnAValueOrThrowAnError() }
+</pre>
+<h2 id='nscondition-gt-conditional' class='heading'>NSCondition -&gt; Conditional</h2>
+
+<p>For the same reasons as above I created a wrapper around <a href="https://developer.apple.com/documentation/foundation/nscondition">NSCondition</a> called simply &ldquo;Conditional&rdquo;.</p>
+
+<p>Also, along with the &ldquo;withLock(_:)&rdquo; method above, I&rsquo;ve also included a new method called:</p>
+
+<pre>public func withLockWait&lt;T&gt;(cond: () -> Bool, _ lambda: () throws -> T) rethrows -> T</pre>
+
+<p>This method takes two enclosures. One to test the condition and the other to execute once the condition is met.</p>
+
+<p>So instead of saying:</p>
+
+<pre>
+do {
+    lock.lock()
+    defer {
+        lock.signal()
+        lock.unlock()
+    }
+    while !someCondition() {
+        lock.wait()
+    }
+    /* Do something here! */
+}
+</pre>
+
+<p>You can now simply say this:</p>
+
+<pre>
+lock.withLockWait(cond: { someCondition() }) { /* Do something here! */ }
+</pre>
+
+<p>So much more clear!</p>
+
+<p>Also, the version of &ldquo;withLock(_:)&rdquo; in Conditional calls &ldquo;signal()&rdquo; right before it calls &ldquo;unlock()&rdquo;.</p>
 
           </section>
         </section>

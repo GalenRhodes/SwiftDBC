@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>DBResultSetMetaData Protocol Reference</title>
+    <title>RecursiveLock Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Protocol/DBResultSetMetaData" class="dashAnchor"></a>
-    <a title="DBResultSetMetaData Protocol Reference"></a>
+    <a name="//apple_ref/swift/Class/RecursiveLock" class="dashAnchor"></a>
+    <a title="RecursiveLock Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">SwiftDBC©</a> (7% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        DBResultSetMetaData Protocol Reference
+        RecursiveLock Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -129,24 +129,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>DBResultSetMetaData</h1>
+            <h1>RecursiveLock</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBResultSetMetaData</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">RecursiveLock</span> <span class="p">:</span> <span class="kt">NSLocking</span></code></pre>
 
                 </div>
               </div>
-            <p>An object that can be used to get information about the types and properties of the columns in a <code><a href="../Protocols/DBResultSet.html">DBResultSet</a></code> object. The
-following code fragment creates the <code><a href="../Protocols/DBResultSet.html">DBResultSet</a></code> object rs, creates the <code>DBResultSetMetaData</code> object rsmd, and uses rsmd to
-find out how many columns rs has and whether the first column in rs can hold a <code>NULL</code> value.</p>
-
-<pre>
-     let rs: DBResultSet = stmt.executeQuery(sql: "SELECT a, b, c FROM TABLE2")
-     let rsmd: DBResultSetMetaData = rs.metaData
-     let numberOfColumns: Int = rsmd.columnCount
-     let b: Bool = rsmd[0].isNullable
-</pre>
-
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -154,9 +144,9 @@ find out how many columns rs has and whether the first column in rs can hold a <
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC19DBResultSetMetaDataP11columnCountSivp"></a>
-                    <a name="//apple_ref/swift/Property/columnCount" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC19DBResultSetMetaDataP11columnCountSivp">columnCount</a>
+                    <a name="/s:8SwiftDBC13RecursiveLockCACycfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC13RecursiveLockCACycfc">init()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -170,12 +160,12 @@ find out how many columns rs has and whether the first column in rs can hold a <
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">columnCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSetMetaData.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Misc/RecursiveLock.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -183,9 +173,9 @@ find out how many columns rs has and whether the first column in rs can hold a <
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC19DBResultSetMetaDataPyAA08DBColumneF0_pSgSScip"></a>
-                    <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC19DBResultSetMetaDataPyAA08DBColumneF0_pSgSScip">subscript(_:)</a>
+                    <a name="/s:8SwiftDBC13RecursiveLockC4lockyyF"></a>
+                    <a name="//apple_ref/swift/Method/lock()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC13RecursiveLockC4lockyyF">lock()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -199,12 +189,13 @@ find out how many columns rs has and whether the first column in rs can hold a <
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">subscript</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/DBColumnMetaData.html">DBColumnMetaData</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">lock</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSetMetaData.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Misc/RecursiveLock.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -212,9 +203,9 @@ find out how many columns rs has and whether the first column in rs can hold a <
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC19DBResultSetMetaDataPyAA08DBColumneF0_pSicip"></a>
-                    <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC19DBResultSetMetaDataPyAA08DBColumneF0_pSicip">subscript(_:)</a>
+                    <a name="/s:8SwiftDBC13RecursiveLockC4lock6beforeSb10Foundation4DateV_tF"></a>
+                    <a name="//apple_ref/swift/Method/lock(before:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC13RecursiveLockC4lock6beforeSb10Foundation4DateV_tF">lock(before:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -228,12 +219,73 @@ find out how many columns rs has and whether the first column in rs can hold a <
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">subscript</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/DBColumnMetaData.html">DBColumnMetaData</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">lock</span><span class="p">(</span><span class="nv">before</span><span class="p">:</span> <span class="kt">Date</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSetMetaData.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Misc/RecursiveLock.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC13RecursiveLockC6unlockyyF"></a>
+                    <a name="//apple_ref/swift/Method/unlock()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC13RecursiveLockC6unlockyyF">unlock()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">unlock</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Misc/RecursiveLock.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC13RecursiveLockC3trySbyF"></a>
+                    <a name="//apple_ref/swift/Method/try()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC13RecursiveLockC3trySbyF">try()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="p">`</span><span class="nv">try</span><span class="p">`()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Misc/RecursiveLock.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

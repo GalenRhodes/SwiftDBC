@@ -14,9 +14,68 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="421f09c6-d872-417e-8a2a-797886d5c057" name="Default Changelist" comment="Updated README.md file.">
+      <change afterPath="$PROJECT_DIR$/SwiftDBC/Misc/RecursiveLock.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/Misc/Conditional.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/Misc/Conditional.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/Misc/Extensions.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/Misc/Extensions.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLConnection.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLConnection.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLDriver.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLDriver.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLResultSet.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLResultSet.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Classes/Conditional.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes/Conditional.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Classes/DBDriverManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes/DBDriverManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Enums.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Enums.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Enums/DBError.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Enums/DBError.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Enums/DBNextResults.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Enums/DBNextResults.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Enums/DataTypes.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Enums/DataTypes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Extensions.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Extensions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Extensions/Array.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Extensions/Array.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Extensions/NSRecursiveLock.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Extensions/NSRegularExpression.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Extensions/NSRegularExpression.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Extensions/String.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Extensions/String.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Functions.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Functions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Global Variables.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Global Variables.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Protocols.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Protocols.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Protocols/Closable.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Protocols/Closable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Protocols/DBColumnMetaData.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Protocols/DBColumnMetaData.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Protocols/DBConnection.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Protocols/DBConnection.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Protocols/DBDriver.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Protocols/DBDriver.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Protocols/DBResultSet.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Protocols/DBResultSet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Protocols/DBResultSetMetaData.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Protocols/DBResultSetMetaData.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Protocols/DBStatement.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Protocols/DBStatement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/badge.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/badge.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/Conditional.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/Conditional.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/DBDriverManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/DBDriverManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums/DBError.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums/DBError.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums/DBNextResults.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums/DBNextResults.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums/DataTypes.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums/DataTypes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions/Array.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions/Array.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions/NSRecursiveLock.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions/NSRegularExpression.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions/NSRegularExpression.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions/String.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions/String.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Functions.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Functions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Global Variables.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Global Variables.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/Closable.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/Closable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBColumnMetaData.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBColumnMetaData.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBConnection.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBConnection.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBDriver.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBDriver.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBResultSet.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBResultSet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBResultSetMetaData.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBResultSetMetaData.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBStatement.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBStatement.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/search.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/docSet.dsidx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/docSet.dsidx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/docsets/.tgz" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.tgz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/search.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/undocumented.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/undocumented.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +151,7 @@
       <workItem from="1598658131985" duration="19318000" />
       <workItem from="1598895774774" duration="10773000" />
       <workItem from="1598959023459" duration="17457000" />
-      <workItem from="1598980753286" duration="9145000" />
+      <workItem from="1598980753286" duration="12641000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1598452724013</created>
@@ -143,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599062424244</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Updated README.md file.">
+      <created>1599062999026</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1599062999026</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,10 +312,10 @@
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="968" y="152" key="StringManipulation.SortTypeDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1598898350966" />
-    <state x="880" y="276" key="Vcs.Push.Dialog.v2" timestamp="1599062426165">
+    <state x="880" y="276" key="Vcs.Push.Dialog.v2" timestamp="1599063004252">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="880" y="276" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1599062426165" />
+    <state x="880" y="276" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1599063004252" />
     <state x="1113" y="317" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599060703755">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>

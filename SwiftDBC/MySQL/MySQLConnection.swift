@@ -32,13 +32,13 @@ class MySQLConnection: DBConnection {
     var lastErrorMessage: String { getString(cStr: mysql_error(mysql)) ?? "Unknown Error" }
 
     var mysql:    UnsafeMutablePointer<MYSQL>
-    let lock:     NSRecursiveLock = NSRecursiveLock()
+    let lock:     RecursiveLock = RecursiveLock()
     let host:     String
     let port:     Int
     let username: String?
     let password: String?
     let database: String?
-    var isInit:   Bool            = false
+    var isInit:   Bool          = false
 
     init(host: String, port: Int, username: String?, password: String?, database: String?, query: [String: String]) throws {
         self.host = host
@@ -47,7 +47,7 @@ class MySQLConnection: DBConnection {
         self.password = password
         self.database = database
         self.autoCommit = false
-        if let _mysql: UnsafeMutablePointer<MYSQL> = MySQLDriver.lock.withLock({ mysql_init(nil) }) { self.mysql =  _mysql }
+        if let _mysql: UnsafeMutablePointer<MYSQL> = MySQLDriver.lock.withLock({ mysql_init(nil) }) { self.mysql = _mysql }
         else { throw DBError.Connection(description: "Unable to allocate memory for database connection to: \(host):\(port)/\(database ?? "")") }
         try _connect()
     }

@@ -14,7 +14,7 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SwiftDBC©</a> (8% documented)</p>
+        <p><a href="index.html">SwiftDBC©</a> (7% documented)</p>
         <p class="header-right"><a href="https://github.com/GalenRhodes/SwiftDBC"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -36,6 +36,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/DBDriverManager.html">DBDriverManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RecursiveLock.html">RecursiveLock</a>
               </li>
             </ul>
           </li>
@@ -66,9 +69,6 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Extensions/Array.html">Array</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/NSRecursiveLock.html">NSRecursiveLock</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/NSRegularExpression.html">NSRegularExpression</a>
@@ -191,12 +191,42 @@ driver for the given URL and then create and return a connection object.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Conditional</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Conditional</span> <span class="p">:</span> <span class="kt">NSLocking</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Misc/Conditional.swift#L25-L49">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Misc/Conditional.swift#L25-L66">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC13RecursiveLockC"></a>
+                    <a name="//apple_ref/swift/Class/RecursiveLock" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC13RecursiveLockC">RecursiveLock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Classes/RecursiveLock.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">RecursiveLock</span> <span class="p">:</span> <span class="kt">NSLocking</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Misc/RecursiveLock.swift#L25-L45">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

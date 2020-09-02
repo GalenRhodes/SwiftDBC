@@ -98,12 +98,3 @@ extension Array {
         return list
     }
 }
-
-public extension NSRecursiveLock {
-
-    @inlinable func withLock<T>(_ lambda: () throws -> T) rethrows -> T {
-        lock()
-        defer { unlock() }
-        return try lambda()
-    }
-}

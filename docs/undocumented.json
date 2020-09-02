@@ -1207,21 +1207,70 @@
     {
       "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/Misc/Conditional.swift",
       "line": 29,
+      "symbol": "Conditional.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/Misc/Conditional.swift",
+      "line": 34,
       "symbol": "Conditional.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/Misc/Conditional.swift",
-      "line": 31,
+      "line": 36,
       "symbol": "Conditional.withLock(lambda:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/Misc/Conditional.swift",
-      "line": 40,
+      "line": 45,
       "symbol": "Conditional.withLockWait(cond:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/Misc/Conditional.swift",
+      "line": 55,
+      "symbol": "Conditional.lock()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/Misc/Conditional.swift",
+      "line": 57,
+      "symbol": "Conditional.unlock()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/Misc/Conditional.swift",
+      "line": 59,
+      "symbol": "Conditional.wait()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/Misc/Conditional.swift",
+      "line": 61,
+      "symbol": "Conditional.wait(until:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/Misc/Conditional.swift",
+      "line": 63,
+      "symbol": "Conditional.signal()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/Misc/Conditional.swift",
+      "line": 65,
+      "symbol": "Conditional.broadcast()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -1352,9 +1401,44 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/Misc/Extensions.swift",
-      "line": 104,
-      "symbol": "NSRecursiveLock.withLock(_:)",
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/Misc/RecursiveLock.swift",
+      "line": 25,
+      "symbol": "RecursiveLock",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/Misc/RecursiveLock.swift",
+      "line": 29,
+      "symbol": "RecursiveLock.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/Misc/RecursiveLock.swift",
+      "line": 31,
+      "symbol": "RecursiveLock.lock()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/Misc/RecursiveLock.swift",
+      "line": 33,
+      "symbol": "RecursiveLock.lock(before:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/Misc/RecursiveLock.swift",
+      "line": 35,
+      "symbol": "RecursiveLock.unlock()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBC/Misc/RecursiveLock.swift",
+      "line": 37,
+      "symbol": "RecursiveLock.try()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },

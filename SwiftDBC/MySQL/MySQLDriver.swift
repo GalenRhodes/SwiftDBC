@@ -27,8 +27,8 @@ class MySQLDriver: DBDriver {
     private(set) var majorVersion: Int = 1
     private(set) var minorVersion: Int = 0
 
-    static let defaultDriver: MySQLDriver     = MySQLDriver()
-    static let lock:          NSRecursiveLock = NSRecursiveLock()
+    static let defaultDriver: MySQLDriver   = MySQLDriver()
+    static let lock:          RecursiveLock = RecursiveLock()
 
     private init() {
         mysql_server_init(0, nil, nil)
