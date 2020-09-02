@@ -59,8 +59,8 @@ extension String {
     @inlinable func substring(toOffset: Int) -> String { String(self[startIndex ..< index(startIndex, offsetBy: toOffset)]) }
 
     @inlinable subscript(_ intRange: Range<Int>) -> String {
-        let aIndex = index(startIndex, offsetBy: intRange.lowerBound)
-        let bIndex = index(startIndex, offsetBy: intRange.upperBound)
+        let aIndex: Index = index(startIndex, offsetBy: intRange.lowerBound)
+        let bIndex: Index = index(startIndex, offsetBy: intRange.upperBound)
         return String(self[aIndex ..< bIndex])
     }
 
@@ -69,9 +69,13 @@ extension String {
 
 extension NSRegularExpression {
 
-    @inlinable func firstMatch(in str: String, options: NSRegularExpression.MatchingOptions = []) -> NSTextCheckingResult? { firstMatch(in: str, options: options, range: str.fullNSRange()) }
+    @inlinable func firstMatch(in str: String, options: NSRegularExpression.MatchingOptions = []) -> NSTextCheckingResult? {
+        firstMatch(in: str, options: options, range: str.fullNSRange())
+    }
 
-    @inlinable func matches(in str: String, options: NSRegularExpression.MatchingOptions = []) -> [NSTextCheckingResult] { matches(in: str, options: options, range: str.fullNSRange()) }
+    @inlinable func matches(in str: String, options: NSRegularExpression.MatchingOptions = []) -> [NSTextCheckingResult] {
+        matches(in: str, options: options, range: str.fullNSRange())
+    }
 }
 
 extension Array {
@@ -92,5 +96,14 @@ extension Array {
             return f
         }
         return list
+    }
+}
+
+public extension NSRecursiveLock {
+
+    @inlinable func withLock<T>(_ lambda: () throws -> T) rethrows -> T {
+        lock()
+        defer { unlock() }
+        return try lambda()
     }
 }

@@ -27,10 +27,12 @@ class MySQLDriver: DBDriver {
     private(set) var majorVersion: Int = 1
     private(set) var minorVersion: Int = 0
 
-    static let defaultDriver: MySQLDriver = MySQLDriver()
+    static let defaultDriver: MySQLDriver     = MySQLDriver()
+    static let lock:          NSRecursiveLock = NSRecursiveLock()
 
     private init() {
         mysql_server_init(0, nil, nil)
+        mysql_thread_init()
     }
 
     func acceptsURL(_ url: String) -> Bool {
@@ -82,17 +84,18 @@ class MySQLDriver: DBDriver {
                 }
             }
         }
+
         return query
     }
 
     func register(driverManager: DBDriverManager) {
-        driverManager.register(driver: self, deregisterLambda: { mysql_server_end() })
+        MySQLDriver.lock.withLock { driverManager.register(driver: self, deregisterLambda: { mysql_server_end() }) }
     }
 
     /*===========================================================================================================================*/
     /// We have this method but it's kinda pointless since the constructor for `DBDriverManager` does this part for us.
     ///
     class func register() {
-        defaultDriver.register(driverManager: DBDriverManager.manager)
+        MySQLDriver.lock.withLock { defaultDriver.register(driverManager: DBDriverManager.manager) }
     }
 }

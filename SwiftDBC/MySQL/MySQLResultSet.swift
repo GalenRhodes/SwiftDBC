@@ -28,56 +28,57 @@ import BigInt
 /// The result set from a query against the database.
 ///
 class MySQLResultSet: DBResultSet {
-
     /*===========================================================================================================================*/
     /// `true` if the result set is closed.
     ///
-    var isClosed: Bool       = false
+    var isClosed:   Bool       = false
 
     /*===========================================================================================================================*/
     /// The rows of data returned from the database.
     ///
-    var rawData:  [MySQLRow] = []
+    var rawData:    [MySQLRow] = []
 
     /*===========================================================================================================================*/
     /// The statement this result set belongs to.
     ///
-    let stmt:     MySQLStatement
+    let stmt:       MySQLStatement
 
     /*===========================================================================================================================*/
     /// The result set metadata.
     ///
-    let metaData: DBResultSetMetaData
+    let metaData:   DBResultSetMetaData
 
     /*===========================================================================================================================*/
     /// The current row being read. `nil` if `next()` has not yet been called or there are no more rows.
     ///
-    var currentRow: MySQLRow? = nil
+    var currentRow: MySQLRow?  = nil
+
+    var wasNextCalled: Bool = false
+
+    let lock: NSRecursiveLock = NSRecursiveLock()
 
     /*===========================================================================================================================*/
     /// Initializes this result set by reading all of the rows returned by the database.
-    ///
+    /// 
     /// - Parameters:
     ///   - stmt: the statement that this result set belongs to.
     ///   - rs: the result set structure returned by the database.
     ///
     init(_ stmt: MySQLStatement, _ rs: UnsafeMutablePointer<MYSQL_RES>) {
-        self.stmt = stmt
-        metaData = MySQLResultSetMetaData(rs: rs)
         defer { mysql_free_result(rs) }
+        self.stmt = stmt
+        self.metaData = MySQLResultSetMetaData(rs: rs)
+        NotificationCenter.default.addObserver(forName: DBStatementWillClose, object: stmt, queue: nil) { [weak self] (notice: Notification) in if let s: MySQLResultSet = self { s.close() } }
 
-        var row: MYSQL_ROW? = mysql_fetch_row(rs)
-        while let r: MYSQL_ROW = row {
-            if let lens: UnsafeMutablePointer<UInt> = mysql_fetch_lengths(rs) {
-                rawData.append(MySQLRow(row: r, lengths: lens, colCount:
-                metaData.columnCount))
+        var _row: MYSQL_ROW? = mysql_fetch_row(rs)
+        let _cc:  Int        = metaData.columnCount
+
+        while let row: MYSQL_ROW = _row {
+            if let dataLengths: UnsafeMutablePointer<UInt> = mysql_fetch_lengths(rs) {
+                let rowObj = MySQLRow(row: row, lengths: dataLengths, colCount: _cc)
+                rawData.append(rowObj)
             }
-            row = mysql_fetch_row(rs)
-        }
-
-        NotificationCenter.default.addObserver(forName: DBStatementWillClose, object: stmt, queue: nil) {
-            [weak self] (notice: Notification) in
-            if let s: MySQLResultSet = self { s.close() }
+            _row = mysql_fetch_row(rs)
         }
     }
 
@@ -85,13 +86,17 @@ class MySQLResultSet: DBResultSet {
     /// Close the result set when this object is disposed of by the system.
     ///
     deinit {
-        close()
+        _close()
     }
 
     /*===========================================================================================================================*/
     /// Close the result set.
     ///
     func close() {
+        lock.withLock { _close() }
+    }
+
+    @inlinable func _close() {
         if !isClosed {
             // Tell anyone who depends on this result set that it is closing.
             NotificationCenter.default.post(name: DBResultSetWillClose, object: self)
@@ -102,172 +107,196 @@ class MySQLResultSet: DBResultSet {
 
     /*===========================================================================================================================*/
     /// Get the next row of data.
-    ///
+    /// 
     /// - Returns: `true` if there is another row of data or `false` if there are no more rows.
     /// - Throws: if an error occurs of if the result set has been closed.
     ///
-    func next() throws -> Bool {
-        fatalError("next() has not been implemented")
+    func hasNextRow() throws -> Bool {
+        lock.withLock {
+            wasNextCalled = true
+            if rawData.count == 0 { currentRow = nil }
+            else { currentRow = rawData.removeFirst() }
+            return (currentRow != nil)
+        }
+    }
+
+    func getData(index: Int) throws -> Data? { try lock.withLock { try _getData(index: index) } }
+
+    func getInputStream(index: Int) throws -> InputStream? {
+        guard let data: Data = try getData(index: index) else { return nil }
+        return InputStream(data: data)
     }
 
     func getString(index: Int) throws -> String? {
-        fatalError("getString(index:) has not been implemented")
+        guard let data: Data = try getData(index: index) else { return nil }
+
+        switch metaData[index].dataType {
+            case .Blob, .Binary, .VarBinary, .LongVarBinary: return data.base64EncodedString()
+            case .Null: return nil
+            case .Array: return nil
+            case .DataLink: return nil
+            case .Distinct: return nil
+            case .JavaObject: return nil
+            case .Other: return nil
+            case .Ref: return nil
+            case .RefCursor: return nil
+            case .RowId: return nil
+            case .SqlXml: return nil
+            case .Struct: return nil
+            default: return String(bytes: data, encoding: String.Encoding.utf8)
+        }
     }
 
-    func getString(name: String) throws -> String? {
-        fatalError("getString(name:) has not been implemented")
-    }
-
-    func getByte(index: Int) throws -> Int8? {
-        fatalError("getByte(index:) has not been implemented")
-    }
-
-    func getByte(name: String) throws -> Int8? {
-        fatalError("getByte(name:) has not been implemented")
+    func getByte(index: Int) throws -> UInt8? {
+        guard let data: Data = try getData(index: index) else { return nil }
+        if metaData[index].isBinary { return data.count > 0 ? data[0] : nil }
+        else if let str: String = String(bytes: data, encoding: String.Encoding.utf8) { return UInt8(str) }
+        else { return nil }
     }
 
     func getShort(index: Int) throws -> Int16? {
-        fatalError("getShort(index:) has not been implemented")
-    }
-
-    func getShort(name: String) throws -> Int16? {
-        fatalError("getShort(name:) has not been implemented")
+        guard let data: Data = try getData(index: index) else { return nil }
+        if !metaData[index].isBinary, let str: String = String(bytes: data, encoding: String.Encoding.utf8) { return Int16(str) }
+        else { return nil }
     }
 
     func getInt(index: Int) throws -> Int? {
-        fatalError("getInt(index:) has not been implemented")
-    }
-
-    func getInt(name: String) throws -> Int? {
-        fatalError("getInt(name:) has not been implemented")
+        guard let data: Data = try getData(index: index) else { return nil }
+        if !metaData[index].isBinary, let str: String = String(bytes: data, encoding: String.Encoding.utf8) { return Int(str) }
+        else { return nil }
     }
 
     func getLong(index: Int) throws -> Int64? {
-        fatalError("getLong(index:) has not been implemented")
-    }
-
-    func getLong(name: String) throws -> Int64? {
-        fatalError("getLong(name:) has not been implemented")
+        guard let data: Data = try getData(index: index) else { return nil }
+        if !metaData[index].isBinary, let str: String = String(bytes: data, encoding: String.Encoding.utf8) { return Int64(str) }
+        else { return nil }
     }
 
     func getBigInt(index: Int) throws -> BigInt? {
-        fatalError("getBigInt(index:) has not been implemented")
+        guard let data: Data = try getData(index: index) else { return nil }
+        if !metaData[index].isBinary, let str: String = String(bytes: data, encoding: String.Encoding.utf8) { return BigInt(str) }
+        else { return nil }
     }
 
-    func getBigInt(name: String) throws -> BigInt? {
-        fatalError("getBigInt(name:) has not been implemented")
-    }
+    func getBool(index: Int) throws -> Bool? {
+        try lock.withLock {
+            if let data: Data = try _getData(index: index) {
+                let md: DBColumnMetaData = metaData[index]
 
-    func getBool(index: Int) throws -> String? {
-        fatalError("getBool(index:) has not been implemented")
-    }
+                if md.dataType != .Null, !md.isBinary, let s: String = String(bytes: data, encoding: String.Encoding.utf8) {
+                    if md.isNumeric {
+                        if let b: Int64 = Int64(s) { return (b != 0) }
+                        else if let b: Double = Double(s) { return (b != 0.0) }
+                    }
+                    else if let rx: NSRegularExpression = try? NSRegularExpression(pattern: "^\\s*(true|yes|y|t|on)\\s*$", options: [ NSRegularExpression.Options.caseInsensitive ]) {
+                        return (rx.matches(in: s).count == 1)
+                    }
+                }
+            }
 
-    func getBool(name: String) throws -> String? {
-        fatalError("getBool(name:) has not been implemented")
+            return nil
+        }
     }
 
     func getDate(index: Int) throws -> Date? {
-        fatalError("getDate(index:) has not been implemented")
-    }
-
-    func getDate(name: String) throws -> Date? {
-        fatalError("getDate(name:) has not been implemented")
+        guard !metaData[index].isBinary, let str: String = try getString(index: index) else { return nil }
+        let fmt = DateFormatter()
+        fmt.dateFormat = "yyyy-MM-dd"
+        return fmt.date(from: str)
     }
 
     func getTime(index: Int) throws -> Date? {
-        fatalError("getTime(index:) has not been implemented")
-    }
-
-    func getTime(name: String) throws -> Date? {
-        fatalError("getTime(name:) has not been implemented")
+        guard !metaData[index].isBinary, let str: String = try getString(index: index) else { return nil }
+        let fmt = DateFormatter()
+        fmt.dateFormat = "HH:mm:ssZZZZZ"
+        return fmt.date(from: str)
     }
 
     func getTimestamp(index: Int) throws -> Date? {
-        fatalError("getTimestamp(index:) has not been implemented")
-    }
-
-    func getTimestamp(name: String) throws -> Date? {
-        fatalError("getTimestamp(name:) has not been implemented")
+        guard !metaData[index].isBinary, let str: String = try getString(index: index) else { return nil }
+        let fmt = DateFormatter()
+        fmt.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        return fmt.date(from: str)
     }
 
     func getFloat(index: Int) throws -> Float? {
-        fatalError("getFloat(index:) has not been implemented")
-    }
-
-    func getFloat(name: String) throws -> Float? {
-        fatalError("getFloat(name:) has not been implemented")
+        guard let data: Data = try getData(index: index) else { return nil }
+        if !metaData[index].isBinary, let str: String = String(bytes: data, encoding: String.Encoding.utf8) { return Float(str) }
+        else { return nil }
     }
 
     func getDouble(index: Int) throws -> Double? {
-        fatalError("getDouble(index:) has not been implemented")
+        guard let data: Data = try getData(index: index) else { return nil }
+        if !metaData[index].isBinary, let str: String = String(bytes: data, encoding: String.Encoding.utf8) { return Double(str) }
+        else { return nil }
     }
 
-    func getDouble(name: String) throws -> Double? {
-        fatalError("getDouble(name:) has not been implemented")
-    }
-
+    /*===========================================================================================================================*/
+    /// TODO: We're going to have to revisit this because we need a Swift version of Java's BigDecimal class.
+    /// 
+    /// - Parameter index: the column number.
+    /// - Returns: an instance of Decimal or `nil` if the column had a NULL value.
+    /// - Throws: if an error occurs.
+    ///
     func getBigDecimal(index: Int) throws -> Decimal? {
-        fatalError("getBigDecimal(index:) has not been implemented")
-    }
-
-    func getBigDecimal(name: String) throws -> Decimal? {
-        fatalError("getBigDecimal(name:) has not been implemented")
+        guard let data: Data = try getData(index: index) else { return nil }
+        if !metaData[index].isBinary, let str: String = String(bytes: data, encoding: String.Encoding.utf8) {
+            if let dec: Decimal = Decimal(string: str) {
+                return dec
+            }
+        }
+        return nil
     }
 
     func getSmall(index: Int) throws -> Int32? {
-        fatalError("getSmall(index:) has not been implemented")
-    }
-
-    func getSmall(name: String) throws -> Int32? {
-        fatalError("getSmall(name:) has not been implemented")
-    }
-
-    func getUByte(index: Int) throws -> UInt8? {
-        fatalError("getUByte(index:) has not been implemented")
-    }
-
-    func getUByte(name: String) throws -> UInt8? {
-        fatalError("getUByte(name:) has not been implemented")
+        guard let data: Data = try getData(index: index) else { return nil }
+        if !metaData[index].isBinary, let str: String = String(bytes: data, encoding: String.Encoding.utf8) { return Int32(str) }
+        else { return nil }
     }
 
     func getUShort(index: Int) throws -> UInt16? {
-        fatalError("getUShort(index:) has not been implemented")
-    }
-
-    func getUShort(name: String) throws -> UInt16? {
-        fatalError("getUShort(name:) has not been implemented")
+        guard let data: Data = try getData(index: index) else { return nil }
+        if !metaData[index].isBinary, let str: String = String(bytes: data, encoding: String.Encoding.utf8) { return UInt16(str) }
+        else { return nil }
     }
 
     func getUSmall(index: Int) throws -> UInt32? {
-        fatalError("getUSmall(index:) has not been implemented")
-    }
-
-    func getUSmall(name: String) throws -> UInt32? {
-        fatalError("getUSmall(name:) has not been implemented")
+        guard let data: Data = try getData(index: index) else { return nil }
+        if !metaData[index].isBinary, let str: String = String(bytes: data, encoding: String.Encoding.utf8) { return UInt32(str) }
+        else { return nil }
     }
 
     func getUInt(index: Int) throws -> UInt? {
-        fatalError("getUInt(index:) has not been implemented")
-    }
-
-    func getUInt(name: String) throws -> UInt? {
-        fatalError("getUInt(name:) has not been implemented")
+        guard let data: Data = try getData(index: index) else { return nil }
+        if !metaData[index].isBinary, let str: String = String(bytes: data, encoding: String.Encoding.utf8) { return UInt(str) }
+        else { return nil }
     }
 
     func getULong(index: Int) throws -> UInt64? {
-        fatalError("getULong(index:) has not been implemented")
+        guard let data: Data = try getData(index: index) else { return nil }
+        if !metaData[index].isBinary, let str: String = String(bytes: data, encoding: String.Encoding.utf8) { return UInt64(str) }
+        else { return nil }
     }
 
-    func getULong(name: String) throws -> UInt64? {
-        fatalError("getULong(name:) has not been implemented")
+    func getBigUInt(index: Int) throws -> BigUInt? {
+        guard let data: Data = try getData(index: index) else { return nil }
+        if !metaData[index].isBinary, let str: String = String(bytes: data, encoding: String.Encoding.utf8) { return BigUInt(str) }
+        else { return nil }
+    }
+}
+
+extension MySQLResultSet {
+    @inlinable func _getData(index: Int) throws -> Data? {
+        guard !isClosed else { throw DBError.ResultSetClosed }
+        guard wasNextCalled else { throw DBError.ResultSet(description: "hasNextRow() was never called.") }
+        guard index >= 0 && index < metaData.columnCount else { throw DBError.ResultSet(description: "Index out of bounds.") }
+        guard let row: MySQLRow = currentRow else { throw DBError.ResultSet(description: "No more rows.") }
+        return row.columns[index]
     }
 
-    func getUBigInt(index: Int) throws -> BigUInt? {
-        fatalError("getUBigInt(index:) has not been implemented")
-    }
-
-    func getUBigInt(name: String) throws -> BigUInt? {
-        fatalError("getUBigInt(name:) has not been implemented")
+    @inlinable func _getString(index: Int) throws -> String? {
+        guard let data: Data = try _getData(index: index) else { return nil }
+        return representableAsText(dataType: metaData[index].dataType) ? String(bytes: data, encoding: String.Encoding.utf8) : nil
     }
 }
 
@@ -277,14 +306,15 @@ class MySQLResultSet: DBResultSet {
 class MySQLRow {
 
     /*===========================================================================================================================*/
-    /// MySQL sends us data as strings regardless of the underlying data type in the database. It's up to the client to convert
-    /// that string data to the appropriate data type.
+    /// MySQL sends us data as `nil`-terminated C strings unless the underlying type is binary, varbinary, or blob in which case we
+    /// have to depend on the lengths that the system reported to us. We will just assume that they are all binary fields and
+    /// convert them to strings as needed.
     ///
-    var columns: [String?] = []
+    var columns: [Data?] = []
 
     /*===========================================================================================================================*/
     /// Initializes the row with the data from the database.
-    ///
+    /// 
     /// - Parameters:
     ///   - row: the row from the database as an array of pointers to `nil`-terminated C strings encoded using UTF-8.
     ///   - lengths: the lengths of each column
@@ -293,8 +323,7 @@ class MySQLRow {
     init(row: MYSQL_ROW, lengths: UnsafeMutablePointer<UInt>, colCount: Int) {
         for i: Int in (0 ..< colCount) {
             let cData: UnsafeMutablePointer<Int8>? = row[i]
-            columns.append((cData == nil) ? nil : getString(cStr: cData!, length: Int(lengths[i])))
+            columns.append((cData == nil) ? nil : getData(bytes: cData!, length: Int(lengths[i])))
         }
     }
-
 }

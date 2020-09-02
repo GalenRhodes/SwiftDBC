@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>DBNextResults Enumeration Reference</title>
+    <title>NSRecursiveLock Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/DBNextResults" class="dashAnchor"></a>
-    <a title="DBNextResults Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Extension/NSRecursiveLock" class="dashAnchor"></a>
+    <a title="NSRecursiveLock Extension Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">SwiftDBC©</a> (8% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        DBNextResults Enumeration Reference
+        NSRecursiveLock Extension Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -129,10 +129,10 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>DBNextResults</h1>
+            <h1>NSRecursiveLock</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">DBNextResults</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">NSRecursiveLock</span></code></pre>
 
                 </div>
               </div>
@@ -144,9 +144,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC13DBNextResultsO4NoneyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/None" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC13DBNextResultsO4NoneyA2CmF">None</a>
+                    <a name="/s:So15NSRecursiveLockC8SwiftDBCE04withB0yxxyKXEKlF"></a>
+                    <a name="//apple_ref/swift/Method/withLock(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So15NSRecursiveLockC8SwiftDBCE04withB0yxxyKXEKlF">withLock(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -160,70 +160,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">None</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="n">withLock</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">lambda</span><span class="p">:</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="k">rethrows</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC13DBNextResultsO9ResultSetyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/ResultSet" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC13DBNextResultsO9ResultSetyA2CmF">ResultSet</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">ResultSet</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC13DBNextResultsO11UpdateCountyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/UpdateCount" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC13DBNextResultsO11UpdateCountyA2CmF">UpdateCount</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">UpdateCount</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Misc/Extensions.swift#L104-L108">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

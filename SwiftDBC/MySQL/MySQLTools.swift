@@ -27,8 +27,8 @@ import MySQL
 @usableFromInline let DBStatementWillClose  = Notification.Name("DBStatementWillClose")
 @usableFromInline let DBResultSetWillClose  = Notification.Name("DBResultSetWillClose")
 
-@usableFromInline let cCharAlignment: Int = MemoryLayout<CChar>.alignment
-@usableFromInline let MySQLDefaultCharacterSet: String = "utf8mb4"
+@usableFromInline let cCharAlignment:           Int    = MemoryLayout<CChar>.alignment
+@usableFromInline let MySQLDefaultCharacterSet: String = String("utf8mb4".utf8)
 @usableFromInline let MySQLDBCPrefix:           String = "\(SwiftDBCPrefix):mysql"
 
 @inlinable func _get(str: String, result: NSTextCheckingResult, group: Int) -> String? {
@@ -40,41 +40,56 @@ import MySQL
     return ((fieldValue & i) == i)
 }
 
+@inlinable func getData(bytes: UnsafeMutablePointer<Int8>, length: Int) -> Data {
+    Data(bytes: UnsafeRawPointer(bytes), count: length)
+}
+
 @inlinable func getString(cStr: UnsafeMutablePointer<CChar>, length: Int) -> String {
-    let mp: UnsafeMutableRawPointer = UnsafeMutableRawPointer.allocate(byteCount: (length + 1), alignment: cCharAlignment);
-    mp.initializeMemory(as: CChar.self, from: UnsafePointer<CChar>(cStr), count: length)
-    mp.storeBytes(of: CChar(0), toByteOffset: length, as: CChar.self)
-    return String(bytesNoCopy: mp, length: length, encoding: String.Encoding.utf8, freeWhenDone: true) ?? ""
+    String(bytes: getData(bytes: cStr, length: length), encoding: String.Encoding.utf8) ?? ""
+}
+
+@inlinable func getString(cStr: UnsafePointer<CChar>?) -> String? {
+    cStr == nil ? nil : (String(cString: cStr!, encoding: String.Encoding.utf8))
 }
 
 @usableFromInline func getDataType(id: enum_field_types, charSetId: Int, decDigits dc: UInt) -> DataTypes {
-    //---------------------------------------------
+    //------------------------------------------------
     // Try to get as close to a match as possible.
-    //---------------------------------------------
+    // In MySQL a binary or varbinary field is simply
+    // a char or varchar field with the charset set
+    // to 63.
+    //------------------------------------------------
     switch id { //@f:0
-        case MYSQL_TYPE_STRING    : return charSetId == 63 ? DataTypes.Binary    : DataTypes.Char    // CHAR or BINARY field
-        case MYSQL_TYPE_VAR_STRING: return charSetId == 63 ? DataTypes.VarBinary : DataTypes.VarChar // VARCHAR or VARBINARY field
-        case MYSQL_TYPE_BLOB      : return charSetId == 63 ? DataTypes.Blob      : DataTypes.Clob    // BLOB or TEXT field (use max_length to determine the maximum length)
-        case MYSQL_TYPE_DECIMAL   : return dc == 0         ? DataTypes.BigInt    : DataTypes.Decimal // DECIMAL or NUMERIC field
-        case MYSQL_TYPE_NEWDECIMAL: return dc == 0         ? DataTypes.BigInt    : DataTypes.Decimal // Precision math DECIMAL or NUMERIC
-        case MYSQL_TYPE_TINY      : return DataTypes.TinyInt   // TINYINT field
-        case MYSQL_TYPE_SHORT     : return DataTypes.SmallInt  // SMALLINT field
-        case MYSQL_TYPE_LONG      : return DataTypes.Integer   // INTEGER field
-        case MYSQL_TYPE_INT24     : return DataTypes.Integer   // MEDIUMINT field
-        case MYSQL_TYPE_LONGLONG  : return DataTypes.BigInt    // BIGINT field
-        case MYSQL_TYPE_FLOAT     : return DataTypes.Float     // FLOAT field
-        case MYSQL_TYPE_DOUBLE    : return DataTypes.Double    // DOUBLE or REAL field
-        case MYSQL_TYPE_BIT       : return DataTypes.Bit       // BIT field
-        case MYSQL_TYPE_TIMESTAMP : return DataTypes.TimeStamp // TIMESTAMP field
-        case MYSQL_TYPE_DATE      : return DataTypes.Date      // DATE field
-        case MYSQL_TYPE_TIME      : return DataTypes.Time      // TIME field
-        case MYSQL_TYPE_DATETIME  : return DataTypes.TimeStamp // DATETIME field
-        case MYSQL_TYPE_YEAR      : return DataTypes.Date      // YEAR field
-        case MYSQL_TYPE_SET       : return DataTypes.VarChar   // SET field
-        case MYSQL_TYPE_ENUM      : return DataTypes.VarChar   // ENUM field
-        case MYSQL_TYPE_GEOMETRY  : return DataTypes.Other     // Spatial field
-        case MYSQL_TYPE_NULL      : return DataTypes.Null      // NULL-type field
-        default                   : return DataTypes.VarChar   // VARCHAR field
+        case MYSQL_TYPE_DATE        : return DataTypes.Date      // DATE field
+        case MYSQL_TYPE_DATETIME    : return DataTypes.TimeStamp // DATETIME field
+        case MYSQL_TYPE_TIME        : return DataTypes.Time      // TIME field
+        case MYSQL_TYPE_TIMESTAMP   : return DataTypes.TimeStamp // TIMESTAMP field
+
+        case MYSQL_TYPE_NULL        : return DataTypes.Null      // NULL-type field
+        case MYSQL_TYPE_BIT         : return DataTypes.Bit       // BIT field
+        case MYSQL_TYPE_DOUBLE      : return DataTypes.Double    // DOUBLE or REAL field
+        case MYSQL_TYPE_FLOAT       : return DataTypes.Float     // FLOAT field
+        case MYSQL_TYPE_INT24       : return DataTypes.Integer   // MEDIUMINT field
+        case MYSQL_TYPE_LONG        : return DataTypes.Integer   // INTEGER field
+        case MYSQL_TYPE_LONGLONG    : return DataTypes.BigInt    // BIGINT field
+        case MYSQL_TYPE_SHORT       : return DataTypes.SmallInt  // SMALLINT field
+        case MYSQL_TYPE_TINY        : return DataTypes.TinyInt   // TINYINT field
+        case MYSQL_TYPE_YEAR        : return DataTypes.SmallInt  // YEAR field
+        case MYSQL_TYPE_DECIMAL     : return dc == 0 ? DataTypes.BigInt : DataTypes.Decimal // DECIMAL or NUMERIC field
+        case MYSQL_TYPE_NEWDECIMAL  : return dc == 0 ? DataTypes.BigInt : DataTypes.Decimal // Precision math DECIMAL or NUMERIC
+
+        case MYSQL_TYPE_JSON        : return DataTypes.VarChar
+        case MYSQL_TYPE_TINY_BLOB   : return charSetId == 63 ? DataTypes.Blob      : DataTypes.Clob    // BLOB or TEXT field (use max_length to determine the maximum length)
+        case MYSQL_TYPE_MEDIUM_BLOB : return charSetId == 63 ? DataTypes.Blob      : DataTypes.Clob    // BLOB or TEXT field (use max_length to determine the maximum length)
+        case MYSQL_TYPE_BLOB        : return charSetId == 63 ? DataTypes.Blob      : DataTypes.Clob    // BLOB or TEXT field (use max_length to determine the maximum length)
+        case MYSQL_TYPE_LONG_BLOB   : return charSetId == 63 ? DataTypes.Blob      : DataTypes.Clob    // BLOB or TEXT field (use max_length to determine the maximum length)
+        case MYSQL_TYPE_STRING      : return charSetId == 63 ? DataTypes.Binary    : DataTypes.Char    // CHAR or BINARY field
+        case MYSQL_TYPE_ENUM        : return charSetId == 63 ? DataTypes.VarBinary : DataTypes.VarChar // VARCHAR or VARBINARY field
+        case MYSQL_TYPE_SET         : return charSetId == 63 ? DataTypes.VarBinary : DataTypes.VarChar // VARCHAR or VARBINARY field
+        case MYSQL_TYPE_GEOMETRY    : return charSetId == 63 ? DataTypes.VarBinary : DataTypes.VarChar // VARCHAR or VARBINARY field
+        case MYSQL_TYPE_VARCHAR     : return charSetId == 63 ? DataTypes.VarBinary : DataTypes.VarChar // VARCHAR or VARBINARY field
+        case MYSQL_TYPE_VAR_STRING  : return charSetId == 63 ? DataTypes.VarBinary : DataTypes.VarChar // VARCHAR or VARBINARY field
+        default                     : return charSetId == 63 ? DataTypes.VarBinary : DataTypes.VarChar // VARCHAR or VARBINARY field
     } //@f:1
 }
 

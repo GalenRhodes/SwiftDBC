@@ -50,6 +50,8 @@ class MySQLResultSetMetaData: DBResultSetMetaData {
 }
 
 class MySQLColumnMetaData: DBColumnMetaData {
+
+    let charSetId:       Int
     let index:           Int
     let dataType:        DataTypes
     let name:            String
@@ -61,61 +63,73 @@ class MySQLColumnMetaData: DBColumnMetaData {
     let length:          UInt
     let maxLength:       UInt
     let decimalCount:    UInt
-    let isNullable:      Bool
     let hasDefault:      Bool
     let isAutoIncrement: Bool
-    let isUnsigned:      Bool
-    let isPrimaryKey:    Bool
-    let isUniqueKey:     Bool
     let isIndexed:       Bool
+    let isNullable:      Bool
+    let isPrimaryKey:    Bool
     let isReadOnly:      Bool
-    let charSetId:       Int
+    let isUniqueKey:     Bool
+    let isUnsigned:      Bool
 
     init(index idx: Int) {
-        catalog = ""
-        charSetId = 0
-        dataType = .VarChar
-        database = ""
-        decimalCount = 0
-        hasDefault = false
-        index = idx
+        // @f:0
+        index           = idx
+        charSetId       = 0
+        dataType        = .VarChar
+
+        name            = ""
+        orgName         = ""
+        tableName       = ""
+        orgTableName    = ""
+        catalog         = ""
+        database        = ""
+
+        length          = 0
+        maxLength       = 0
+        decimalCount    = 0
+
+        hasDefault      = false
         isAutoIncrement = false
-        isIndexed = false
-        isNullable = true
-        isPrimaryKey = false
-        isReadOnly = false
-        isUniqueKey = false
-        isUnsigned = false
-        length = 0
-        maxLength = 0
-        name = ""
-        orgName = ""
-        orgTableName = ""
-        tableName = ""
+        isIndexed       = false
+        isNullable      = true
+        isPrimaryKey    = false
+        isReadOnly      = false
+        isUniqueKey     = false
+        isUnsigned      = false
+        // @f:1
     }
 
     init(field fld: MYSQL_FIELD, index idx: Int) {
-        let flags: UInt32 = fld.flags
+        let _flags:         UInt32           = fld.flags
+        let _dataType:      enum_field_types = fld.type
+        let _charSetId:     Int              = Int(fld.charsetnr)
+        let _decimalDigits: UInt             = UInt(fld.decimals)
 
-        catalog = getString(cStr: fld.catalog, length: Int(fld.catalog_length))
-        charSetId = Int(fld.charsetnr)
-        decimalCount = UInt(fld.decimals)
-        dataType = getDataType(id: fld.type, charSetId: charSetId, decDigits: decimalCount)
-        database = getString(cStr: fld.db, length: Int(fld.db_length))
-        hasDefault = !testFlag(fieldValue: flags, flag: NO_DEFAULT_VALUE_FLAG)
-        index = idx
-        isAutoIncrement = testFlag(fieldValue: flags, flag: AUTO_INCREMENT_FLAG)
-        isIndexed = testFlag(fieldValue: flags, flag: MULTIPLE_KEY_FLAG)
-        isNullable = !testFlag(fieldValue: flags, flag: NOT_NULL_FLAG)
-        isPrimaryKey = testFlag(fieldValue: flags, flag: PRI_KEY_FLAG)
-        isReadOnly = false
-        isUniqueKey = testFlag(fieldValue: flags, flag: UNIQUE_KEY_FLAG)
-        isUnsigned = testFlag(fieldValue: flags, flag: UNSIGNED_FLAG)
-        length = UInt(fld.length)
-        maxLength = UInt(fld.max_length)
-        name = getString(cStr: fld.name, length: Int(fld.name_length))
-        orgName = getString(cStr: fld.org_name, length: Int(fld.org_name_length))
-        orgTableName = getString(cStr: fld.org_table, length: Int(fld.org_table_length))
-        tableName = getString(cStr: fld.table, length: Int(fld.table_length))
+        // @f:0
+        index           = idx
+        charSetId       = _charSetId
+        decimalCount    = _decimalDigits
+        isReadOnly      = false
+        dataType        = getDataType(id: _dataType, charSetId: _charSetId, decDigits: _decimalDigits)
+
+        name            = getString(cStr: fld.name,      length: Int(fld.name_length)     )
+        orgName         = getString(cStr: fld.org_name,  length: Int(fld.org_name_length) )
+        tableName       = getString(cStr: fld.table,     length: Int(fld.table_length)    )
+        orgTableName    = getString(cStr: fld.org_table, length: Int(fld.org_table_length))
+        catalog         = getString(cStr: fld.catalog,   length: Int(fld.catalog_length)  )
+        database        = getString(cStr: fld.db,        length: Int(fld.db_length)       )
+
+        length          = UInt(fld.length    )
+        maxLength       = UInt(fld.max_length)
+
+        hasDefault      = !testFlag(fieldValue: _flags, flag: NO_DEFAULT_VALUE_FLAG)
+        isNullable      = !testFlag(fieldValue: _flags, flag: NOT_NULL_FLAG        )
+        isAutoIncrement =  testFlag(fieldValue: _flags, flag: AUTO_INCREMENT_FLAG  )
+        isIndexed       =  testFlag(fieldValue: _flags, flag: MULTIPLE_KEY_FLAG    )
+        isPrimaryKey    =  testFlag(fieldValue: _flags, flag: PRI_KEY_FLAG         )
+        isUniqueKey     =  testFlag(fieldValue: _flags, flag: UNIQUE_KEY_FLAG      )
+        isUnsigned      =  testFlag(fieldValue: _flags, flag: UNSIGNED_FLAG        )
+        // @f:1
     }
 }

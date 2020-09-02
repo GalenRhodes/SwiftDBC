@@ -25,11 +25,6 @@ import Foundation
 public let SwiftDBCPrefix: String = "swiftdbc"
 
 /*===============================================================================================================================*/
-/// Defines a lambda (closure) that is called when a driver is deregistered with the driver manager.
-///
-public typealias DBDeregisterLambda = () -> Void
-
-/*===============================================================================================================================*/
 /// The driver manager. The driver manager maintains a list of currently registered drivers. When a connection to a database is
 /// required then a call to the driver manager's `connect(url:username:password:properties:)` method will locate the appropriate
 /// driver for the given URL and then create and return a connection object.
@@ -39,6 +34,11 @@ public typealias DBDeregisterLambda = () -> Void
 public class DBDriverManager {
 
     /*===========================================================================================================================*/
+    /// Defines a lambda (closure) that is called when a driver is deregistered with the driver manager.
+    ///
+    public typealias DBDeregisterLambda = () -> Void
+
+    /*===========================================================================================================================*/
     /// The shared instance of the driver manager.
     ///
     public static let manager: DBDriverManager = DBDriverManager()
@@ -46,7 +46,7 @@ public class DBDriverManager {
     /*===========================================================================================================================*/
     /// The list of registered drivers.
     ///
-    var driverList: [DriverItem] = []
+    var driverList: [DBDriverManager.DriverItem] = []
 
     /*===========================================================================================================================*/
     /// Initializes the driver mananger. It's marked private because we want folks to use the singleton from the `manager` class
@@ -61,8 +61,8 @@ public class DBDriverManager {
     ///
     deinit {
         var l: [DBDriver] = []
-        for i in driverList { l.append(i.driver) }
-        for d in l { deregister(driver: d) }
+        for i: DBDriverManager.DriverItem in driverList { l.append(i.driver) }
+        for d: DBDriver in l { deregister(driver: d) }
     }
 
     /*===========================================================================================================================*/
@@ -73,9 +73,9 @@ public class DBDriverManager {
     ///   - driver: the instance of the driver.
     ///   - deregisterLambda: a lambda (closure) that is called when the driver is deregistered.
     ///
-    public func register(driver: DBDriver, deregisterLambda: @escaping DBDeregisterLambda = {}) {
+    public func register(driver: DBDriver, deregisterLambda: @escaping DBDriverManager.DBDeregisterLambda = {}) {
         if !driverList.contains(where: { $0.driver === driver }) {
-            driverList.append(DriverItem(driver: driver, lambda: deregisterLambda))
+            driverList.append(DBDriverManager.DriverItem(driver: driver, lambda: deregisterLambda))
         }
     }
 
@@ -85,8 +85,8 @@ public class DBDriverManager {
     /// - Parameter driver: the driver.
     ///
     public func deregister(driver: DBDriver) {
-        let removed: [DriverItem] = driverList.removeAllGet { $0.driver === driver }
-        for item: DriverItem in removed { item.lambda() }
+        let removed: [DBDriverManager.DriverItem] = driverList.removeAllGet { $0.driver === driver }
+        for item: DBDriverManager.DriverItem in removed { item.lambda() }
     }
 
     /*===========================================================================================================================*/
@@ -100,25 +100,25 @@ public class DBDriverManager {
     /// - Returns: the connection to the database.
     /// - Throws: if an error occurs.
     ///
-    public func connect(url: String, username: String? = nil, password: String? = nil, properties: [String: Any] = [:]) throws -> DBConnection {
+    public func connect(url: String, username: String? = nil, password: String? = nil, database: String? = nil, properties: [String: Any] = [:]) throws -> DBConnection {
         if url.hasPrefix("\(SwiftDBCPrefix):") {
-            for item: DriverItem in driverList {
+            for item: DBDriverManager.DriverItem in driverList {
                 if item.driver.acceptsURL(url) {
-                    return try item.driver.connect(url: url, username: username, password: password, database: nil, properties: properties)
+                    return try item.driver.connect(url: url, username: username, password: password, database: database, properties: properties)
                 }
             }
         }
 
         throw DBError.Connection(description: "URL not recognized by any registered drivers: \(url)")
     }
-}
 
-class DriverItem {
-    let driver: DBDriver
-    let lambda: DBDeregisterLambda
+    class DriverItem {
+        let driver: DBDriver
+        let lambda: DBDriverManager.DBDeregisterLambda
 
-    init(driver: DBDriver, lambda: @escaping DBDeregisterLambda) {
-        self.driver = driver
-        self.lambda = lambda
+        init(driver: DBDriver, lambda: @escaping DBDriverManager.DBDeregisterLambda) {
+            self.driver = driver
+            self.lambda = lambda
+        }
     }
 }

@@ -14,7 +14,7 @@
     <a title="DBResultSet Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SwiftDBC©</a> (7% documented)</p>
+        <p><a href="../index.html">SwiftDBC©</a> (8% documented)</p>
         <p class="header-right"><a href="https://github.com/GalenRhodes/SwiftDBC"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -68,6 +68,9 @@
                 <a href="../Extensions/Array.html">Array</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Extensions/NSRecursiveLock.html">NSRecursiveLock</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Extensions/NSRegularExpression.html">NSRegularExpression</a>
               </li>
               <li class="nav-group-task">
@@ -90,6 +93,9 @@
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:8SwiftDBC2ssopyxxzSzRzlF">--(_:)</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:8SwiftDBC19representableAsText8dataTypeSbAA9DataTypesO_tF">representableAsText(dataType:)</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -105,9 +111,6 @@
                 <a href="../Protocols/DBConnection.html">DBConnection</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols.html#/s:8SwiftDBC18DBDatabaseMetaDataP">DBDatabaseMetaData</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Protocols/DBDriver.html">DBDriver</a>
               </li>
               <li class="nav-group-task">
@@ -118,14 +121,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/DBStatement.html">DBStatement</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="../Typealiases.html">Type Aliases</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:8SwiftDBC18DBDeregisterLambdaa">DBDeregisterLambda</a>
               </li>
             </ul>
           </li>
@@ -170,7 +165,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -178,9 +173,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP4nextSbyKF"></a>
-                    <a name="//apple_ref/swift/Method/next()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP4nextSbyKF">next()</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP10hasNextRowSbyKF"></a>
+                    <a name="//apple_ref/swift/Method/hasNextRow()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP10hasNextRowSbyKF">hasNextRow()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -194,12 +189,142 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">next</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">hasNextRow</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC11DBResultSetP7getData5index10Foundation0F0VSgSi_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getData(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getData5index10Foundation0F0VSgSi_tKF">getData(index:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getData</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC11DBResultSetP7getData4name10Foundation0F0VSgSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getData(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getData4name10Foundation0F0VSgSS_tKF">getData(name:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getData</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC11DBResultSetP14getInputStream5indexSo07NSInputG0CSgSi_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getInputStream(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP14getInputStream5indexSo07NSInputG0CSgSi_tKF">getInputStream(index:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getInputStream</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">InputStream</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC11DBResultSetP14getInputStream4nameSo07NSInputG0CSgSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getInputStream(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP14getInputStream4nameSo07NSInputG0CSgSS_tKF">getInputStream(name:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getInputStream</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">InputStream</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -228,7 +353,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -240,12 +365,19 @@
                     <a name="//apple_ref/swift/Method/getDate(name:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getDate4name10Foundation0F0VSgSS_tKF">getDate(name:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
                         
                       </div>
                       <div class="declaration">
@@ -257,7 +389,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -286,7 +418,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -298,12 +430,19 @@
                     <a name="//apple_ref/swift/Method/getTime(name:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getTime4name10Foundation4DateVSgSS_tKF">getTime(name:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
                         
                       </div>
                       <div class="declaration">
@@ -315,7 +454,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -344,7 +483,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -356,12 +495,19 @@
                     <a name="//apple_ref/swift/Method/getTimestamp(name:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:8SwiftDBC11DBResultSetP12getTimestamp4name10Foundation4DateVSgSS_tKF">getTimestamp(name:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
                         
                       </div>
                       <div class="declaration">
@@ -373,7 +519,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -402,7 +548,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -414,12 +560,19 @@
                     <a name="//apple_ref/swift/Method/getFloat(name:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getFloat4nameSfSgSS_tKF">getFloat(name:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
                         
                       </div>
                       <div class="declaration">
@@ -431,7 +584,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -460,7 +613,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -472,12 +625,19 @@
                     <a name="//apple_ref/swift/Method/getDouble(name:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getDouble4nameSdSgSS_tKF">getDouble(name:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
                         
                       </div>
                       <div class="declaration">
@@ -489,7 +649,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -507,7 +667,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>TODO: We&rsquo;re going to have to revisit this because we need a Swift version of Java&rsquo;s BigDecimal class.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    if an error occurs.
+
+</div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -517,8 +683,31 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>index</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the column number.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>an instance of Decimal or <code>nil</code> if the column had a NULL value.</p>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L73">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -530,13 +719,32 @@
                     <a name="//apple_ref/swift/Method/getBigDecimal(name:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:8SwiftDBC11DBResultSetP13getBigDecimal4nameSo9NSDecimalaSgSS_tKF">getBigDecimal(name:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>TODO: We&rsquo;re going to have to revisit this because we need a Swift version of Java&rsquo;s BigDecimal class.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    if an error occurs.
+
+</div>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>TODO: We&rsquo;re going to have to revisit this because we need a Swift version of Java&rsquo;s BigDecimal class.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    if an error occurs.
+
+</div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -546,8 +754,31 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the column name.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>an instance of Decimal or <code>nil</code> if the column had a NULL value.</p>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L82">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -555,9 +786,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP7getBool5indexSSSgSi_tKF"></a>
+                    <a name="/s:8SwiftDBC11DBResultSetP7getBool5indexSbSgSi_tKF"></a>
                     <a name="//apple_ref/swift/Method/getBool(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getBool5indexSSSgSi_tKF">getBool(index:)</a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getBool5indexSbSgSi_tKF">getBool(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -571,12 +802,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBool</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBool</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -584,10 +815,13 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP7getBool4nameSSSgSS_tKF"></a>
+                    <a name="/s:8SwiftDBC11DBResultSetP7getBool4nameSbSgSS_tKF"></a>
                     <a name="//apple_ref/swift/Method/getBool(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getBool4nameSSSgSS_tKF">getBool(name:)</a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getBool4nameSbSgSS_tKF">getBool(name:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
@@ -596,16 +830,20 @@
                       <div class="abstract">
                         
                       </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBool</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBool</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -634,7 +872,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -646,12 +884,19 @@
                     <a name="//apple_ref/swift/Method/getString(name:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getString4nameSSSgSS_tKF">getString(name:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
                         
                       </div>
                       <div class="declaration">
@@ -663,7 +908,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -671,9 +916,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP7getByte5indexs4Int8VSgSi_tKF"></a>
+                    <a name="/s:8SwiftDBC11DBResultSetP7getByte5indexs5UInt8VSgSi_tKF"></a>
                     <a name="//apple_ref/swift/Method/getByte(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getByte5indexs4Int8VSgSi_tKF">getByte(index:)</a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getByte5indexs5UInt8VSgSi_tKF">getByte(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -687,12 +932,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getByte</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int8</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getByte</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt8</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -700,10 +945,13 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP7getByte4names4Int8VSgSS_tKF"></a>
+                    <a name="/s:8SwiftDBC11DBResultSetP7getByte4names5UInt8VSgSS_tKF"></a>
                     <a name="//apple_ref/swift/Method/getByte(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getByte4names4Int8VSgSS_tKF">getByte(name:)</a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getByte4names5UInt8VSgSS_tKF">getByte(name:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
@@ -712,16 +960,20 @@
                       <div class="abstract">
                         
                       </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getByte</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int8</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getByte</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt8</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -750,7 +1002,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -762,12 +1014,19 @@
                     <a name="//apple_ref/swift/Method/getShort(name:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getShort4names5Int16VSgSS_tKF">getShort(name:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
                         
                       </div>
                       <div class="declaration">
@@ -779,7 +1038,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -808,7 +1067,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -820,12 +1079,19 @@
                     <a name="//apple_ref/swift/Method/getSmall(name:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getSmall4names5Int32VSgSS_tKF">getSmall(name:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
                         
                       </div>
                       <div class="declaration">
@@ -837,7 +1103,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -866,7 +1132,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -878,12 +1144,19 @@
                     <a name="//apple_ref/swift/Method/getInt(name:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:8SwiftDBC11DBResultSetP6getInt4nameSiSgSS_tKF">getInt(name:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
                         
                       </div>
                       <div class="declaration">
@@ -895,7 +1168,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -924,7 +1197,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -936,12 +1209,19 @@
                     <a name="//apple_ref/swift/Method/getLong(name:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getLong4names5Int64VSgSS_tKF">getLong(name:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
                         
                       </div>
                       <div class="declaration">
@@ -953,7 +1233,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -982,7 +1262,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -994,12 +1274,19 @@
                     <a name="//apple_ref/swift/Method/getBigInt(name:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getBigIntyXeXeF">getBigInt(name:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
                         
                       </div>
                       <div class="declaration">
@@ -1011,65 +1298,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP8getUByte5indexs5UInt8VSgSi_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getUByte(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getUByte5indexs5UInt8VSgSi_tKF">getUByte(index:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUByte</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt8</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP8getUByte4names5UInt8VSgSS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getUByte(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getUByte4names5UInt8VSgSS_tKF">getUByte(name:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUByte</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt8</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1098,7 +1327,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1110,12 +1339,19 @@
                     <a name="//apple_ref/swift/Method/getUShort(name:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getUShort4names6UInt16VSgSS_tKF">getUShort(name:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
                         
                       </div>
                       <div class="declaration">
@@ -1127,7 +1363,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1156,7 +1392,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1168,12 +1404,19 @@
                     <a name="//apple_ref/swift/Method/getUSmall(name:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getUSmall4names6UInt32VSgSS_tKF">getUSmall(name:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
                         
                       </div>
                       <div class="declaration">
@@ -1185,7 +1428,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1214,7 +1457,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1226,12 +1469,19 @@
                     <a name="//apple_ref/swift/Method/getUInt(name:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getUInt4nameSuSgSS_tKF">getUInt(name:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
                         
                       </div>
                       <div class="declaration">
@@ -1243,7 +1493,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1272,7 +1522,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1284,12 +1534,19 @@
                     <a name="//apple_ref/swift/Method/getULong(name:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getULong4names6UInt64VSgSS_tKF">getULong(name:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
                         
                       </div>
                       <div class="declaration">
@@ -1301,7 +1558,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1309,9 +1566,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP10getUBigIntyXeXeF"></a>
-                    <a name="//apple_ref/swift/Method/getUBigInt(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP10getUBigIntyXeXeF">getUBigInt(index:)</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP10getBigUIntyXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/getBigUInt(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP10getBigUIntyXeXeF">getBigUInt(index:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1325,12 +1582,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUBigInt</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">BigUInt</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBigUInt</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">BigUInt</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1338,10 +1595,49 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP10getUBigIntyXeXeF"></a>
-                    <a name="//apple_ref/swift/Method/getUBigInt(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP10getUBigIntyXeXeF">getUBigInt(name:)</a>
+                    <a name="/s:8SwiftDBC11DBResultSetP10getBigUIntyXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/getBigUInt(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP10getBigUIntyXeXeF">getBigUInt(name:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBigUInt</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">BigUInt</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC11DBResultSetPAAE11getIndexFor4nameSiSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getIndexFor(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetPAAE11getIndexFor4nameSiSS_tKF">getIndexFor(name:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
@@ -1354,12 +1650,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUBigInt</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">BigUInt</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">getIndexFor</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DataTypes.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L139-L142">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1369,7 +1666,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://blog.projectgalen.com" target="_blank" rel="external">Galen Rhodes</a>. All rights reserved. (Last updated: 2020-08-31)</p>
+          <p>&copy; 2020 <a class="link" href="https://blog.projectgalen.com" target="_blank" rel="external">Galen Rhodes</a>. All rights reserved. (Last updated: 2020-09-02)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

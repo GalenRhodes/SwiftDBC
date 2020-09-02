@@ -25,35 +25,20 @@ import MySQL
 
 class MySQLConnection: DBConnection {
 
-    let networkTimeout:   Int                 = 30000
-    var isClosed:         Bool                = true
-    var metaData:         DBDatabaseMetaData? = nil
+    let networkTimeout:   Int  = 30000
+    var isClosed:         Bool = true
     var driver:           DBDriver { MySQLDriver.defaultDriver }
-    var lastErrorMessage: String {
-        if let msg: UnsafePointer<CChar> = mysql_error(mysql) {
-            return String(cString: msg, encoding: String.Encoding.utf8) ?? "Unknown"
-        }
-        else {
-            return ""
-        }
-    }
-    var autoCommit:       Bool {
-        get { _autoCommit }
-        set {
-            _autoCommit = newValue
-            mysql_autocommit(mysql, _autoCommit)
-        }
-    }
+    var autoCommit:       Bool { willSet { if isInit { mysql_autocommit(mysql, newValue) } } }
+    var lastErrorMessage: String { getString(cStr: mysql_error(mysql)) ?? "Unknown Error" }
 
     var mysql:    UnsafeMutablePointer<MYSQL>
+    let lock:     NSRecursiveLock = NSRecursiveLock()
     let host:     String
     let port:     Int
     let username: String?
     let password: String?
     let database: String?
-    var isInit:   Bool = false
-
-    private var _autoCommit: Bool = false
+    var isInit:   Bool            = false
 
     init(host: String, port: Int, username: String?, password: String?, database: String?, query: [String: String]) throws {
         self.host = host
@@ -61,37 +46,52 @@ class MySQLConnection: DBConnection {
         self.username = username
         self.password = password
         self.database = database
-
-        if let _mysql: UnsafeMutablePointer<MYSQL> = mysql_init(nil) {
-            self.mysql = _mysql
-            try connect()
-        }
-        else {
-            throw DBError.Connection(description: "Unable to allocate memory for database connection to: \(host):\(port)/\(database ?? "")")
-        }
+        self.autoCommit = false
+        if let _mysql: UnsafeMutablePointer<MYSQL> = MySQLDriver.lock.withLock({ mysql_init(nil) }) { self.mysql =  _mysql }
+        else { throw DBError.Connection(description: "Unable to allocate memory for database connection to: \(host):\(port)/\(database ?? "")") }
+        try _connect()
     }
 
     func reconnect() throws {
-        close()
-        if let m0: UnsafeMutablePointer<MYSQL> = mysql_init(nil) {
-            self.mysql = m0
-            try connect()
-        }
-        else {
-            throw DBError.Connection(description: "Unable to allocate memory for database connection to: \(host):\(port)/\(database ?? "")")
+        try lock.withLock {
+            _close()
+            if let _mysql: UnsafeMutablePointer<MYSQL> = MySQLDriver.lock.withLock({ mysql_init(nil) }) { self.mysql = _mysql }
+            else { throw DBError.Connection(description: "Unable to allocate memory for database connection to: \(host):\(port)/\(database ?? "")") }
+            try _connect()
         }
     }
 
-    private func connect() throws {
-        var to: UInt32 = UInt32(networkTimeout / 1000)
-        var rc: Bool   = true
+    deinit {
+        _close()
+    }
+
+    func close() {
+        lock.withLock { _close() }
+    }
+
+    func createStatement() throws -> DBStatement {
+        lock.withLock { MySQLStatement(self) }
+    }
+
+    func commit() throws {
+        if !lock.withLock({ mysql_commit(mysql) }) { throw DBError.Commit }
+    }
+
+    func rollback() throws {
+        if !lock.withLock({ mysql_rollback(mysql) }) { throw DBError.Rollback }
+    }
+
+    private func _connect() throws {
+        var to:   UInt32 = UInt32(networkTimeout / 1000)
+        var rc:   Bool   = true
+        let opts: UInt   = (CLIENT_MULTI_STATEMENTS | CLIENT_MULTI_RESULTS)
 
         isInit = true
         mysql_options(mysql, MYSQL_SET_CHARSET_NAME, MySQLDefaultCharacterSet)
         mysql_options(mysql, MYSQL_OPT_CONNECT_TIMEOUT, &to)
         mysql_options(mysql, MYSQL_OPT_RECONNECT, &rc)
 
-        if let _ = mysql_real_connect(mysql, host, username, password, database, UInt32(port), nil, CLIENT_MULTI_STATEMENTS | CLIENT_MULTI_RESULTS) {
+        if let _ = mysql_real_connect(mysql, host, username, password, database, UInt32(port), nil, opts) {
             isClosed = false
             autoCommit = true
             mysql_set_character_set(mysql, MySQLDefaultCharacterSet)
@@ -101,35 +101,15 @@ class MySQLConnection: DBConnection {
         }
     }
 
-    deinit {
-        close()
-    }
-
-    func close() {
+    @inlinable func _close() {
         if isInit {
             // Tell anyone who depends on this connection that it is closing.
             NotificationCenter.default.post(name: DBConnectionWillClose, object: self)
             // Then close it.
             mysql_close(mysql)
+
             isInit = false
             isClosed = true
-            _autoCommit = false
         }
-    }
-
-    func commit() throws {
-        if !mysql_commit(mysql) {
-            throw DBError.Commit
-        }
-    }
-
-    func rollback() throws {
-        if !mysql_rollback(mysql) {
-            throw DBError.Rollback
-        }
-    }
-
-    func createStatement() throws -> DBStatement {
-        MySQLStatement(self)
     }
 }

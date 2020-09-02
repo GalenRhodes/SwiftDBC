@@ -247,8 +247,29 @@ class SwiftDBCTests: XCTestCase {
     }
 
     func testDriverManager() throws {
-        let url: String = "swiftdbc:mysql://grhodes-dev:Leising1970!@goober:3306/RHODES"
-        let _: DBConnection = try DBDriverManager.manager.connect(url: url)
+        let url:  String        = "swiftdbc:mysql://grhodes-dev:Leising1970!@goober:3306/RHODES"
+        let conn: DBConnection  = try DBDriverManager.manager.connect(url: url)
+        let stmt: DBStatement   = try conn.createStatement()
+        var res:  DBNextResults = try stmt.execute(sql: "select * from person")
+
+        while res != .None {
+            if res == .ResultSet {
+                if let rs: DBResultSet = try stmt.getResultSet(){
+                    print("-----------------------------------------------------------------------")
+                    while try rs.hasNextRow() {
+                        for i in (0 ..< rs.metaData.columnCount) {
+                            print("\(rs.metaData[i].name): \"\((try rs.getString(index: i)) ?? "-ERR-")\"")
+                        }
+                        print("-----------------------------------------------------------------------")
+                    }
+                }
+            }
+            else if res == .UpdateCount {
+                print("Update Count: \((try? stmt.getUpdateCount()) ?? -1)")
+            }
+            res = try stmt.hasMoreResults()
+        }
+
         print("Success!")
     }
 
