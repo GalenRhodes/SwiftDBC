@@ -97,6 +97,7 @@
 		1117D48586EB886859139ED6 /* MySQLConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySQLConnection.swift; sourceTree = "<group>"; };
 		1117D4B876D43E295AA33EDA /* DBResultSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBResultSet.swift; sourceTree = "<group>"; };
 		1117D4FC94C2A099B546F07F /* DBTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBTools.swift; sourceTree = "<group>"; };
+		1117D517403327D47CD9F13B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1117D5465EB5F4C00FCB99AF /* MySQLResultSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySQLResultSet.swift; sourceTree = "<group>"; };
 		1117D675CF52BB254A620CBF /* DBError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBError.swift; sourceTree = "<group>"; };
 		1117D6E41BE400A5B6B34A70 /* MySQLStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySQLStatement.swift; sourceTree = "<group>"; };
@@ -266,6 +267,7 @@
 				1117D479D00FA6A6A534DBF1 /* Support */,
 				1117D79D3983856A5B2EC430 /* README.md */,
 				1117DB0A9906E07F60F201F2 /* NOTES.md */,
+				1117D517403327D47CD9F13B /* LICENSE */,
 			);
 			sourceTree = "<group>";
 		};
