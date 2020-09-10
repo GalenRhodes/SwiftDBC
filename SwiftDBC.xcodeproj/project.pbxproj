@@ -106,6 +106,7 @@
 		1117D79D3983856A5B2EC430 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1117D84546936319A6DD9081 /* docfixer.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = docfixer.sh; sourceTree = "<group>"; };
 		1117DA8628075DF37E696237 /* DBColumn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBColumn.swift; sourceTree = "<group>"; };
+		1117DB0A9906E07F60F201F2 /* NOTES.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = NOTES.md; sourceTree = "<group>"; };
 		1117DB6E82154001664799F4 /* DBConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBConnection.swift; sourceTree = "<group>"; };
 		1117DB8DB6DDB5CA27D0284D /* DBDriver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBDriver.swift; sourceTree = "<group>"; };
 		1117DCB3585F8946C356BAC9 /* DBRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBRow.swift; sourceTree = "<group>"; };
@@ -264,6 +265,7 @@
 				83D2DF9024F55D9D003D6E14 /* Frameworks */,
 				1117D479D00FA6A6A534DBF1 /* Support */,
 				1117D79D3983856A5B2EC430 /* README.md */,
+				1117DB0A9906E07F60F201F2 /* NOTES.md */,
 			);
 			sourceTree = "<group>";
 		};

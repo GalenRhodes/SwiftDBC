@@ -13,8 +13,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="421f09c6-d872-417e-8a2a-797886d5c057" name="Default Changelist" comment="Using Rubicon as a package.">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="421f09c6-d872-417e-8a2a-797886d5c057" name="Default Changelist" comment="Updated README">
+      <change afterPath="$PROJECT_DIR$/NOTES.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.pbxproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +52,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="SwiftDBC" />
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
@@ -93,7 +95,7 @@
       <workItem from="1598980753286" duration="13321000" />
       <workItem from="1599132225507" duration="9438000" />
       <workItem from="1599594589561" duration="742000" />
-      <workItem from="1599654715519" duration="7267000" />
+      <workItem from="1599654715519" duration="7535000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1598452724013</created>
@@ -165,11 +167,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599742862433</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Updated README">
+      <created>1599743505882</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1599743505882</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -184,13 +196,20 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="gitattributes" />
     <MESSAGE value="Added BigInt support. [BigInt](https://github.com/attaswift/BigInt)" />
     <MESSAGE value="Changed how result set meta data is dealt with." />
     <MESSAGE value="Updated README.md file." />
     <MESSAGE value="Using Rubicon as a package." />
-    <option name="LAST_COMMIT_MESSAGE" value="Using Rubicon as a package." />
+    <MESSAGE value="Updated README" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated README" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1025" y="297" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1598964856965">
@@ -269,10 +288,10 @@
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="968" y="152" key="StringManipulation.SortTypeDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1598898350966" />
-    <state x="880" y="276" key="Vcs.Push.Dialog.v2" timestamp="1599742871665">
+    <state x="880" y="276" key="Vcs.Push.Dialog.v2" timestamp="1599743509321">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="880" y="276" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1599742871665" />
+    <state x="880" y="276" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1599743509321" />
     <state x="1113" y="317" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599060703755">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
