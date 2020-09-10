@@ -13,31 +13,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="421f09c6-d872-417e-8a2a-797886d5c057" name="Default Changelist" comment="Updated README.md file.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBConnection.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DBConnection.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBDriver.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DBDriver.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBDriverManager.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DBDriverManager.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBError.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DBError.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBResultSet.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DBResultSet.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBResultSetMetaData.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DBResultSetMetaData.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBStatement.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DBStatement.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/DataTypes.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DataTypes.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/Misc/Closable.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DBColumn.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/Misc/Conditional.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/Misc/DBTools.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/Misc/DBTools.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/Misc/Extensions.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/Misc/RecursiveLock.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DBRow.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLConnection.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLConnection.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLDriver.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLDriver.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLResultSet.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLResultSet.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLResultSetMetaData.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLResultSetMetaData.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLStatement.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLStatement.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLTools.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLTools.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBCTests/SwiftDBCTests.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBCTests/SwiftDBCTests.swift" afterDir="false" />
+    <list default="true" id="421f09c6-d872-417e-8a2a-797886d5c057" name="Default Changelist" comment="Using Rubicon as a package.">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +93,7 @@
       <workItem from="1598980753286" duration="13321000" />
       <workItem from="1599132225507" duration="9438000" />
       <workItem from="1599594589561" duration="742000" />
-      <workItem from="1599654715519" duration="6651000" />
+      <workItem from="1599654715519" duration="7267000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1598452724013</created>
@@ -181,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599067869743</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Using Rubicon as a package.">
+      <created>1599742862433</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1599742862433</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +189,8 @@
     <MESSAGE value="Added BigInt support. [BigInt](https://github.com/attaswift/BigInt)" />
     <MESSAGE value="Changed how result set meta data is dealt with." />
     <MESSAGE value="Updated README.md file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md file." />
+    <MESSAGE value="Using Rubicon as a package." />
+    <option name="LAST_COMMIT_MESSAGE" value="Using Rubicon as a package." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1025" y="297" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1598964856965">
@@ -284,10 +269,10 @@
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="968" y="152" key="StringManipulation.SortTypeDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1598898350966" />
-    <state x="880" y="276" key="Vcs.Push.Dialog.v2" timestamp="1599067872570">
+    <state x="880" y="276" key="Vcs.Push.Dialog.v2" timestamp="1599742871665">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="880" y="276" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1599067872570" />
+    <state x="880" y="276" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1599742871665" />
     <state x="1113" y="317" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599060703755">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
