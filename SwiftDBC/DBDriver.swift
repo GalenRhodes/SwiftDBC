@@ -21,9 +21,11 @@
  *//************************************************************************/
 
 import Foundation
+import Rubicon
 
 public protocol DBDriver: AnyObject {
 
+    var name:         String { get }
     var majorVersion: Int { get }
     var minorVersion: Int { get }
 

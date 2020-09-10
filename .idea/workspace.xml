@@ -14,68 +14,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="421f09c6-d872-417e-8a2a-797886d5c057" name="Default Changelist" comment="Updated README.md file.">
-      <change afterPath="$PROJECT_DIR$/SwiftDBC/Misc/RecursiveLock.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/Misc/Conditional.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/Misc/Conditional.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/Misc/Extensions.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/Misc/Extensions.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBConnection.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DBConnection.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBDriver.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DBDriver.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBDriverManager.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DBDriverManager.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBError.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DBError.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBResultSet.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DBResultSet.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBResultSetMetaData.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DBResultSetMetaData.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBStatement.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DBStatement.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/DataTypes.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DataTypes.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/Misc/Closable.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DBColumn.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/Misc/Conditional.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/Misc/DBTools.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/Misc/DBTools.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/Misc/Extensions.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/Misc/RecursiveLock.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DBRow.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLConnection.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLConnection.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLDriver.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLDriver.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLResultSet.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLResultSet.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Classes/Conditional.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes/Conditional.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Classes/DBDriverManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Classes/DBDriverManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Enums.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Enums.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Enums/DBError.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Enums/DBError.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Enums/DBNextResults.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Enums/DBNextResults.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Enums/DataTypes.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Enums/DataTypes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Extensions.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Extensions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Extensions/Array.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Extensions/Array.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Extensions/NSRecursiveLock.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Extensions/NSRegularExpression.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Extensions/NSRegularExpression.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Extensions/String.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Extensions/String.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Functions.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Functions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Global Variables.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Global Variables.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Protocols.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Protocols.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Protocols/Closable.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Protocols/Closable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Protocols/DBColumnMetaData.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Protocols/DBColumnMetaData.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Protocols/DBConnection.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Protocols/DBConnection.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Protocols/DBDriver.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Protocols/DBDriver.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Protocols/DBResultSet.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Protocols/DBResultSet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Protocols/DBResultSetMetaData.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Protocols/DBResultSetMetaData.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Protocols/DBStatement.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Protocols/DBStatement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/badge.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/badge.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/Conditional.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/Conditional.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/DBDriverManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Classes/DBDriverManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums/DBError.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums/DBError.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums/DBNextResults.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums/DBNextResults.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums/DataTypes.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Enums/DataTypes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions/Array.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions/Array.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions/NSRecursiveLock.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions/NSRegularExpression.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions/NSRegularExpression.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions/String.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Extensions/String.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Functions.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Functions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Global Variables.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Global Variables.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/Closable.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/Closable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBColumnMetaData.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBColumnMetaData.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBConnection.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBConnection.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBDriver.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBDriver.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBResultSet.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBResultSet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBResultSetMetaData.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBResultSetMetaData.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBStatement.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/Protocols/DBStatement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/Documents/search.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/docSet.dsidx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.docset/Contents/Resources/docSet.dsidx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docsets/.tgz" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docsets/.tgz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/search.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/undocumented.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/undocumented.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLResultSetMetaData.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLResultSetMetaData.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLStatement.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLStatement.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLTools.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLTools.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBCTests/SwiftDBCTests.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBCTests/SwiftDBCTests.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +113,10 @@
       <workItem from="1598658131985" duration="19318000" />
       <workItem from="1598895774774" duration="10773000" />
       <workItem from="1598959023459" duration="17457000" />
-      <workItem from="1598980753286" duration="12641000" />
+      <workItem from="1598980753286" duration="13321000" />
+      <workItem from="1599132225507" duration="9438000" />
+      <workItem from="1599594589561" duration="742000" />
+      <workItem from="1599654715519" duration="6651000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1598452724013</created>
@@ -209,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599062999026</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Updated README.md file.">
+      <created>1599067869743</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1599067869743</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,10 +216,10 @@
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="744" y="202" width="861" height="735" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1598903654658" />
-    <state x="1071" y="263" width="650" height="554" key="#com.intellij.ide.util.MemberChooser" timestamp="1598632984170">
+    <state x="1071" y="263" width="650" height="554" key="#com.intellij.ide.util.MemberChooser" timestamp="1599142312567">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="1071" y="263" width="650" height="554" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1080@0.0.2560.1080" timestamp="1598632984170" />
+    <state x="1071" y="263" width="650" height="554" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1080@0.0.2560.1080" timestamp="1599142312567" />
     <state x="1018" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598979496461">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
@@ -256,45 +228,45 @@
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="259" y="192" width="442" height="319" key="Github.ShareDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1598452595825" />
-    <state width="1102" height="383" key="GridCell.Tab.0.bottom" timestamp="1599061166082">
+    <state width="1102" height="383" key="GridCell.Tab.0.bottom" timestamp="1599077345960">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1102" height="383" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1599061166082" />
+    <state width="1102" height="383" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1599077345960" />
     <state width="1519" height="383" key="GridCell.Tab.0.bottom/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863921" />
-    <state width="1102" height="383" key="GridCell.Tab.0.center" timestamp="1599061166081">
+    <state width="1102" height="383" key="GridCell.Tab.0.center" timestamp="1599077345959">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1102" height="383" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1599061166081" />
+    <state width="1102" height="383" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1599077345959" />
     <state width="1519" height="383" key="GridCell.Tab.0.center/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863920" />
-    <state width="1102" height="383" key="GridCell.Tab.0.left" timestamp="1599061166080">
+    <state width="1102" height="383" key="GridCell.Tab.0.left" timestamp="1599077345959">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1102" height="383" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1599061166080" />
+    <state width="1102" height="383" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1599077345959" />
     <state width="1519" height="383" key="GridCell.Tab.0.left/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863920" />
-    <state width="1102" height="383" key="GridCell.Tab.0.right" timestamp="1599061166081">
+    <state width="1102" height="383" key="GridCell.Tab.0.right" timestamp="1599077345960">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1102" height="383" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1599061166081" />
+    <state width="1102" height="383" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1599077345960" />
     <state width="1519" height="383" key="GridCell.Tab.0.right/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863921" />
-    <state width="1102" height="383" key="GridCell.Tab.1.bottom" timestamp="1599061166080">
+    <state width="1102" height="383" key="GridCell.Tab.1.bottom" timestamp="1599077345961">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1102" height="383" key="GridCell.Tab.1.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1599061166080" />
+    <state width="1102" height="383" key="GridCell.Tab.1.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1599077345961" />
     <state width="1519" height="383" key="GridCell.Tab.1.bottom/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863919" />
-    <state width="1102" height="383" key="GridCell.Tab.1.center" timestamp="1599061166079">
+    <state width="1102" height="383" key="GridCell.Tab.1.center" timestamp="1599077345960">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1102" height="383" key="GridCell.Tab.1.center/0.0.2560.1080@0.0.2560.1080" timestamp="1599061166079" />
+    <state width="1102" height="383" key="GridCell.Tab.1.center/0.0.2560.1080@0.0.2560.1080" timestamp="1599077345960" />
     <state width="1519" height="383" key="GridCell.Tab.1.center/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863918" />
-    <state width="1102" height="383" key="GridCell.Tab.1.left" timestamp="1599061166078">
+    <state width="1102" height="383" key="GridCell.Tab.1.left" timestamp="1599077345960">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1102" height="383" key="GridCell.Tab.1.left/0.0.2560.1080@0.0.2560.1080" timestamp="1599061166078" />
+    <state width="1102" height="383" key="GridCell.Tab.1.left/0.0.2560.1080@0.0.2560.1080" timestamp="1599077345960" />
     <state width="1519" height="383" key="GridCell.Tab.1.left/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863917" />
-    <state width="1102" height="383" key="GridCell.Tab.1.right" timestamp="1599061166079">
+    <state width="1102" height="383" key="GridCell.Tab.1.right" timestamp="1599077345961">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1102" height="383" key="GridCell.Tab.1.right/0.0.2560.1080@0.0.2560.1080" timestamp="1599061166079" />
+    <state width="1102" height="383" key="GridCell.Tab.1.right/0.0.2560.1080@0.0.2560.1080" timestamp="1599077345961" />
     <state width="1519" height="383" key="GridCell.Tab.1.right/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863918" />
     <state width="177" height="538" key="HiddenNamespacesPopup" timestamp="1598544098717">
       <screen x="0" y="0" width="2560" height="1080" />
@@ -312,10 +284,10 @@
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="968" y="152" key="StringManipulation.SortTypeDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1598898350966" />
-    <state x="880" y="276" key="Vcs.Push.Dialog.v2" timestamp="1599063004252">
+    <state x="880" y="276" key="Vcs.Push.Dialog.v2" timestamp="1599067872570">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="880" y="276" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1599063004252" />
+    <state x="880" y="276" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1599067872570" />
     <state x="1113" y="317" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599060703755">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
@@ -324,10 +296,15 @@
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="842" y="194" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.2560.1080@0.0.2560.1080" timestamp="1598897607925" />
-    <state x="311" y="182" width="1049" height="750" key="find.popup" timestamp="1599003901777">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="474" y="187" width="1599" height="772" key="find.popup" timestamp="1599741822201">
+      <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="311" y="182" width="1049" height="750" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1599003901777" />
+    <state x="474" y="187" width="1599" height="772" key="find.popup/0.0.2560.1080@0.0.2560.1080" timestamp="1599741822201" />
+    <state x="1062" y="391" key="git4idea.ui.GitTagDialog" timestamp="1599739117722">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="1062" y="391" key="git4idea.ui.GitTagDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1599739117722" />
     <state width="600" height="440" key="javadoc.popup" timestamp="1598635175742">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>

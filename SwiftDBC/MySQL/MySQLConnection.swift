@@ -22,6 +22,7 @@
 
 import Foundation
 import MySQL
+import Rubicon
 
 class MySQLConnection: DBConnection {
 
@@ -47,7 +48,7 @@ class MySQLConnection: DBConnection {
         self.password = password
         self.database = database
         self.autoCommit = false
-        if let _mysql: UnsafeMutablePointer<MYSQL> = MySQLDriver.lock.withLock({ mysql_init(nil) }) { self.mysql = _mysql }
+        if let _mysql: UnsafeMutablePointer<MYSQL> = MySQLDriver.lock.withLock(body: { mysql_init(nil) }) { self.mysql = _mysql }
         else { throw DBError.Connection(description: "Unable to allocate memory for database connection to: \(host):\(port)/\(database ?? "")") }
         try _connect()
     }
@@ -55,7 +56,7 @@ class MySQLConnection: DBConnection {
     func reconnect() throws {
         try lock.withLock {
             _close()
-            if let _mysql: UnsafeMutablePointer<MYSQL> = MySQLDriver.lock.withLock({ mysql_init(nil) }) { self.mysql = _mysql }
+            if let _mysql: UnsafeMutablePointer<MYSQL> = MySQLDriver.lock.withLock(body: { mysql_init(nil) }) { self.mysql = _mysql }
             else { throw DBError.Connection(description: "Unable to allocate memory for database connection to: \(host):\(port)/\(database ?? "")") }
             try _connect()
         }
@@ -74,11 +75,11 @@ class MySQLConnection: DBConnection {
     }
 
     func commit() throws {
-        if !lock.withLock({ mysql_commit(mysql) }) { throw DBError.Commit }
+        if !lock.withLock(body: { mysql_commit(mysql) }) { throw DBError.Commit }
     }
 
     func rollback() throws {
-        if !lock.withLock({ mysql_rollback(mysql) }) { throw DBError.Rollback }
+        if !lock.withLock(body: { mysql_rollback(mysql) }) { throw DBError.Rollback }
     }
 
     private func _connect() throws {

@@ -22,6 +22,7 @@
 
 import Foundation
 import MySQL
+import Rubicon
 
 class MySQLResultSetMetaData: DBResultSetMetaData {
 

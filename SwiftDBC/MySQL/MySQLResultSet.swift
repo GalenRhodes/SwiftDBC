@@ -23,6 +23,7 @@
 import Foundation
 import MySQL
 import BigInt
+import Rubicon
 
 /*===============================================================================================================================*/
 /// The result set from a query against the database.
@@ -102,21 +103,6 @@ class MySQLResultSet: DBResultSet {
             NotificationCenter.default.post(name: DBResultSetWillClose, object: self)
             // Then close.
             isClosed = true
-        }
-    }
-
-    /*===========================================================================================================================*/
-    /// Get the next row of data.
-    /// 
-    /// - Returns: `true` if there is another row of data or `false` if there are no more rows.
-    /// - Throws: if an error occurs of if the result set has been closed.
-    ///
-    func hasNextRow() throws -> Bool {
-        lock.withLock {
-            wasNextCalled = true
-            if rawData.count == 0 { currentRow = nil }
-            else { currentRow = rawData.removeFirst() }
-            return (currentRow != nil)
         }
     }
 
@@ -283,6 +269,22 @@ class MySQLResultSet: DBResultSet {
         if !metaData[index].isBinary, let str: String = String(bytes: data, encoding: String.Encoding.utf8) { return BigUInt(str) }
         else { return nil }
     }
+
+    /*===========================================================================================================================*/
+    /// Get the next row of data.
+    /// 
+    /// - Returns: `true` if there is another row of data or `false` if there are no more rows.
+    ///
+    var hasNextRow: Bool {
+        lock.withLock {
+            wasNextCalled = true
+            if rawData.count == 0 { currentRow = nil }
+            else { currentRow = rawData.removeFirst() }
+            return (currentRow != nil)
+        }
+    }
+
+    subscript(index: Int) -> DBColumn { fatalError("subscript(_:) has not been implemented") }
 }
 
 extension MySQLResultSet {

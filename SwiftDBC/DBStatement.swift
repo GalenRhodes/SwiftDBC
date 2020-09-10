@@ -21,29 +21,16 @@
  *//************************************************************************/
 
 import Foundation
+import Rubicon
+
+public enum DBNextResults {
+    case None
+    case ResultSet
+    case UpdateCount
+}
 
 public protocol DBStatement: Closable {
 
-    /*===========================================================================================================================*/
-    /// Executes the given SQL statement, which may return multiple results. In some (uncommon) situations, a single SQL statement
-    /// may return multiple result sets and/or update counts. Normally you can ignore this unless you are (1) executing a stored
-    /// procedure that you know may return multiple results or (2) you are dynamically executing an unknown SQL string.
-    /// 
-    /// The execute method executes an SQL statement and indicates the form of the first result. You must then use the methods
-    /// getResultSet or getUpdateCount to retrieve the result, and getMoreResults to move to any subsequent `result(s)`.
-    /// 
-    /// Note: This method cannot be called on a PreparedStatement or CallableStatement.
-    /// 
-    /// - Parameter sql: any SQL statement
-    /// - Returns: `true` if the first result is a ResultSet object; `false` if it is an update count or there are no results
-    /// - Throws: if the SQL statement was invalid, the server encountered an error, or there was an I/O error communicating with
-    ///           the server.
-    ///
-    func execute(sql: String) throws -> DBNextResults
+    typealias AllDBResultsClosure = (UInt64?, DBResultSet?, Int) throws -> Bool
 
-    func getResultSet() throws -> DBResultSet?
-
-    func getUpdateCount() throws -> Int
-
-    func hasMoreResults() throws -> DBNextResults
 }

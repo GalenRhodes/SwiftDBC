@@ -1,9 +1,9 @@
 /************************************************************************//**
  *     PROJECT: SwiftDBC
- *    FILENAME: RecursiveLock.swift
+ *    FILENAME: DBRow.swift
  *         IDE: AppCode
  *      AUTHOR: Galen Rhodes
- *        DATE: 9/2/20
+ *        DATE: 9/3/20
  *
  * Copyright © 2020 Project Galen. All rights reserved.
  *
@@ -21,25 +21,9 @@
  *//************************************************************************/
 
 import Foundation
+import Rubicon
+import BigInt
 
-open class RecursiveLock: NSLocking {
-
-    @usableFromInline let rLock: NSRecursiveLock = NSRecursiveLock()
-
-    public init() {}
-
-    @inlinable public func lock() { rLock.lock() }
-
-    @inlinable public func lock(before: Date) -> Bool { rLock.lock(before: before) }
-
-    @inlinable public func unlock() { rLock.unlock() }
-
-    @inlinable public func `try`() -> Bool { rLock.try() }
-
-    @inlinable func withLock<T>(_ lambda: () throws -> T) rethrows -> T {
-        lock()
-        defer { unlock() }
-        return try lambda()
-    }
+public protocol DBRow {
 
 }

@@ -21,6 +21,7 @@
  *//************************************************************************/
 
 import Foundation
+import Rubicon
 
 /*===============================================================================================================================*/
 /// A connection (session) with a specific database. SQL statements are executed and results are returned within the context of a

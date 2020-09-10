@@ -21,6 +21,7 @@
  *//************************************************************************/
 
 import Foundation
+import Rubicon
 
 public enum DBError: Error {
     case Connection(description: String)

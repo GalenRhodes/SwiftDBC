@@ -9,6 +9,24 @@
           "revision": "e1f28276687d7661cbb2754771bd9fc281784e32",
           "version": "5.2.0"
         }
+      },
+      {
+        "package": "RingBuffer",
+        "repositoryURL": "https://github.com/GalenRhodes/RingBuffer.git",
+        "state": {
+          "branch": null,
+          "revision": "7ef5b3c2721f7d336a35f2ac97b82a5c1db28bab",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "Rubicon",
+        "repositoryURL": "https://github.com/GalenRhodes/Rubicon.git",
+        "state": {
+          "branch": null,
+          "revision": "64f0343cdb2ac1e14af6f619538292f70fbae06e",
+          "version": "0.1.4"
+        }
       }
     ]
   },

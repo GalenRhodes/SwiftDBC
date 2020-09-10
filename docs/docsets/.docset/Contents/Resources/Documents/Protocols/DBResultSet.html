@@ -32,13 +32,7 @@
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/Conditional.html">Conditional</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/DBDriverManager.html">DBDriverManager</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/RecursiveLock.html">RecursiveLock</a>
               </li>
             </ul>
           </li>
@@ -65,34 +59,8 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Extensions.html">Extensions</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Extensions/Array.html">Array</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/NSRegularExpression.html">NSRegularExpression</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/String.html">String</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
             <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:8SwiftDBC2ppoPyxxzSzRzlF">++(_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:8SwiftDBC2ppopyxxzSzRzlF">++(_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:8SwiftDBC2ssoPyxxzSzRzlF">--(_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:8SwiftDBC2ssopyxxzSzRzlF">--(_:)</a>
-              </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:8SwiftDBC19representableAsText8dataTypeSbAA9DataTypesO_tF">representableAsText(dataType:)</a>
               </li>
@@ -102,7 +70,7 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/Closable.html">Closable</a>
+                <a href="../Protocols/DBColumn.html">DBColumn</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/DBColumnMetaData.html">DBColumnMetaData</a>
@@ -120,6 +88,9 @@
                 <a href="../Protocols/DBResultSetMetaData.html">DBResultSetMetaData</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols.html#/s:8SwiftDBC5DBRowP">DBRow</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/DBStatement.html">DBStatement</a>
               </li>
             </ul>
@@ -132,7 +103,7 @@
             <h1>DBResultSet</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBResultSet</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Closable.html">Closable</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBResultSet</span> <span class="p">:</span> <span class="kt">Closable</span></code></pre>
 
                 </div>
               </div>
@@ -141,6 +112,64 @@
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC11DBResultSetP0cD7Closurea"></a>
+                    <a name="//apple_ref/swift/Alias/DBResultSetClosure" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP0cD7Closurea">DBResultSetClosure</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">DBResultSetClosure</span> <span class="o">=</span> <span class="p">(</span><span class="kt">DBResultSet</span><span class="p">,</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC11DBResultSetP10hasNextRowSbvp"></a>
+                    <a name="//apple_ref/swift/Property/hasNextRow" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP10hasNextRowSbvp">hasNextRow</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">hasNextRow</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -173,67 +202,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP10hasNextRowSbyKF"></a>
-                    <a name="//apple_ref/swift/Method/hasNextRow()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP10hasNextRowSbyKF">hasNextRow()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">hasNextRow</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP7getData5index10Foundation0F0VSgSi_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getData(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getData5index10Foundation0F0VSgSi_tKF">getData(index:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getData</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP7getData4name10Foundation0F0VSgSS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getData(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getData4name10Foundation0F0VSgSS_tKF">getData(name:)</a>
+                    <a name="/s:8SwiftDBC11DBResultSetPyAA8DBColumn_pSicip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetPyAA8DBColumn_pSicip">subscript(_:)</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -254,7 +225,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getData</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="nf">subscript</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/DBColumn.html">DBColumn</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -267,9 +238,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP14getInputStream5indexSo07NSInputG0CSgSi_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getInputStream(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP14getInputStream5indexSo07NSInputG0CSgSi_tKF">getInputStream(index:)</a>
+                    <a name="/s:8SwiftDBC11DBResultSetPyAA8DBColumn_pSgSScip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetPyAA8DBColumn_pSgSScip">subscript(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -283,7 +254,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getInputStream</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">InputStream</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="nf">subscript</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/DBColumn.html">DBColumn</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -296,1344 +267,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP14getInputStream4nameSo07NSInputG0CSgSS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getInputStream(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP14getInputStream4nameSo07NSInputG0CSgSS_tKF">getInputStream(name:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getInputStream</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">InputStream</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP7getDate5index10Foundation0F0VSgSi_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getDate(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getDate5index10Foundation0F0VSgSi_tKF">getDate(index:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getDate</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP7getDate4name10Foundation0F0VSgSS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getDate(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getDate4name10Foundation0F0VSgSS_tKF">getDate(name:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getDate</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP7getTime5index10Foundation4DateVSgSi_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getTime(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getTime5index10Foundation4DateVSgSi_tKF">getTime(index:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getTime</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP7getTime4name10Foundation4DateVSgSS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getTime(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getTime4name10Foundation4DateVSgSS_tKF">getTime(name:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getTime</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP12getTimestamp5index10Foundation4DateVSgSi_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getTimestamp(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP12getTimestamp5index10Foundation4DateVSgSi_tKF">getTimestamp(index:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getTimestamp</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP12getTimestamp4name10Foundation4DateVSgSS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getTimestamp(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP12getTimestamp4name10Foundation4DateVSgSS_tKF">getTimestamp(name:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getTimestamp</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP8getFloat5indexSfSgSi_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getFloat(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getFloat5indexSfSgSi_tKF">getFloat(index:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getFloat</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Float</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP8getFloat4nameSfSgSS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getFloat(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getFloat4nameSfSgSS_tKF">getFloat(name:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getFloat</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Float</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP9getDouble5indexSdSgSi_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getDouble(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getDouble5indexSdSgSi_tKF">getDouble(index:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getDouble</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Double</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP9getDouble4nameSdSgSS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getDouble(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getDouble4nameSdSgSS_tKF">getDouble(name:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getDouble</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Double</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP13getBigDecimal5indexSo9NSDecimalaSgSi_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getBigDecimal(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP13getBigDecimal5indexSo9NSDecimalaSgSi_tKF">getBigDecimal(index:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>TODO: We&rsquo;re going to have to revisit this because we need a Swift version of Java&rsquo;s BigDecimal class.</p>
-<div class="aside aside-throws">
-    <p class="aside-title">Throws</p>
-    if an error occurs.
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBigDecimal</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Decimal</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>index</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the column number.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>an instance of Decimal or <code>nil</code> if the column had a NULL value.</p>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L73">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP13getBigDecimal4nameSo9NSDecimalaSgSS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getBigDecimal(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP13getBigDecimal4nameSo9NSDecimalaSgSS_tKF">getBigDecimal(name:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>TODO: We&rsquo;re going to have to revisit this because we need a Swift version of Java&rsquo;s BigDecimal class.</p>
-<div class="aside aside-throws">
-    <p class="aside-title">Throws</p>
-    if an error occurs.
-
-</div>
-
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        <p>TODO: We&rsquo;re going to have to revisit this because we need a Swift version of Java&rsquo;s BigDecimal class.</p>
-<div class="aside aside-throws">
-    <p class="aside-title">Throws</p>
-    if an error occurs.
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBigDecimal</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Decimal</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>name</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the column name.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>an instance of Decimal or <code>nil</code> if the column had a NULL value.</p>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L82">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP7getBool5indexSbSgSi_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getBool(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getBool5indexSbSgSi_tKF">getBool(index:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBool</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP7getBool4nameSbSgSS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getBool(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getBool4nameSbSgSS_tKF">getBool(name:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBool</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP9getString5indexSSSgSi_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getString(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getString5indexSSSgSi_tKF">getString(index:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getString</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP9getString4nameSSSgSS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getString(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getString4nameSSSgSS_tKF">getString(name:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getString</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP7getByte5indexs5UInt8VSgSi_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getByte(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getByte5indexs5UInt8VSgSi_tKF">getByte(index:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getByte</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt8</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP7getByte4names5UInt8VSgSS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getByte(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getByte4names5UInt8VSgSS_tKF">getByte(name:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getByte</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt8</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP8getShort5indexs5Int16VSgSi_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getShort(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getShort5indexs5Int16VSgSi_tKF">getShort(index:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getShort</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int16</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP8getShort4names5Int16VSgSS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getShort(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getShort4names5Int16VSgSS_tKF">getShort(name:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getShort</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int16</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP8getSmall5indexs5Int32VSgSi_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getSmall(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getSmall5indexs5Int32VSgSi_tKF">getSmall(index:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getSmall</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP8getSmall4names5Int32VSgSS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getSmall(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getSmall4names5Int32VSgSS_tKF">getSmall(name:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getSmall</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP6getInt5indexSiSgSi_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getInt(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP6getInt5indexSiSgSi_tKF">getInt(index:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getInt</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP6getInt4nameSiSgSS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getInt(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP6getInt4nameSiSgSS_tKF">getInt(name:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getInt</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP7getLong5indexs5Int64VSgSi_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getLong(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getLong5indexs5Int64VSgSi_tKF">getLong(index:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getLong</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP7getLong4names5Int64VSgSS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getLong(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getLong4names5Int64VSgSS_tKF">getLong(name:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getLong</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP9getBigIntyXeXeF"></a>
-                    <a name="//apple_ref/swift/Method/getBigInt(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getBigIntyXeXeF">getBigInt(index:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBigInt</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">BigInt</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP9getBigIntyXeXeF"></a>
-                    <a name="//apple_ref/swift/Method/getBigInt(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getBigIntyXeXeF">getBigInt(name:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBigInt</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">BigInt</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP9getUShort5indexs6UInt16VSgSi_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getUShort(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getUShort5indexs6UInt16VSgSi_tKF">getUShort(index:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUShort</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt16</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP9getUShort4names6UInt16VSgSS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getUShort(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getUShort4names6UInt16VSgSS_tKF">getUShort(name:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUShort</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt16</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP9getUSmall5indexs6UInt32VSgSi_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getUSmall(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getUSmall5indexs6UInt32VSgSi_tKF">getUSmall(index:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUSmall</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP9getUSmall4names6UInt32VSgSS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getUSmall(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP9getUSmall4names6UInt32VSgSS_tKF">getUSmall(name:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUSmall</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP7getUInt5indexSuSgSi_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getUInt(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getUInt5indexSuSgSi_tKF">getUInt(index:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUInt</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP7getUInt4nameSuSgSS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getUInt(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP7getUInt4nameSuSgSS_tKF">getUInt(name:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUInt</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP8getULong5indexs6UInt64VSgSi_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getULong(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getULong5indexs6UInt64VSgSi_tKF">getULong(index:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getULong</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt64</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP8getULong4names6UInt64VSgSS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getULong(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP8getULong4names6UInt64VSgSS_tKF">getULong(name:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getULong</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UInt64</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP10getBigUIntyXeXeF"></a>
-                    <a name="//apple_ref/swift/Method/getBigUInt(index:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP10getBigUIntyXeXeF">getBigUInt(index:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBigUInt</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">BigUInt</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetP10getBigUIntyXeXeF"></a>
-                    <a name="//apple_ref/swift/Method/getBigUInt(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetP10getBigUIntyXeXeF">getBigUInt(name:)</a>
-                    </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBigUInt</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">BigUInt</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC11DBResultSetPAAE11getIndexFor4nameSiSS_tKF"></a>
-                    <a name="//apple_ref/swift/Method/getIndexFor(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC11DBResultSetPAAE11getIndexFor4nameSiSS_tKF">getIndexFor(name:)</a>
+                    <a name="/s:8SwiftDBC11DBResultSetPAAE17getColumnIndexFor4nameSiSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/getColumnIndexFor(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC11DBResultSetPAAE17getColumnIndexFor4nameSiSS_tKF">getColumnIndexFor(name:)</a>
                     </code>
                       <span class="declaration-note">
                         Extension method
@@ -1651,12 +287,12 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@inlinable</span>
-<span class="kd">func</span> <span class="nf">getIndexFor</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+<span class="kd">func</span> <span class="nf">getColumnIndexFor</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L139-L142">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L42-L45">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1666,7 +302,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://blog.projectgalen.com" target="_blank" rel="external">Galen Rhodes</a>. All rights reserved. (Last updated: 2020-09-02)</p>
+          <p>&copy; 2020 <a class="link" href="https://blog.projectgalen.com" target="_blank" rel="external">Galen Rhodes</a>. All rights reserved. (Last updated: 2020-09-10)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

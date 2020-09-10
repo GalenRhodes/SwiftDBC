@@ -21,6 +21,7 @@
  *//************************************************************************/
 
 import Foundation
+import Rubicon
 
 @inlinable func isType(_ dataType: DataTypes, inTypes list: DataTypes...) -> Bool {
     for aType: DataTypes in list { if dataType == aType { return true } }

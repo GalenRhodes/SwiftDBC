@@ -22,6 +22,7 @@
 
 import Foundation
 import MySQL
+import Rubicon
 
 @usableFromInline let DBConnectionWillClose = Notification.Name("DBConnectionWillClose")
 @usableFromInline let DBStatementWillClose  = Notification.Name("DBStatementWillClose")
@@ -32,7 +33,7 @@ import MySQL
 @usableFromInline let MySQLDBCPrefix:           String = "\(SwiftDBCPrefix):mysql"
 
 @inlinable func _get(str: String, result: NSTextCheckingResult, group: Int) -> String? {
-    ((group < result.numberOfRanges) ? str.substringWith(nsRange: result.range(at: group)) : nil)
+    ((group < result.numberOfRanges) ? str.substr(nsRange: result.range(at: group)) : nil)
 }
 
 @inlinable func testFlag(fieldValue: UInt32, flag: Int32) -> Bool {

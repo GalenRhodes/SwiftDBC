@@ -32,13 +32,7 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/Conditional.html">Conditional</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Classes/DBDriverManager.html">DBDriverManager</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/RecursiveLock.html">RecursiveLock</a>
               </li>
             </ul>
           </li>
@@ -65,34 +59,8 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Extensions.html">Extensions</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Extensions/Array.html">Array</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/NSRegularExpression.html">NSRegularExpression</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/String.html">String</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
             <a href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:8SwiftDBC2ppoPyxxzSzRzlF">++(_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:8SwiftDBC2ppopyxxzSzRzlF">++(_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:8SwiftDBC2ssoPyxxzSzRzlF">--(_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:8SwiftDBC2ssopyxxzSzRzlF">--(_:)</a>
-              </li>
               <li class="nav-group-task">
                 <a href="Functions.html#/s:8SwiftDBC19representableAsText8dataTypeSbAA9DataTypesO_tF">representableAsText(dataType:)</a>
               </li>
@@ -102,7 +70,7 @@
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/Closable.html">Closable</a>
+                <a href="Protocols/DBColumn.html">DBColumn</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/DBColumnMetaData.html">DBColumnMetaData</a>
@@ -118,6 +86,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/DBResultSetMetaData.html">DBResultSetMetaData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols.html#/s:8SwiftDBC5DBRowP">DBRow</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/DBStatement.html">DBStatement</a>
@@ -136,6 +107,36 @@
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC8DBColumnP"></a>
+                    <a name="//apple_ref/swift/Protocol/DBColumn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC8DBColumnP">DBColumn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Protocols/DBColumn.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBColumn</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L27-L58">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -176,12 +177,12 @@ case, the method will use the given type map instead of the one associated with 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBConnection</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Closable.html">Closable</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBConnection</span> <span class="p">:</span> <span class="kt">Closable</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBConnection.swift#L47-L61">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBConnection.swift#L48-L62">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -211,7 +212,7 @@ case, the method will use the given type map instead of the one associated with 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBDriver.swift#L25-L35">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBDriver.swift#L26-L37">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -236,12 +237,12 @@ case, the method will use the given type map instead of the one associated with 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBResultSet</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Closable.html">Closable</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBResultSet</span> <span class="p">:</span> <span class="kt">Closable</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L32-L135">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSet.swift#L27-L38">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -281,7 +282,7 @@ find out how many columns rs has and whether the first column in rs can hold a <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSetMetaData.swift#L38-L44">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSetMetaData.swift#L39-L45">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -311,7 +312,36 @@ find out how many columns rs has and whether the first column in rs can hold a <
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSetMetaData.swift#L46-L70">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBResultSetMetaData.swift#L47-L71">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC5DBRowP"></a>
+                    <a name="//apple_ref/swift/Protocol/DBRow" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SwiftDBC5DBRowP">DBRow</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBRow</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBRow.swift#L27-L29">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -336,42 +366,12 @@ find out how many columns rs has and whether the first column in rs can hold a <
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBStatement</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Closable.html">Closable</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBStatement</span> <span class="p">:</span> <span class="kt">Closable</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBStatement.swift#L25-L49">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC8ClosableP"></a>
-                    <a name="//apple_ref/swift/Protocol/Closable" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC8ClosableP">Closable</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                        <a href="Protocols/Closable.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Closable</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Misc/Closable.swift#L25-L36">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBStatement.swift#L32-L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -381,7 +381,7 @@ find out how many columns rs has and whether the first column in rs can hold a <
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://blog.projectgalen.com" target="_blank" rel="external">Galen Rhodes</a>. All rights reserved. (Last updated: 2020-09-02)</p>
+          <p>&copy; 2020 <a class="link" href="https://blog.projectgalen.com" target="_blank" rel="external">Galen Rhodes</a>. All rights reserved. (Last updated: 2020-09-10)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

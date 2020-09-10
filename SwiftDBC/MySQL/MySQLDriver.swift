@@ -22,6 +22,7 @@
 
 import Foundation
 import MySQL
+import Rubicon
 
 class MySQLDriver: DBDriver {
     private(set) var majorVersion: Int = 1
@@ -50,7 +51,7 @@ class MySQLDriver: DBDriver {
                     let username:   String?          = _get(str: url, result: m, group: 1) ?? query["username"]
                     let password:   String?          = _get(str: url, result: m, group: 2) ?? query["password"]
                     let pathStr:    String           = _get(str: url, result: m, group: 5) ?? ("/\(query["database"] ?? "")")
-                    let database:   String           = pathStr.substring(fromOffset: 1)
+                    let database:   String           = pathStr.substr(from: 1)
 
                     query.removeValue(forKey: "username")
                     query.removeValue(forKey: "password")
@@ -98,4 +99,6 @@ class MySQLDriver: DBDriver {
     class func register() {
         MySQLDriver.lock.withLock { defaultDriver.register(driverManager: DBDriverManager.manager) }
     }
+
+    let name: String = "MySQL"
 }

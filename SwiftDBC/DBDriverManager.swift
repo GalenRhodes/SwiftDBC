@@ -21,6 +21,7 @@
  *//************************************************************************/
 
 import Foundation
+import Rubicon
 
 public let SwiftDBCPrefix: String = "swiftdbc"
 
@@ -34,7 +35,7 @@ public let SwiftDBCPrefix: String = "swiftdbc"
 public class DBDriverManager {
 
     /*===========================================================================================================================*/
-    /// Defines a lambda (closure) that is called when a driver is deregistered with the driver manager.
+    /// Defines a body (closure) that is called when a driver is deregistered with the driver manager.
     ///
     public typealias DBDeregisterLambda = () -> Void
 
@@ -71,11 +72,11 @@ public class DBDriverManager {
     /// 
     /// - Parameters:
     ///   - driver: the instance of the driver.
-    ///   - deregisterLambda: a lambda (closure) that is called when the driver is deregistered.
+    ///   - deregisterLambda: a body (closure) that is called when the driver is deregistered.
     ///
     public func register(driver: DBDriver, deregisterLambda: @escaping DBDriverManager.DBDeregisterLambda = {}) {
         if !driverList.contains(where: { $0.driver === driver }) {
-            driverList.append(DBDriverManager.DriverItem(driver: driver, lambda: deregisterLambda))
+            driverList.append(DBDriverManager.DriverItem(driver: driver, body: deregisterLambda))
         }
     }
 
@@ -86,7 +87,7 @@ public class DBDriverManager {
     ///
     public func deregister(driver: DBDriver) {
         let removed: [DBDriverManager.DriverItem] = driverList.removeAllGet { $0.driver === driver }
-        for item: DBDriverManager.DriverItem in removed { item.lambda() }
+        for item: DBDriverManager.DriverItem in removed { item.body() }
     }
 
     /*===========================================================================================================================*/
@@ -114,11 +115,11 @@ public class DBDriverManager {
 
     class DriverItem {
         let driver: DBDriver
-        let lambda: DBDriverManager.DBDeregisterLambda
+        let body: DBDriverManager.DBDeregisterLambda
 
-        init(driver: DBDriver, lambda: @escaping DBDriverManager.DBDeregisterLambda) {
+        init(driver: DBDriver, body: @escaping DBDriverManager.DBDeregisterLambda) {
             self.driver = driver
-            self.lambda = lambda
+            self.body = body
         }
     }
 }
