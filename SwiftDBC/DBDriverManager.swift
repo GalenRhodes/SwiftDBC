@@ -75,7 +75,7 @@ public class DBDriverManager {
     ///   - deregisterLambda: a body (closure) that is called when the driver is deregistered.
     ///
     public func register(driver: DBDriver, deregisterLambda: @escaping DBDriverManager.DBDeregisterLambda = {}) {
-        if !driverList.contains(where: { $0.driver === driver }) {
+        if !driverList.contains(where: { $0.driver == driver }) {
             driverList.append(DBDriverManager.DriverItem(driver: driver, body: deregisterLambda))
         }
     }
@@ -86,7 +86,7 @@ public class DBDriverManager {
     /// - Parameter driver: the driver.
     ///
     public func deregister(driver: DBDriver) {
-        let removed: [DBDriverManager.DriverItem] = driverList.removeAllGet { $0.driver === driver }
+        let removed: [DBDriverManager.DriverItem] = driverList.removeAllGet { $0.driver == driver }
         for item: DBDriverManager.DriverItem in removed { item.body() }
     }
 

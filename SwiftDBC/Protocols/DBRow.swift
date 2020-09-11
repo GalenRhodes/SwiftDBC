@@ -1,9 +1,9 @@
 /************************************************************************//**
  *     PROJECT: SwiftDBC
- *    FILENAME: DBResultSet.swift
+ *    FILENAME: DBRow.swift
  *         IDE: AppCode
  *      AUTHOR: Galen Rhodes
- *        DATE: 9/1/20
+ *        DATE: 9/3/20
  *
  * Copyright © 2020 Project Galen. All rights reserved.
  *
@@ -24,28 +24,16 @@ import Foundation
 import Rubicon
 import BigInt
 
-public protocol DBResultSet: Closable {
+public protocol DBRow: AnyObject {
 
-    typealias DBResultSetClosure = (DBResultSet, Int) throws -> Bool
+    var resultSet: DBResultSet { get }
+    var rowNumber: Int { get }
 
-    var hasNextRow: Bool { get }
+    func withColumns(do body: (DBColumn) throws -> Bool) throws -> Bool
 
-    var metaData: DBResultSetMetaData { get }
+    subscript(_ idx: Int) -> DBColumn { get }
 
-    subscript(index: Int) -> DBColumn { get }
-
-    subscript(name: String) -> DBColumn? { get }
+    subscript(_ name: String) -> DBColumn? { get }
 }
 
-public extension DBResultSet {
-
-    @inlinable func getColumnIndexFor(name: String) throws -> Int {
-        guard let index: Int = metaData[name]?.index else { throw DBError.ResultSet(description: "Column \"\(name)\" not found.") }
-        return index
-    }
-
-    @inlinable subscript(name: String) -> DBColumn? {
-        guard let index: Int = metaData[name]?.index else { return nil }
-        return self[index]
-    }
-}
+@inlinable public func == (lhs: DBRow, rhs: DBRow) -> Bool { ((lhs === rhs) || ((lhs.resultSet == rhs.resultSet) && (lhs.rowNumber == rhs.rowNumber))) }

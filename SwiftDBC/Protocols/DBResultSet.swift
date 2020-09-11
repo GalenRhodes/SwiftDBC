@@ -1,6 +1,6 @@
 /************************************************************************//**
  *     PROJECT: SwiftDBC
- *    FILENAME: DBStatement.swift
+ *    FILENAME: DBResultSet.swift
  *         IDE: AppCode
  *      AUTHOR: Galen Rhodes
  *        DATE: 9/1/20
@@ -22,15 +22,17 @@
 
 import Foundation
 import Rubicon
+import BigInt
 
-public enum DBNextResults {
-    case None
-    case ResultSet
-    case UpdateCount
+public protocol DBResultSet: Closable, AnyObject {
+
+    var metaData:  DBResultSetMetaData { get }
+    var count:     Int { get }
+    var statement: DBStatement { get }
+
+    func withRows(do body: (DBRow) throws -> Bool) throws -> Bool
+
+    subscript(rowNumber: Int) -> DBRow { get }
 }
 
-public protocol DBStatement: Closable {
-
-    typealias AllDBResultsClosure = (UInt64?, DBResultSet?, Int) throws -> Bool
-
-}
+@inlinable public func == (lhs: DBResultSet, rhs: DBResultSet) -> Bool { lhs === rhs }

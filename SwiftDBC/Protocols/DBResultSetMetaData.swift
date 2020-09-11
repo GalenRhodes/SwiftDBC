@@ -22,7 +22,6 @@
 
 import Foundation
 import Rubicon
-import BigInt
 
 /*===============================================================================================================================*/
 /// An object that can be used to get information about the types and properties of the columns in a `DBResultSet` object. The
@@ -42,6 +41,16 @@ public protocol DBResultSetMetaData: AnyObject {
 
     subscript(name: String) -> DBColumnMetaData? { get }
     subscript(index: Int) -> DBColumnMetaData { get }
+
+    func columnIndexFor(name: String) -> Int?
+}
+
+public extension DBResultSetMetaData {
+
+    @inlinable func columnIndexFor(name: String) -> Int? {
+        guard let cmd: DBColumnMetaData = self[name] else { return nil }
+        return cmd.index
+    }
 }
 
 public protocol DBColumnMetaData: AnyObject {

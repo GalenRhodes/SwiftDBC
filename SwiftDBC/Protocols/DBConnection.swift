@@ -45,18 +45,20 @@ import Rubicon
 /// A user may create a new type map, make an entry in it, and pass it to the methods that can perform custom mapping. In this
 /// case, the method will use the given type map instead of the one associated with the connection.
 ///
-public protocol DBConnection: Closable {
+public protocol DBConnection: Closable, AnyObject {
 
     var autoCommit:       Bool { get set }
     var networkTimeout:   Int { get }
     var lastErrorMessage: String { get }
     var driver:           DBDriver { get }
 
-    func commit() throws
+    func commit() -> Bool
 
-    func rollback() throws
+    func rollback() -> Bool
 
     func reconnect() throws
 
     func createStatement() throws -> DBStatement
 }
+
+@inlinable public func == (lhs: DBConnection, rhs: DBConnection) -> Bool { (lhs === rhs) }

@@ -7,14 +7,14 @@
     <meta charset='utf-8'>
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
-    
+
   </head>
   <body>
     <a name="//apple_ref/swift/Protocol/DBConnection" class="dashAnchor"></a>
     <a title="DBConnection Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SwiftDBC©</a> (7% documented)</p>
+        <p><a href="../index.html">SwiftDBC©</a> (6% documented)</p>
         <p class="header-right"><a href="https://github.com/GalenRhodes/SwiftDBC"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -51,7 +51,7 @@
                 <a href="../Enums/DBError.html">DBError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/DBNextResults.html">DBNextResults</a>
+                <a href="../Enums/DBResultType.html">DBResultType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/DataTypes.html">DataTypes</a>
@@ -61,6 +61,21 @@
           <li class="nav-group-name">
             <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:8SwiftDBC2eeoiySbAA11DBResultSet_p_AaC_ptF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:8SwiftDBC2eeoiySbAA11DBStatement_p_AaC_ptF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:8SwiftDBC2eeoiySbAA12DBConnection_p_AaC_ptF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:8SwiftDBC2eeoiySbAA5DBRow_p_AaC_ptF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:8SwiftDBC2eeoiySbAA8DBColumn_p_AaC_ptF">==(_:_:)</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:8SwiftDBC19representableAsText8dataTypeSbAA9DataTypesO_tF">representableAsText(dataType:)</a>
               </li>
@@ -88,7 +103,7 @@
                 <a href="../Protocols/DBResultSetMetaData.html">DBResultSetMetaData</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols.html#/s:8SwiftDBC5DBRowP">DBRow</a>
+                <a href="../Protocols/DBRow.html">DBRow</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/DBStatement.html">DBStatement</a>
@@ -103,7 +118,7 @@
             <h1>DBConnection</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBConnection</span> <span class="p">:</span> <span class="kt">Closable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBConnection</span> <span class="p">:</span> <span class="kt">AnyObject</span><span class="p">,</span> <span class="kt">Closable</span></code></pre>
 
                 </div>
               </div>
@@ -145,7 +160,7 @@ case, the method will use the given type map instead of the one associated with 
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -156,7 +171,7 @@ case, the method will use the given type map instead of the one associated with 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBConnection.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBConnection.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -174,7 +189,7 @@ case, the method will use the given type map instead of the one associated with 
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -185,7 +200,7 @@ case, the method will use the given type map instead of the one associated with 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBConnection.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBConnection.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -203,7 +218,7 @@ case, the method will use the given type map instead of the one associated with 
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -214,7 +229,7 @@ case, the method will use the given type map instead of the one associated with 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBConnection.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBConnection.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -232,7 +247,7 @@ case, the method will use the given type map instead of the one associated with 
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -243,7 +258,7 @@ case, the method will use the given type map instead of the one associated with 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBConnection.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBConnection.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -251,9 +266,9 @@ case, the method will use the given type map instead of the one associated with 
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC12DBConnectionP6commityyKF"></a>
+                    <a name="/s:8SwiftDBC12DBConnectionP6commitSbyF"></a>
                     <a name="//apple_ref/swift/Method/commit()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC12DBConnectionP6commityyKF">commit()</a>
+                    <a class="token" href="#/s:8SwiftDBC12DBConnectionP6commitSbyF">commit()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -261,18 +276,18 @@ case, the method will use the given type map instead of the one associated with 
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">commit</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">commit</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBConnection.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBConnection.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -280,9 +295,9 @@ case, the method will use the given type map instead of the one associated with 
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SwiftDBC12DBConnectionP8rollbackyyKF"></a>
+                    <a name="/s:8SwiftDBC12DBConnectionP8rollbackSbyF"></a>
                     <a name="//apple_ref/swift/Method/rollback()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC12DBConnectionP8rollbackyyKF">rollback()</a>
+                    <a class="token" href="#/s:8SwiftDBC12DBConnectionP8rollbackSbyF">rollback()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -290,18 +305,18 @@ case, the method will use the given type map instead of the one associated with 
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">rollback</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">rollback</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBConnection.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBConnection.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -319,7 +334,7 @@ case, the method will use the given type map instead of the one associated with 
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -330,7 +345,7 @@ case, the method will use the given type map instead of the one associated with 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBConnection.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBConnection.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -348,7 +363,7 @@ case, the method will use the given type map instead of the one associated with 
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -359,7 +374,7 @@ case, the method will use the given type map instead of the one associated with 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBConnection.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBConnection.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -369,7 +384,7 @@ case, the method will use the given type map instead of the one associated with 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://blog.projectgalen.com" target="_blank" rel="external">Galen Rhodes</a>. All rights reserved. (Last updated: 2020-09-10)</p>
+          <p>&copy; 2020 <a class="link" href="https://blog.projectgalen.com" rel="external" target="_blank">Galen Rhodes</a>. All rights reserved. (Last updated: 2020-09-11)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

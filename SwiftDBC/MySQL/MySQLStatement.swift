@@ -24,8 +24,6 @@ import Foundation
 import MySQL
 import Rubicon
 
-typealias Q<T> = () throws -> T
-
 class MySQLStatement: DBStatement {
 
     /*===========================================================================================================================*/
@@ -33,102 +31,66 @@ class MySQLStatement: DBStatement {
     ///
     static let workQueue: DispatchQueue = DispatchQueue(label: "SwiftDBC_Stmt1_\(UUID().uuidString)", qos: DispatchQoS.utility, attributes: [ DispatchQueue.Attributes.concurrent ])
 
-    var results:   [MultiResultBlock] = []
+    var _isClosed: Bool               = false
     var isWorking: Bool               = false
+    var results:   [MultiResultBlock] = []
     let cond:      Conditional        = Conditional()
     let conn:      MySQLConnection
 
-    var isClosed: Bool = true
+    @inlinable var connection: DBConnection { conn }
+    @inlinable var isClosed:   Bool {
+        get { _isClosed || conn.isClosed }
+        set { _isClosed = newValue }
+    }
 
     init(_ conn: MySQLConnection) {
         self.conn = conn
-        NotificationCenter.default.addObserver(forName: DBConnectionWillClose, object: self.conn, queue: nil) {
+        NotificationCenter.default.addObserver(forName: DBConnectionWillClose, object: conn, queue: nil) {
             [weak self] (notice: Notification) in
-            if let _self: MySQLStatement = self { _self.close() }
+            if let s: MySQLStatement = self { s.close() }
         }
-        isClosed = false
-        isWorking = false
     }
 
-    deinit { _close() }
+    deinit {
+        _close()
+    }
 
-    func close() { conn.lock.withLock { _close() } }
+    func close() {
+        cond.withLockWait(cond: { ((results.count == 0) && !isWorking) }) {
+            _close()
+        }
+    }
 
-    func execute(sql: String) throws -> DBNextResults {
+    @inlinable func nextMultiResults() -> MultiResultBlock? {
+        cond.withLockWait(cond: { ((results.count > 0) || !isWorking) }) {
+            () -> MultiResultBlock? in
+            ((results.count > 0) ? results.removeFirst() : nil)
+        }
+    }
+
+    func withSQLStatement(sql: String, do body: (UInt64?, DBResultSet?, Int) throws -> Bool) throws -> Bool {
         try conn.lock.withLock {
             guard !isClosed else { throw DBError.StatementClosed }
-            guard !isWorking else { throw DBError.Query(description: "Statement is currently busy with another query.") }
+            guard !isWorking else { throw DBError.Query(description: "Connection is currently busy with another query.") }
+
             isWorking = true
             MySQLStatement.workQueue.async { self.backgroundLoad(sql) }
-        }
-        return try hasMoreResults()
-    }
 
-    func withAllResults(_ body: AllDBResultsClosure) throws -> Bool {
-        var _mrb: MultiResultBlock? = nextMultiResults()
-        var _resNum: Int = 0
+            var resultBlock:  MultiResultBlock? = nextMultiResults()
+            var resultNumber: Int               = 0
 
-        while let mrb: MultiResultBlock = _mrb  {
-            if let rs: MySQLResultSet = mrb.resultSet {
-                if try body(nil, rs, ++_resNum) { return true }
-            }
-            else if let ud: UInt64 = mrb.updateCount {
-                if try body(ud, nil, ++_resNum) { return true }
-            }
-            else if let e: DBError = mrb.error {
-                throw e
+            while let mrb: MultiResultBlock = resultBlock {
+                switch mrb.type {
+                    case .ResultSet:   if try body(nil, mrb.resultSet!, resultNumber++) { return true }
+                    case .UpdateCount: if try body(mrb.updateCount!, nil, resultNumber++) { return true }
+                    case .Error:        throw mrb.error!
+                }
+                resultBlock = nextMultiResults()
             }
 
-            _mrb = nextMultiResults()
-        }
-
-        return false
-    }
-
-    func withResultSet(_ body: DBResultSet.DBResultSetClosure) throws -> Bool {
-        if let rs: DBResultSet = try getResultSet(){
-            var rowNumber: Int = 0
-
-            while rs.hasNextRow {
-                if try body(rs, ++rowNumber) { return true }
-            }
-        }
-
-        return false
-    }
-
-    func hasMoreResults() throws -> DBNextResults {
-        try whenNext {
-            if results.count == 0 {
-                return .None
-            }
-            else {
-                let r: MultiResultBlock = results[0]
-                if let e: DBError = r.error { throw e }
-                return ((r.resultSet == nil) ? .UpdateCount : .ResultSet)
-            }
+            return false
         }
     }
-
-    func getUpdateCount() throws -> Int {
-        if let mrb: MultiResultBlock = nextMultiResults() {
-            if let e: DBError = mrb.error { throw e }
-            if let c: UInt64 = mrb.updateCount { return Int(c) }
-        }
-        return -1
-    }
-
-    func getResultSet() throws -> DBResultSet? {
-        if let mrb: MultiResultBlock = nextMultiResults() {
-            if let e: DBError = mrb.error { throw e }
-            if let r: MySQLResultSet = mrb.resultSet { return r }
-        }
-        return nil
-    }
-
-    @inlinable func whenNext<T>(_ body: Q<T>) rethrows -> T { try cond.withLockWait(cond: { (results.count > 0 || !isWorking) }) { try body() } }
-
-    @inlinable func nextMultiResults() -> MultiResultBlock? { whenNext { ((results.count == 0) ? nil : results.removeFirst()) } }
 
     @inlinable func _close() {
         if !isClosed {
@@ -147,61 +109,72 @@ class MySQLStatement: DBStatement {
     private func backgroundLoad(_ sql: String) {
         defer { isWorking = false }
 
-        var status: Int32 = sql.withCString { (p: UnsafePointer<Int8>) -> Int32 in mysql_real_query(conn.mysql, p, UInt(strlen(p))) }
+        var status: Int32 = sql.withCString {
+            (p: CCharROPointer) -> Int32 in
+            let l: Int = strlen(p)
+            return mysql_real_query(conn.mysql, p, UInt(l))
+        }
 
         while status == 0 {
             if let rs: UnsafeMutablePointer<MYSQL_RES> = mysql_use_result(conn.mysql) {
-                cond.withLock { results.append(MultiResultBlock(resultSet: MySQLResultSet(self, rs))) }
+                addResult(MultiResultBlock(resultSet: MySQLResultSet(self, rs)))
             }
             else if mysql_field_count(conn.mysql) == 0 {
-                cond.withLock { results.append(MultiResultBlock(updateCount: mysql_affected_rows(conn.mysql))) }
+                addResult(MultiResultBlock(updateCount: mysql_affected_rows(conn.mysql)))
             }
             else {
-                // There was supposed to be a result set and there wasn't one so something went wrong.
                 status = 1
                 break
             }
             status = mysql_next_result(conn.mysql)
         }
 
-        if status > 0 {
-            cond.withLock { results.append(MultiResultBlock(error: DBError.Query(description: conn.lastErrorMessage))) }
+        if status > 0 { addResult(MultiResultBlock(error: DBError.Query(description: conn.lastErrorMessage))) }
+    }
+
+    @inlinable func addResult(_ mrb: MultiResultBlock) {
+        cond.withLock {
+            results.append(mrb)
         }
     }
 
     /*===========================================================================================================================*/
     /// We're going to be returning one of three possible results. But only one.
     ///
-    @usableFromInline struct MultiResultBlock {
+    class MultiResultBlock {
         let resultSet:   MySQLResultSet?
         let updateCount: UInt64?
         let error:       DBError?
+        let type:        DBResultType
 
         /*=======================================================================================================================*/
         /// There can...
         ///
-        @inlinable init(resultSet: MySQLResultSet) {
+        init(resultSet: MySQLResultSet) {
             self.resultSet = resultSet
             self.updateCount = nil
             self.error = nil
+            self.type = .ResultSet
         }
 
         /*=======================================================================================================================*/
         /// ...only be...
         ///
-        @inlinable init(updateCount: UInt64) {
+        init(updateCount: UInt64) {
             self.resultSet = nil
             self.updateCount = updateCount
             self.error = nil
+            self.type = .UpdateCount
         }
 
         /*=======================================================================================================================*/
         /// ...one!
         ///
-        @inlinable init(error: DBError) {
+        init(error: DBError) {
             self.resultSet = nil
             self.updateCount = nil
             self.error = error
+            self.type = .Error
         }
     }
 }

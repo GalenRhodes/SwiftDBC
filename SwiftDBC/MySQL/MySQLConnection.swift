@@ -24,6 +24,8 @@ import Foundation
 import MySQL
 import Rubicon
 
+@usableFromInline typealias MySQLPointer = UnsafeMutablePointer<MYSQL>
+
 class MySQLConnection: DBConnection {
 
     let networkTimeout:   Int  = 30000
@@ -32,14 +34,16 @@ class MySQLConnection: DBConnection {
     var autoCommit:       Bool { willSet { if isInit { mysql_autocommit(mysql, newValue) } } }
     var lastErrorMessage: String { getString(cStr: mysql_error(mysql)) ?? "Unknown Error" }
 
-    var mysql:    UnsafeMutablePointer<MYSQL>
+    var mysql:    MySQLPointer
+    var isInit:   Bool          = false
+    var isBusy:   AnyObject?    = nil // Only one statement can be working at once. Other's have to wait.
     let lock:     RecursiveLock = RecursiveLock()
+    let cond:     Conditional   = Conditional()
     let host:     String
     let port:     Int
     let username: String?
     let password: String?
     let database: String?
-    var isInit:   Bool          = false
 
     init(host: String, port: Int, username: String?, password: String?, database: String?, query: [String: String]) throws {
         self.host = host
@@ -48,41 +52,56 @@ class MySQLConnection: DBConnection {
         self.password = password
         self.database = database
         self.autoCommit = false
-        if let _mysql: UnsafeMutablePointer<MYSQL> = MySQLDriver.lock.withLock(body: { mysql_init(nil) }) { self.mysql = _mysql }
-        else { throw DBError.Connection(description: "Unable to allocate memory for database connection to: \(host):\(port)/\(database ?? "")") }
-        try _connect()
+        self.mysql = try _initializeMySQL(host, port, database)
+        try connect()
     }
 
     func reconnect() throws {
         try lock.withLock {
             _close()
-            if let _mysql: UnsafeMutablePointer<MYSQL> = MySQLDriver.lock.withLock(body: { mysql_init(nil) }) { self.mysql = _mysql }
-            else { throw DBError.Connection(description: "Unable to allocate memory for database connection to: \(host):\(port)/\(database ?? "")") }
-            try _connect()
+            mysql = try _initializeMySQL(host, port, database)
+            try connect()
         }
     }
 
-    deinit {
-        _close()
-    }
+    deinit { _close() }
 
-    func close() {
-        lock.withLock { _close() }
+    func close() { lock.withLock { _close() } }
+
+    func doWithBusySet<T>(busyObj: AnyObject, body: () throws -> T) rethrows -> T {
+        try cond.withLockWait(cond: { (isBusy == nil) }) {
+            isBusy = busyObj
+            defer { isBusy = nil }
+            return try body()
+        }
     }
 
     func createStatement() throws -> DBStatement {
-        lock.withLock { MySQLStatement(self) }
+        let stmt = MySQLStatement(self)
+
+        NotificationCenter.default.addObserver(forName: DBStatementWillClose, object: stmt, queue: nil) {
+            [weak self] (note: Notification) in
+            if let s: MySQLConnection = self {
+                s.cond.withLock {
+                    if let busy: AnyObject = s.isBusy, busy === (note.object as AnyObject) {
+                        s.isBusy = nil
+                    }
+                }
+            }
+        }
+
+        return stmt
     }
 
-    func commit() throws {
-        if !lock.withLock(body: { mysql_commit(mysql) }) { throw DBError.Commit }
+    func commit() -> Bool {
+        doWithBusySet(busyObj: self) { mysql_commit(mysql) }
     }
 
-    func rollback() throws {
-        if !lock.withLock(body: { mysql_rollback(mysql) }) { throw DBError.Rollback }
+    func rollback() -> Bool {
+        doWithBusySet(busyObj: self) { mysql_rollback(mysql) }
     }
 
-    private func _connect() throws {
+    private func connect() throws {
         var to:   UInt32 = UInt32(networkTimeout / 1000)
         var rc:   Bool   = true
         let opts: UInt   = (CLIENT_MULTI_STATEMENTS | CLIENT_MULTI_RESULTS)
@@ -113,4 +132,9 @@ class MySQLConnection: DBConnection {
             isClosed = true
         }
     }
+}
+
+fileprivate func _initializeMySQL(_ host: String, _ port: Int, _ database: String?) throws -> MySQLPointer {
+    if let _mysql = MySQLDriver.lock.withLock(body: { mysql_init(nil) }) { return _mysql }
+    else { throw DBError.Connection(description: "Unable to allocate memory for database connection to: \(host):\(port)/\(database ?? "")") }
 }

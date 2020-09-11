@@ -7,13 +7,13 @@
     <meta charset='utf-8'>
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
-    
+
   </head>
   <body>
     <a title="  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SwiftDBC©</a> (7% documented)</p>
+        <p><a href="index.html">SwiftDBC©</a> (6% documented)</p>
         <p class="header-right"><a href="https://github.com/GalenRhodes/SwiftDBC"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -50,7 +50,7 @@
                 <a href="Enums/DBError.html">DBError</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/DBNextResults.html">DBNextResults</a>
+                <a href="Enums/DBResultType.html">DBResultType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/DataTypes.html">DataTypes</a>
@@ -60,6 +60,21 @@
           <li class="nav-group-name">
             <a href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:8SwiftDBC2eeoiySbAA11DBResultSet_p_AaC_ptF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:8SwiftDBC2eeoiySbAA11DBStatement_p_AaC_ptF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:8SwiftDBC2eeoiySbAA12DBConnection_p_AaC_ptF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:8SwiftDBC2eeoiySbAA5DBRow_p_AaC_ptF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:8SwiftDBC2eeoiySbAA8DBColumn_p_AaC_ptF">==(_:_:)</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Functions.html#/s:8SwiftDBC19representableAsText8dataTypeSbAA9DataTypesO_tF">representableAsText(dataType:)</a>
               </li>
@@ -87,7 +102,7 @@
                 <a href="Protocols/DBResultSetMetaData.html">DBResultSetMetaData</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols.html#/s:8SwiftDBC5DBRowP">DBRow</a>
+                <a href="Protocols/DBRow.html">DBRow</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/DBStatement.html">DBStatement</a>
@@ -99,7 +114,7 @@
       <article class="main-content">
         <section>
           <section class="section">
-            
+
             <h1 id='swiftdbc' class='heading'>SwiftDBC</h1>
 
 <p>SwiftDBC is <em>very</em> loosely based on the Java JDBC library. It&rsquo;s aim is to provide a Swift interface to different databases by having an abstraction layer away from vendor specific differences in database access libraries.</p>
@@ -122,78 +137,11 @@
 <h1 id='help-appreciated' class='heading'>Help Appreciated!</h1>
 
 <p>If some industrious folks want to fork this project and start working on support for other databases such as <em>(but not limited to)</em> Oracle, Postgre, Microsoft SQL Server, etc. Please feel free and I&rsquo;ll gladly consider your pull requests! 😎</p>
-<h1 id='swifty-stuff' class='heading'>Swifty Stuff</h1>
-
-<p>Here&rsquo;s just a few of the places where I&rsquo;ve taken advantage of Swift&rsquo;s features.</p>
-<h2 id='nsrecursivelock-gt-recursivelock' class='heading'>NSRecursiveLock -&gt; RecursiveLock</h2>
-
-<p>Even though they&rsquo;ve included a version of <a href="https://developer.apple.com/documentation/foundation/nsrecursivelock">NSRecursiveLock</a> in the open source version of Swift I still get nervous that one day all the NS* classes will suddenly disappear. So I created a wrapper around NSRecursiveLock called simply &ldquo;RecursiveLock&rdquo;. That way if I suddenly have to recreate it at least I won&rsquo;t have to rename it.</p>
-
-<p>Also as part of RecursiveLock I&rsquo;ve create a method called:</p>
-
-<pre>func withLock&lt;T&gt;(_ lambda: () throws -> T) rethrows -> T</pre>
-
-<p>So that rather than the standard design pattern of:</p>
-
-<pre>
-do {
-    lock.lock()
-    defer { lock.unlock() }
-    /* Do something here. */
-}
-</pre>
-
-<p>We can now just do this:</p>
-
-<pre>
-lock.withLock { /* Do something here. */ }
-</pre>
-
-<p>It will even allow returned values and throws.</p>
-
-<pre>
-let val = try lock.withLock { try iReturnAValueOrThrowAnError() }
-</pre>
-<h2 id='nscondition-gt-conditional' class='heading'>NSCondition -&gt; Conditional</h2>
-
-<p>For the same reasons as above I created a wrapper around <a href="https://developer.apple.com/documentation/foundation/nscondition">NSCondition</a> called simply &ldquo;Conditional&rdquo;.</p>
-
-<p>Also, along with the &ldquo;withLock(_:)&rdquo; method above, I&rsquo;ve also included a new method called:</p>
-
-<pre>public func withLockWait&lt;T&gt;(cond: () -> Bool, _ lambda: () throws -> T) rethrows -> T</pre>
-
-<p>This method takes two enclosures. One to test the condition and the other to execute once the condition is met.</p>
-
-<p>So instead of saying:</p>
-
-<pre>
-do {
-    lock.lock()
-    defer {
-        lock.signal()
-        lock.unlock()
-    }
-    while !someCondition() {
-        lock.wait()
-    }
-    /* Do something here! */
-}
-</pre>
-
-<p>You can now simply say this:</p>
-
-<pre>
-lock.withLockWait(cond: { someCondition() }) { /* Do something here! */ }
-</pre>
-
-<p>So much more clear!</p>
-
-<p>Also, the version of &ldquo;withLock(_:)&rdquo; in Conditional calls &ldquo;signal()&rdquo; right before it calls &ldquo;unlock()&rdquo;.</p>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://blog.projectgalen.com" target="_blank" rel="external">Galen Rhodes</a>. All rights reserved. (Last updated: 2020-09-10)</p>
+          <p>&copy; 2020 <a class="link" href="https://blog.projectgalen.com" rel="external" target="_blank">Galen Rhodes</a>. All rights reserved. (Last updated: 2020-09-11)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

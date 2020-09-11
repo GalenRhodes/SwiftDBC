@@ -1,9 +1,9 @@
 /************************************************************************//**
  *     PROJECT: SwiftDBC
- *    FILENAME: DBRow.swift
+ *    FILENAME: DBDriver.swift
  *         IDE: AppCode
  *      AUTHOR: Galen Rhodes
- *        DATE: 9/3/20
+ *        DATE: 9/1/20
  *
  * Copyright © 2020 Project Galen. All rights reserved.
  *
@@ -22,8 +22,24 @@
 
 import Foundation
 import Rubicon
-import BigInt
 
-public protocol DBRow {
+public protocol DBDriver: AnyObject {
 
+    var name:         String { get }
+    var majorVersion: Int { get }
+    var minorVersion: Int { get }
+
+    func acceptsURL(_ url: String) -> Bool
+
+    func connect(url: String, username: String?, password: String?, database: String?, properties: [String: Any]) throws -> DBConnection
+
+    static func register()
 }
+
+public extension DBDriver {
+    func connect(url: String, username: String? = nil, password: String? = nil, database: String? = nil) throws -> DBConnection {
+        try connect(url: url, username: username, password: password, database: database, properties: [:])
+    }
+}
+
+@inlinable func == (lhs: DBDriver, rhs: DBDriver) -> Bool { (lhs === rhs) }

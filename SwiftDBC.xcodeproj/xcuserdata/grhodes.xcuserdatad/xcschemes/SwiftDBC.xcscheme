@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "83D2DEF224F52E25003D6E14"
-               BuildableName = "SwiftDBCTests"
-               BlueprintName = "SwiftDBCTests"
+               BlueprintIdentifier = "83D2DEE924F52E25003D6E14"
+               BuildableName = "SwiftDBC"
+               BlueprintName = "SwiftDBC"
                ReferencedContainer = "container:SwiftDBC.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,23 +26,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "NO">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "83D2DEF224F52E25003D6E14"
-               BuildableName = "SwiftDBCTests"
-               BlueprintName = "SwiftDBCTests"
-               ReferencedContainer = "container:SwiftDBC.xcodeproj">
-            </BuildableReference>
-            <SelectedTests>
-               <Test
-                  Identifier = "SwiftDBCTests/testDriverManager">
-               </Test>
-            </SelectedTests>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -50,8 +35,7 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
-      useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/SwiftDBCTests"
+      useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"

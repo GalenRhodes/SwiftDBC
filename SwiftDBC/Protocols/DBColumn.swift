@@ -24,7 +24,11 @@ import Foundation
 import Rubicon
 import BigInt
 
-public protocol DBColumn {
+public protocol DBColumn: AnyObject {
+
+    var name:          String { get }
+    var index:         Int { get }
+    var row:           DBRow { get }
     var metaData:      DBColumnMetaData { get }
     var isNull:        Bool { get }
     var asData:        Data? { get }
@@ -58,6 +62,8 @@ public protocol DBColumn {
 }
 
 public extension DBColumn {
-    var name:  String { metaData.name }
-    var index: Int { metaData.index }
+    @inlinable var name:  String { metaData.name }
+    @inlinable var index: Int { metaData.index }
 }
+
+@inlinable public func == (lhs: DBColumn, rhs: DBColumn) -> Bool { ((lhs === rhs) || ((lhs.row == rhs.row) && (lhs.index == rhs.index))) }

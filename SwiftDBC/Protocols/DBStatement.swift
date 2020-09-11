@@ -1,6 +1,6 @@
 /************************************************************************//**
  *     PROJECT: SwiftDBC
- *    FILENAME: DBDriver.swift
+ *    FILENAME: DBStatement.swift
  *         IDE: AppCode
  *      AUTHOR: Galen Rhodes
  *        DATE: 9/1/20
@@ -23,21 +23,17 @@
 import Foundation
 import Rubicon
 
-public protocol DBDriver: AnyObject {
-
-    var name:         String { get }
-    var majorVersion: Int { get }
-    var minorVersion: Int { get }
-
-    func acceptsURL(_ url: String) -> Bool
-
-    func connect(url: String, username: String?, password: String?, database: String?, properties: [String: Any]) throws -> DBConnection
-
-    static func register()
+public enum DBResultType {
+    case ResultSet
+    case UpdateCount
+    case Error
 }
 
-public extension DBDriver {
-    func connect(url: String, username: String? = nil, password: String? = nil, database: String? = nil) throws -> DBConnection {
-        try connect(url: url, username: username, password: password, database: database, properties: [:])
-    }
+public protocol DBStatement: Closable, AnyObject {
+
+    var connection: DBConnection { get }
+
+    func withSQLStatement(sql: String, do body: (UInt64?, DBResultSet?, Int) throws -> Bool) throws -> Bool
 }
+
+@inlinable public func == (lhs: DBStatement, rhs: DBStatement) -> Bool { (lhs === rhs) }

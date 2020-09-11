@@ -25,8 +25,9 @@ import MySQL
 import Rubicon
 
 class MySQLDriver: DBDriver {
-    private(set) var majorVersion: Int = 1
-    private(set) var minorVersion: Int = 0
+    let majorVersion: Int    = 1
+    let minorVersion: Int    = 0
+    let name:         String = "MySQL"
 
     static let defaultDriver: MySQLDriver   = MySQLDriver()
     static let lock:          RecursiveLock = RecursiveLock()
@@ -99,6 +100,4 @@ class MySQLDriver: DBDriver {
     class func register() {
         MySQLDriver.lock.withLock { defaultDriver.register(driverManager: DBDriverManager.manager) }
     }
-
-    let name: String = "MySQL"
 }

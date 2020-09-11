@@ -7,14 +7,14 @@
     <meta charset='utf-8'>
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
-    
+
   </head>
   <body>
     <a name="//apple_ref/swift/Protocol/DBColumn" class="dashAnchor"></a>
     <a title="DBColumn Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SwiftDBC©</a> (7% documented)</p>
+        <p><a href="../index.html">SwiftDBC©</a> (6% documented)</p>
         <p class="header-right"><a href="https://github.com/GalenRhodes/SwiftDBC"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -51,7 +51,7 @@
                 <a href="../Enums/DBError.html">DBError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/DBNextResults.html">DBNextResults</a>
+                <a href="../Enums/DBResultType.html">DBResultType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/DataTypes.html">DataTypes</a>
@@ -61,6 +61,21 @@
           <li class="nav-group-name">
             <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:8SwiftDBC2eeoiySbAA11DBResultSet_p_AaC_ptF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:8SwiftDBC2eeoiySbAA11DBStatement_p_AaC_ptF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:8SwiftDBC2eeoiySbAA12DBConnection_p_AaC_ptF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:8SwiftDBC2eeoiySbAA5DBRow_p_AaC_ptF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:8SwiftDBC2eeoiySbAA8DBColumn_p_AaC_ptF">==(_:_:)</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:8SwiftDBC19representableAsText8dataTypeSbAA9DataTypesO_tF">representableAsText(dataType:)</a>
               </li>
@@ -88,7 +103,7 @@
                 <a href="../Protocols/DBResultSetMetaData.html">DBResultSetMetaData</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols.html#/s:8SwiftDBC5DBRowP">DBRow</a>
+                <a href="../Protocols/DBRow.html">DBRow</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/DBStatement.html">DBStatement</a>
@@ -103,15 +118,116 @@
             <h1>DBColumn</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBColumn</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DBColumn</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
 
                 </div>
               </div>
-            
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC8DBColumnP4nameSSvp"></a>
+                    <a class="dashAnchor" name="//apple_ref/swift/Property/name"></a>
+                    <a class="token" href="#/s:8SwiftDBC8DBColumnP4nameSSvp">name</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC8DBColumnP5indexSivp"></a>
+                    <a class="dashAnchor" name="//apple_ref/swift/Property/index"></a>
+                    <a class="token" href="#/s:8SwiftDBC8DBColumnP5indexSivp">index</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SwiftDBC8DBColumnP3rowAA5DBRow_pvp"></a>
+                    <a class="dashAnchor" name="//apple_ref/swift/Property/row"></a>
+                    <a class="token" href="#/s:8SwiftDBC8DBColumnP3rowAA5DBRow_pvp">row</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">row</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DBRow.html">DBRow</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -125,7 +241,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -136,7 +252,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -154,7 +270,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -165,7 +281,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -183,7 +299,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -194,7 +310,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -212,7 +328,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -223,7 +339,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -241,7 +357,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -252,7 +368,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -270,7 +386,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -281,7 +397,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -299,7 +415,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -310,7 +426,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -328,7 +444,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -339,7 +455,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -357,7 +473,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -368,7 +484,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -426,7 +542,7 @@
                         <p>an instance of Decimal or <code>nil</code> if the column had a NULL value.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L44">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -444,7 +560,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -455,7 +571,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -473,7 +589,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -484,7 +600,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -502,7 +618,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -513,7 +629,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -531,7 +647,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -542,7 +658,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -560,7 +676,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -571,7 +687,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -589,7 +705,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -600,7 +716,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -618,7 +734,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -629,7 +745,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -647,7 +763,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -658,7 +774,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -676,7 +792,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -687,7 +803,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -705,7 +821,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -716,7 +832,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -734,7 +850,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -745,7 +861,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -763,7 +879,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -774,7 +890,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -792,7 +908,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -803,71 +919,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC8DBColumnPAAE4nameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC8DBColumnPAAE4nameSSvp">name</a>
-                    </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SwiftDBC8DBColumnPAAE5indexSivp"></a>
-                    <a name="//apple_ref/swift/Property/index" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SwiftDBC8DBColumnPAAE5indexSivp">index</a>
-                    </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/DBColumn.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/GalenRhodes/SwiftDBC/blob/master/SwiftDBC/Protocols/DBColumn.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -877,7 +929,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://blog.projectgalen.com" target="_blank" rel="external">Galen Rhodes</a>. All rights reserved. (Last updated: 2020-09-10)</p>
+          <p>&copy; 2020 <a class="link" href="https://blog.projectgalen.com" rel="external" target="_blank">Galen Rhodes</a>. All rights reserved. (Last updated: 2020-09-11)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

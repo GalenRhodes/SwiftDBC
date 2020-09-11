@@ -24,13 +24,14 @@ import Foundation
 import MySQL
 import Rubicon
 
-@usableFromInline let DBConnectionWillClose = Notification.Name("DBConnectionWillClose")
-@usableFromInline let DBStatementWillClose  = Notification.Name("DBStatementWillClose")
-@usableFromInline let DBResultSetWillClose  = Notification.Name("DBResultSetWillClose")
+let DBConnectionWillClose = Notification.Name("DBConnectionWillClose")
+let DBStatementWillClose  = Notification.Name("DBStatementWillClose")
+let DBResultSetWillClose  = Notification.Name("DBResultSetWillClose")
+let DBStatementWillBeBusy = Notification.Name("DBStatementWillBeBusy")
 
-@usableFromInline let cCharAlignment:           Int    = MemoryLayout<CChar>.alignment
-@usableFromInline let MySQLDefaultCharacterSet: String = String("utf8mb4".utf8)
-@usableFromInline let MySQLDBCPrefix:           String = "\(SwiftDBCPrefix):mysql"
+let cCharAlignment:           Int    = MemoryLayout<CChar>.alignment
+let MySQLDefaultCharacterSet: String = String("utf8mb4".utf8)
+let MySQLDBCPrefix:           String = "\(SwiftDBCPrefix):mysql"
 
 @inlinable func _get(str: String, result: NSTextCheckingResult, group: Int) -> String? {
     ((group < result.numberOfRanges) ? str.substr(nsRange: result.range(at: group)) : nil)
@@ -41,19 +42,19 @@ import Rubicon
     return ((fieldValue & i) == i)
 }
 
-@inlinable func getData(bytes: UnsafeMutablePointer<Int8>, length: Int) -> Data {
+@inlinable func getData(bytes: CCharPointer, length: Int) -> Data {
     Data(bytes: UnsafeRawPointer(bytes), count: length)
 }
 
-@inlinable func getString(cStr: UnsafeMutablePointer<CChar>, length: Int) -> String {
+@inlinable func getString(cStr: CCharPointer, length: Int) -> String {
     String(bytes: getData(bytes: cStr, length: length), encoding: String.Encoding.utf8) ?? ""
 }
 
-@inlinable func getString(cStr: UnsafePointer<CChar>?) -> String? {
+@inlinable func getString(cStr: CCharROPointer?) -> String? {
     cStr == nil ? nil : (String(cString: cStr!, encoding: String.Encoding.utf8))
 }
 
-@usableFromInline func getDataType(id: enum_field_types, charSetId: Int, decDigits dc: UInt) -> DataTypes {
+func getDataType(id: enum_field_types, charSetId: Int, decDigits dc: UInt) -> DataTypes {
     //------------------------------------------------
     // Try to get as close to a match as possible.
     // In MySQL a binary or varbinary field is simply
