@@ -189,13 +189,13 @@
       "OBJ_115" = {
          isa = "PBXGroup";
          children = (
+            "SwiftDBC::DocFixer::Product",
             "SwiftDBC::SwiftDBCTests::Product",
             "Rubicon::Rubicon::Product",
             "SwiftDBC::SwiftDBC::Product",
             "RingBuffer::RingBuffer::Product",
-            "SwiftDBC::DocFixer::Product",
-            "PGDocFixer::PGDocFixer::Product",
-            "BigInt::BigInt::Product"
+            "BigInt::BigInt::Product",
+            "PGDocFixer::PGDocFixer::Product"
          );
          name = "Products";
          path = "";
@@ -1392,7 +1392,9 @@
             );
             OTHER_LDFLAGS = (
                "$(inherited)",
-               "-L/usr/local/mysql/lib"
+               "-L/usr/local/mysql/lib",
+               "-rpath",
+               "/usr/local/mysql/lib"
             );
             OTHER_SWIFT_FLAGS = (
                "$(inherited)",
@@ -1439,7 +1441,9 @@
             );
             OTHER_LDFLAGS = (
                "$(inherited)",
-               "-L/usr/local/mysql/lib"
+               "-L/usr/local/mysql/lib",
+               "-rpath",
+               "/usr/local/mysql/lib"
             );
             OTHER_SWIFT_FLAGS = (
                "$(inherited)",

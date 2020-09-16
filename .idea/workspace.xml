@@ -16,80 +16,46 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="502831d5-4e4c-4c89-a6bd-8692308e89d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/$CACHE_FILE$" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SwiftDBC.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+    <list default="true" id="502831d5-4e4c-4c89-a6bd-8692308e89d7" name="Default Changelist" comment="Project Restructure">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/DocFixer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/SwiftDBC_Package.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/SwiftDBC_Package_Tests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/xcode.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DocFixer/main.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/include/errmsg.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/include/field_types.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/include/my_command.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/include/my_compress.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/include/my_list.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/include/mysql.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/include/mysql/client_plugin.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/include/mysql/plugin_auth_common.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/include/mysql/udf_registration_types.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/include/mysql_com.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/include/mysql_time.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/include/mysql_version.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/include/mysqld_error.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/include/mysqlx_ername.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/include/mysqlx_error.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/include/mysqlx_version.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/lib/libcrypto.1.1.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/lib/libmysqlclient.21.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/lib/libssl.1.1.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/module.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Package.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Package.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcshareddata/xcschemes/SwiftDBC-Package.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcshareddata/xcschemes/SwiftDBC-Package.xcscheme" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/SwiftDBC Tests.xcscheme" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/SwiftDBC.xcscheme" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBDriverManager.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/Misc/DBTools.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLColumn.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLConnection.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLDriver.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLResultSet.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLResultSetMetaData.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLRow.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLStatement.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLTools.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/Protocols/DBColumn.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/Protocols/DBConnection.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/Protocols/DBDriver.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/Protocols/DBError.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/Protocols/DBResultSet.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/Protocols/DBResultSetMetaData.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/Protocols/DBRow.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/Protocols/DBStatement.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/Protocols/DataTypes.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/SwiftDBC.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBCTests/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBCTests/SwiftDBCTests.swift" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="macos_macos_x86_64" />
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MacroExpansionManager">
@@ -108,11 +74,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++/Objective-C" />
   </component>
-  <component name="RunManager" selected="XCTest.SwiftDBC-Package-Tests">
+  <component name="RunManager" selected="Application.DocFixer">
     <list>
       <item itemvalue="Application.DocFixer" />
       <item itemvalue="Application.SwiftDBC-Package" />
@@ -127,8 +100,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600287271202</updated>
-      <workItem from="1600287273521" duration="292000" />
+      <workItem from="1600287273521" duration="3173000" />
     </task>
+    <task id="LOCAL-00001" summary="Project Restructure">
+      <created>1600288190733</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600288190733</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,16 +120,36 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Project Restructure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project Restructure" />
   </component>
   <component name="WindowStateProjectService">
     <state x="744" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600287566654">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="744" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1600287566654" />
+    <state x="880" y="280" key="Vcs.Push.Dialog.v2" timestamp="1600288604352">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="880" y="280" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1600288604352" />
   </component>
 </project>

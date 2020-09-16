@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "SwiftDBC::SwiftDBC"
-               BuildableName = "SwiftDBC.framework"
-               BlueprintName = "SwiftDBC"
+               BlueprintIdentifier = "SwiftDBC::DocFixer"
+               BuildableName = "DocFixer"
+               BlueprintName = "DocFixer"
                ReferencedContainer = "container:SwiftDBC.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "SwiftDBC::DocFixer"
-               BuildableName = "DocFixer"
-               BlueprintName = "DocFixer"
+               BlueprintIdentifier = "SwiftDBC::SwiftDBC"
+               BuildableName = "SwiftDBC.framework"
+               BlueprintName = "SwiftDBC"
                ReferencedContainer = "container:SwiftDBC.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
