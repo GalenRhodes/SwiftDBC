@@ -1,0 +1,6 @@
+module MySQL [system] {
+    link "mysqlclient"
+    umbrella header "include/mysql.h"
+    export *
+    module * { export * }
+}

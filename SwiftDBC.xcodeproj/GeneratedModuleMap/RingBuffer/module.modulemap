@@ -1,0 +1,4 @@
+module RingBuffer {
+    umbrella "/Users/grhodes/Projects/2020/SwiftProjects/SwiftDBC/.build/checkouts/RingBuffer/Sources/RingBuffer"
+    export *
+}

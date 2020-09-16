@@ -1,248 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="421f09c6-d872-417e-8a2a-797886d5c057" name="Default Changelist" comment="Added Apache 2.0 License">
-      <change afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/SwiftDBC.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLColumn.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLRow.swift" afterDir="false" />
+    <list default="true" id="502831d5-4e4c-4c89-a6bd-8692308e89d7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/$CACHE_FILE$" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SwiftDBC.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/module.map" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/module.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/xcode.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocFixer/main.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/include/errmsg.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/include/field_types.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/include/my_command.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/include/my_compress.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/include/my_list.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/include/mysql.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/include/mysql/client_plugin.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/include/mysql/plugin_auth_common.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/include/mysql/udf_registration_types.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/include/mysql_com.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/include/mysql_time.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/include/mysql_version.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/include/mysqld_error.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/include/mysqlx_ername.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/include/mysqlx_error.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/include/mysqlx_version.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/lib/libcrypto.1.1.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/lib/libmysqlclient.21.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/lib/libssl.1.1.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/module.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/SwiftDBC Tests.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/SwiftDBC Tests.xcscheme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/SwiftDBC Tests.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/SwiftDBC.xcscheme" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC.xcodeproj/xcuserdata/grhodes.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBColumn.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/Protocols/DBColumn.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBConnection.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/Protocols/DBConnection.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBDriver.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/Protocols/DBDriver.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBDriverManager.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/DBDriverManager.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBError.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/Protocols/DBError.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBResultSet.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/Protocols/DBResultSet.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBResultSetMetaData.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/Protocols/DBResultSetMetaData.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBRow.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/Protocols/DBRow.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBStatement.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/Protocols/DBStatement.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/DataTypes.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/Protocols/DataTypes.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLConnection.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLConnection.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLDriver.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLDriver.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLResultSet.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLResultSet.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLStatement.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLStatement.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLTools.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLTools.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/DBDriverManager.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/Misc/DBTools.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLColumn.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLConnection.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLDriver.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLResultSet.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLResultSetMetaData.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLRow.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLStatement.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/MySQL/MySQLTools.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/Protocols/DBColumn.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/Protocols/DBConnection.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/Protocols/DBDriver.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/Protocols/DBError.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/Protocols/DBResultSet.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/Protocols/DBResultSetMetaData.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/Protocols/DBRow.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/Protocols/DBStatement.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/Protocols/DataTypes.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBC/SwiftDBC.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBCTests/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwiftDBCTests/SwiftDBCTests.swift" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager">
-    <option name="groupingKeys">
-      <option value="directory" />
-    </option>
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="macos_macos_x86_64" />
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$">
-      <ProjectState />
-    </projectState>
-  </component>
   <component name="Git.Settings">
-    <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--tags" />
-        <option name="title" value="All" />
-      </GitPushTagMode>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1gad3tS4KoEfIY11GdWrRhYqBUu" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="shuwnvrc" />
   </component>
+  <component name="ProjectId" id="1hbkdaXuEpH8S2O6jzyEm8M3PiS" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="manualOrder" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
-    <option name="sortByType" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="SwiftDBC" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++/Objective-C" />
   </component>
-  <component name="RunManager" selected="Application.SwiftDBC">
-    <configuration name="SwiftDBC" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SwiftDBC" TARGET_NAME="SwiftDBC" CONFIG_NAME="Debug" SCHEME_NAME="SwiftDBC" IS_LOCATION_SIMULATION_ALLOWED="true" LOCATION_SCENARIO_ID="com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier" LOCATION_SCENARIO_TYPE="1" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
-      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
-      </EXTENSION>
-      <embedded_app_extension_list />
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SwiftDBC Tests" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" REDIRECT_INPUT="false" WORKING_DIR="file://$PROJECT_DIR$/SwiftDBCTests" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SwiftDBC" TARGET_NAME="SwiftDBCTests" CONFIG_NAME="Debug" SCHEME_NAME="SwiftDBC Tests" IS_LOCATION_SIMULATION_ALLOWED="true" LOCATION_SCENARIO_ID="com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier" LOCATION_SCENARIO_TYPE="1" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" TEST_CLASS="SwiftDBCTests" TEST_METHOD="testDriverManager" TEST_MODE="SUITE_TEST" XCODE_TESTS_HASH_CODE="183534994">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="XCTest.SwiftDBC-Package-Tests">
     <list>
-      <item itemvalue="Application.SwiftDBC" />
-      <item itemvalue="XCTest.SwiftDBC Tests" />
+      <item itemvalue="Application.DocFixer" />
+      <item itemvalue="Application.SwiftDBC-Package" />
+      <item itemvalue="XCTest.SwiftDBC-Package-Tests" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="421f09c6-d872-417e-8a2a-797886d5c057" name="Default Changelist" comment="" />
-      <created>1598356440561</created>
+      <changelist id="502831d5-4e4c-4c89-a6bd-8692308e89d7" name="Default Changelist" comment="" />
+      <created>1600287271202</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1598356440561</updated>
-      <workItem from="1598356441736" duration="28935000" />
-      <workItem from="1598438898340" duration="25930000" />
-      <workItem from="1598538014319" duration="10906000" />
-      <workItem from="1598562134459" duration="35966000" />
-      <workItem from="1598650713094" duration="1831000" />
-      <workItem from="1598658131985" duration="19318000" />
-      <workItem from="1598895774774" duration="10773000" />
-      <workItem from="1598959023459" duration="17457000" />
-      <workItem from="1598980753286" duration="13321000" />
-      <workItem from="1599132225507" duration="9438000" />
-      <workItem from="1599594589561" duration="742000" />
-      <workItem from="1599654715519" duration="11348000" />
-      <workItem from="1599751843714" duration="2614000" />
-      <workItem from="1599754621772" duration="2397000" />
-      <workItem from="1599757246641" duration="119000" />
-      <workItem from="1599757387741" duration="1002000" />
-      <workItem from="1599758675474" duration="9993000" />
-      <workItem from="1599777777530" duration="3723000" />
-      <workItem from="1599822934086" duration="13459000" />
+      <updated>1600287271202</updated>
+      <workItem from="1600287273521" duration="292000" />
     </task>
-    <task id="LOCAL-00001" summary="Initial Commit">
-      <created>1598452724013</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1598452724013</updated>
-    </task>
-    <task id="LOCAL-00002" summary="gitattributes">
-      <created>1598457544683</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1598457544683</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Added BigInt support. [BigInt](https://github.com/attaswift/BigInt)">
-      <created>1598643022151</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1598643022151</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Changed how result set meta data is dealt with.">
-      <created>1598649244743</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1598649244743</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Changed how result set meta data is dealt with.">
-      <created>1598878800403</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1598878800403</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Changed how result set meta data is dealt with.">
-      <created>1599050880635</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1599050880635</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Updated README.md file.">
-      <created>1599062424244</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1599062424244</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Updated README.md file.">
-      <created>1599062999026</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1599062999026</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Updated README.md file.">
-      <created>1599067869743</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1599067869743</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Using Rubicon as a package.">
-      <created>1599742862433</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1599742862433</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Updated README">
-      <created>1599743505882</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1599743505882</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Added NOTES.md.">
-      <created>1599743785359</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1599743785359</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Added Apache 2.0 License">
-      <created>1599744768789</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1599744768789</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="UpdateCopyrightCheckinHandler">
-    <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -254,143 +144,11 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Initial Commit" />
-    <MESSAGE value="gitattributes" />
-    <MESSAGE value="Added BigInt support. [BigInt](https://github.com/attaswift/BigInt)" />
-    <MESSAGE value="Changed how result set meta data is dealt with." />
-    <MESSAGE value="Updated README.md file." />
-    <MESSAGE value="Using Rubicon as a package." />
-    <MESSAGE value="Updated README" />
-    <MESSAGE value="Added NOTES.md." />
-    <MESSAGE value="Added Apache 2.0 License" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Apache 2.0 License" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1106" y="186" key="#Menus_and_Toolbars" timestamp="1599752479146">
+    <state x="744" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600287566654">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="1106" y="186" key="#Menus_and_Toolbars/0.0.2560.1080@0.0.2560.1080" timestamp="1599752479146" />
-    <state x="1025" y="297" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1598964856965">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state x="1025" y="297" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1598964856965" />
-    <state x="744" y="202" width="861" height="735" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599757522159">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state x="744" y="202" width="861" height="735" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1599757522159" />
-    <state x="1110" y="183" key="#com.intellij.ide.ui.customization.CustomizableActionsPanel.FindAvailableActionsDialog" timestamp="1599752118291">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state x="1110" y="183" key="#com.intellij.ide.ui.customization.CustomizableActionsPanel.FindAvailableActionsDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1599752118291" />
-    <state x="1071" y="263" width="650" height="554" key="#com.intellij.ide.util.MemberChooser" timestamp="1599838656024">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state x="1071" y="263" width="650" height="554" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1080@0.0.2560.1080" timestamp="1599838656024" />
-    <state x="1018" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598979496461">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state x="1018" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1598979496461" />
-    <state x="259" y="192" width="442" height="319" key="Github.ShareDialog" timestamp="1598452595825">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state x="259" y="192" width="442" height="319" key="Github.ShareDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1598452595825" />
-    <state width="1102" height="383" key="GridCell.Tab.0.bottom" timestamp="1599077345960">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state width="1102" height="383" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1599077345960" />
-    <state width="1519" height="383" key="GridCell.Tab.0.bottom/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863921" />
-    <state width="1102" height="383" key="GridCell.Tab.0.center" timestamp="1599077345959">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state width="1102" height="383" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1599077345959" />
-    <state width="1519" height="383" key="GridCell.Tab.0.center/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863920" />
-    <state width="1102" height="383" key="GridCell.Tab.0.left" timestamp="1599077345959">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state width="1102" height="383" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1599077345959" />
-    <state width="1519" height="383" key="GridCell.Tab.0.left/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863920" />
-    <state width="1102" height="383" key="GridCell.Tab.0.right" timestamp="1599077345960">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state width="1102" height="383" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1599077345960" />
-    <state width="1519" height="383" key="GridCell.Tab.0.right/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863921" />
-    <state width="1102" height="383" key="GridCell.Tab.1.bottom" timestamp="1599077345961">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state width="1102" height="383" key="GridCell.Tab.1.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1599077345961" />
-    <state width="1519" height="383" key="GridCell.Tab.1.bottom/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863919" />
-    <state width="1102" height="383" key="GridCell.Tab.1.center" timestamp="1599077345960">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state width="1102" height="383" key="GridCell.Tab.1.center/0.0.2560.1080@0.0.2560.1080" timestamp="1599077345960" />
-    <state width="1519" height="383" key="GridCell.Tab.1.center/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863918" />
-    <state width="1102" height="383" key="GridCell.Tab.1.left" timestamp="1599077345960">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state width="1102" height="383" key="GridCell.Tab.1.left/0.0.2560.1080@0.0.2560.1080" timestamp="1599077345960" />
-    <state width="1519" height="383" key="GridCell.Tab.1.left/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863917" />
-    <state width="1102" height="383" key="GridCell.Tab.1.right" timestamp="1599077345961">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state width="1102" height="383" key="GridCell.Tab.1.right/0.0.2560.1080@0.0.2560.1080" timestamp="1599077345961" />
-    <state width="1519" height="383" key="GridCell.Tab.1.right/0.23.2560.1032@0.23.2560.1032" timestamp="1598392863918" />
-    <state width="177" height="538" key="HiddenNamespacesPopup" timestamp="1598544098717">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state width="177" height="538" key="HiddenNamespacesPopup/0.0.2560.1080@0.0.2560.1080" timestamp="1598544098717" />
-    <state x="635" y="73" width="1307" height="890" key="SettingsEditor" timestamp="1599062117362">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state x="635" y="73" width="1307" height="890" key="SettingsEditor/0.0.2560.1080@0.0.2560.1080" timestamp="1599062117362" />
-    <state x="818" y="202" key="StringManipulation.AlignToColumnsAction" timestamp="1598898239486">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state x="818" y="202" key="StringManipulation.AlignToColumnsAction/0.0.2560.1080@0.0.2560.1080" timestamp="1598898239486" />
-    <state x="968" y="152" key="StringManipulation.SortTypeDialog" timestamp="1598898350966">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state x="968" y="152" key="StringManipulation.SortTypeDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1598898350966" />
-    <state x="880" y="276" key="Vcs.Push.Dialog.v2" timestamp="1599744776953">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state x="880" y="276" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1599744776953" />
-    <state x="1113" y="317" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599060703755">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state x="1113" y="317" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1599060703755" />
-    <state x="1168" y="489" key="com.intellij.ide.ui.customization.CustomizableActionsPanel$EditIconDialog" timestamp="1599752475981">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state x="1168" y="489" key="com.intellij.ide.ui.customization.CustomizableActionsPanel$EditIconDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1599752475981" />
-    <state x="842" y="194" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1598897607925">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state x="842" y="194" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.2560.1080@0.0.2560.1080" timestamp="1598897607925" />
-    <state x="553" y="146" width="1599" height="772" key="find.popup" timestamp="1599835276587">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state x="311" y="182" width="1049" height="750" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1599003901777" />
-    <state x="553" y="146" width="1599" height="772" key="find.popup/0.0.2560.1080@0.0.2560.1080" timestamp="1599835276587" />
-    <state x="1062" y="391" key="git4idea.ui.GitTagDialog" timestamp="1599739117722">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state x="1062" y="391" key="git4idea.ui.GitTagDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1599739117722" />
-    <state width="600" height="440" key="javadoc.popup" timestamp="1598635175742">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state width="600" height="440" key="javadoc.popup/0.0.2560.1080@0.0.2560.1080" timestamp="1598635175742" />
-    <state x="945" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1598647291470">
-      <screen x="0" y="0" width="2560" height="1080" />
-    </state>
-    <state x="945" y="241" width="670" height="676" key="search.everywhere.popup/0.0.2560.1080@0.0.2560.1080" timestamp="1598647291470" />
+    <state x="744" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1600287566654" />
   </component>
 </project>

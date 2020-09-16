@@ -15,7 +15,12 @@ It has been added to this project as a package dependency.
 The first database system that is implemented is MySQL.
 
 ## MySQL Dependency
-Naturally there is a dependency on the MySQL libraries. Currently, the MySQL 8.0.19 for Mac OS X client libraries _(libcrypto.1.1.dylib, libmysqlclient.2.1.dylib, and libssl.1.1.dylib)_ are included in this project and I'm embedding those libraries into the Framework object and linking against them. If you're building this on Linux you'll need to install the client library and link against those instead.
+Naturally there is a dependency on the MySQL client libraries. If you're building this on MacOS then I recommend downloading the installer directly from [MySQL Community Downloads](https://dev.mysql.com/downloads/mysql/) because this package assumes file locations (header and lib) based on where their installer puts them.
+
+If you're building this on Linux you'll need to install the client library:
+```
+sudo apt install libmysqlclient-dev
+```
 
 # Help Appreciated!
 If some industrious folks want to fork this project and start working on support for other databases such as _(but not limited to)_ Oracle, Postgre, Microsoft SQL Server, etc. Please feel free and I'll gladly consider your pull requests! 😎
