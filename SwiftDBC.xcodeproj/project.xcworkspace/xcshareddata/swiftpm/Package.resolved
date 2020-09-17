@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "BigInt",
+        "repositoryURL": "https://github.com/attaswift/BigInt.git",
+        "state": {
+          "branch": null,
+          "revision": "e1f28276687d7661cbb2754771bd9fc281784e32",
+          "version": "5.2.0"
+        }
+      },
+      {
+        "package": "PGDocFixer",
+        "repositoryURL": "https://github.com/GalenRhodes/PGDocFixer.git",
+        "state": {
+          "branch": null,
+          "revision": "1a7a85a60edb2d1b5bfb3a0cf04c8336a3d106ae",
+          "version": "1.0.1"
+        }
+      },
+      {
+        "package": "RingBuffer",
+        "repositoryURL": "https://github.com/GalenRhodes/RingBuffer",
+        "state": {
+          "branch": null,
+          "revision": "ae4793764b49de024637e0d34887d094f4a7ee56",
+          "version": "1.0.5"
+        }
+      },
+      {
+        "package": "Rubicon",
+        "repositoryURL": "https://github.com/GalenRhodes/Rubicon.git",
+        "state": {
+          "branch": null,
+          "revision": "f834ef74da740886e4bf31d68e34c8b3bb063536",
+          "version": "0.2.4"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

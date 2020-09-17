@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,10 +27,12 @@
 		83C092CA25140247001BE708 /* MySQLConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C092B525140247001BE708 /* MySQLConnection.swift */; };
 		83C092CB25140247001BE708 /* MySQLResultSetMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C092B625140247001BE708 /* MySQLResultSetMetaData.swift */; };
 		83C092CC25140247001BE708 /* MySQLRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C092B725140247001BE708 /* MySQLRow.swift */; };
-		83C092CD25140247001BE708 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83C092B825140247001BE708 /* Info.plist */; };
 		83C092CE25140247001BE708 /* DBDriverManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C092B925140247001BE708 /* DBDriverManager.swift */; };
 		83C092D025140394001BE708 /* SwiftDBCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C092CF25140394001BE708 /* SwiftDBCTests.swift */; };
-		83C092D8251404B0001BE708 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C092D7251404B0001BE708 /* main.swift */; };
+		83C092DE2514058B001BE708 /* PGDocFixer in Frameworks */ = {isa = PBXBuildFile; productRef = 83C092DD2514058B001BE708 /* PGDocFixer */; };
+		83C092E1251406C3001BE708 /* Rubicon in Frameworks */ = {isa = PBXBuildFile; productRef = 83C092E0251406C3001BE708 /* Rubicon */; };
+		83C092E425140730001BE708 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C092E225140726001BE708 /* main.swift */; };
+		83C092E9251408D2001BE708 /* BigInt in Frameworks */ = {isa = PBXBuildFile; productRef = 83C092E8251408D2001BE708 /* BigInt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,11 +81,10 @@
 		83C092B525140247001BE708 /* MySQLConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySQLConnection.swift; sourceTree = "<group>"; };
 		83C092B625140247001BE708 /* MySQLResultSetMetaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySQLResultSetMetaData.swift; sourceTree = "<group>"; };
 		83C092B725140247001BE708 /* MySQLRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySQLRow.swift; sourceTree = "<group>"; };
-		83C092B825140247001BE708 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../../../../../Desktop/Temp/Sources/SwiftDBC/Info.plist; sourceTree = "<group>"; };
 		83C092B925140247001BE708 /* DBDriverManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBDriverManager.swift; sourceTree = "<group>"; };
 		83C092CF25140394001BE708 /* SwiftDBCTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDBCTests.swift; sourceTree = "<group>"; };
 		83C092D5251404B0001BE708 /* DocFixer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DocFixer; sourceTree = BUILT_PRODUCTS_DIR; };
-		83C092D7251404B0001BE708 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		83C092E225140726001BE708 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		83CA9CD52513FD2C0084E753 /* .jazzy.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .jazzy.yaml; sourceTree = "<group>"; };
 		83CA9CD62513FD420084E753 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		83CA9CD72513FD420084E753 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -115,6 +116,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83C092E1251406C3001BE708 /* Rubicon in Frameworks */,
+				83C092E9251408D2001BE708 /* BigInt in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83C092DE2514058B001BE708 /* PGDocFixer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +145,6 @@
 			children = (
 				83CA9CD32513FCE00084E753 /* Sources */,
 				83CA9CD42513FCEF0084E753 /* Tests */,
-				83C092D6251404B0001BE708 /* DocFixer */,
 				8374D81E2513FC70007D0B0D /* Products */,
 				83CA9CD92513FD420084E753 /* Modules */,
 				83CA9CD62513FD420084E753 /* LICENSE */,
@@ -164,11 +167,10 @@
 		8374D81F2513FC70007D0B0D /* SwiftDBC */ = {
 			isa = PBXGroup;
 			children = (
-				83C092B925140247001BE708 /* DBDriverManager.swift */,
-				83C092B825140247001BE708 /* Info.plist */,
 				83C092A225140247001BE708 /* Misc */,
 				83C092AF25140247001BE708 /* MySQL */,
 				83C092A425140247001BE708 /* Protocols */,
+				83C092B925140247001BE708 /* DBDriverManager.swift */,
 				83C092AE25140247001BE708 /* SwiftDBC.h */,
 				8374D8212513FC70007D0B0D /* Info.plist */,
 			);
@@ -226,7 +228,7 @@
 		83C092D6251404B0001BE708 /* DocFixer */ = {
 			isa = PBXGroup;
 			children = (
-				83C092D7251404B0001BE708 /* main.swift */,
+				83C092E225140726001BE708 /* main.swift */,
 			);
 			path = DocFixer;
 			sourceTree = "<group>";
@@ -234,6 +236,7 @@
 		83CA9CD32513FCE00084E753 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				83C092D6251404B0001BE708 /* DocFixer */,
 				8374D81F2513FC70007D0B0D /* SwiftDBC */,
 			);
 			path = Sources;
@@ -318,6 +321,10 @@
 			dependencies = (
 			);
 			name = SwiftDBC;
+			packageProductDependencies = (
+				83C092E0251406C3001BE708 /* Rubicon */,
+				83C092E8251408D2001BE708 /* BigInt */,
+			);
 			productName = SwiftDBC;
 			productReference = 8374D81D2513FC70007D0B0D /* SwiftDBC.framework */;
 			productType = "com.apple.product-type.framework";
@@ -353,6 +360,9 @@
 			dependencies = (
 			);
 			name = DocFixer;
+			packageProductDependencies = (
+				83C092DD2514058B001BE708 /* PGDocFixer */,
+			);
 			productName = DocFixer;
 			productReference = 83C092D5251404B0001BE708 /* DocFixer */;
 			productType = "com.apple.product-type.tool";
@@ -389,6 +399,11 @@
 				Base,
 			);
 			mainGroup = 8374D8132513FC70007D0B0D;
+			packageReferences = (
+				83C092DC2514058B001BE708 /* XCRemoteSwiftPackageReference "PGDocFixer" */,
+				83C092DF251406C3001BE708 /* XCRemoteSwiftPackageReference "Rubicon" */,
+				83C092E7251408D2001BE708 /* XCRemoteSwiftPackageReference "BigInt" */,
+			);
 			productRefGroup = 8374D81E2513FC70007D0B0D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -405,7 +420,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83C092CD25140247001BE708 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +471,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83C092D8251404B0001BE708 /* main.swift in Sources */,
+				83C092E425140730001BE708 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,7 +628,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.projectgalen.SwiftDBC;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = Modules;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Modules";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -643,7 +657,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.projectgalen.SwiftDBC;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = Modules;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Modules";
 				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
 				SWIFT_VERSION = 5.0;
 			};
@@ -657,7 +671,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Q5XWZ7S7E9;
-				INFOPLIST_FILE = SwiftDBCTests/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/SwiftDBCTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -678,7 +692,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Q5XWZ7S7E9;
-				INFOPLIST_FILE = SwiftDBCTests/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/SwiftDBCTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -752,6 +766,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		83C092DC2514058B001BE708 /* XCRemoteSwiftPackageReference "PGDocFixer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GalenRhodes/PGDocFixer.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+		83C092DF251406C3001BE708 /* XCRemoteSwiftPackageReference "Rubicon" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GalenRhodes/Rubicon.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.4;
+			};
+		};
+		83C092E7251408D2001BE708 /* XCRemoteSwiftPackageReference "BigInt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/attaswift/BigInt.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		83C092DD2514058B001BE708 /* PGDocFixer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83C092DC2514058B001BE708 /* XCRemoteSwiftPackageReference "PGDocFixer" */;
+			productName = PGDocFixer;
+		};
+		83C092E0251406C3001BE708 /* Rubicon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83C092DF251406C3001BE708 /* XCRemoteSwiftPackageReference "Rubicon" */;
+			productName = Rubicon;
+		};
+		83C092E8251408D2001BE708 /* BigInt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83C092E7251408D2001BE708 /* XCRemoteSwiftPackageReference "BigInt" */;
+			productName = BigInt;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8374D8142513FC70007D0B0D /* Project object */;
 }
