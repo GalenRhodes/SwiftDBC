@@ -1,0 +1,9 @@
+**/.DS_Store
+**/xcuserdata
+build/
+runlog.txt
+DocumentArchive.tar
+bin/
+df.tar.bz2
+docfixer.sh
+.build/

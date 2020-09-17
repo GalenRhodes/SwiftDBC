@@ -24,11 +24,14 @@
 
 import PackageDescription
 
-#if swift(>=5.2) && !os(Linux)
+#if swift(>=5.2) && (os(macOS) || os(iOS) || os(tvOS) || os(watchOS))
     let pkgConfig:    String? = nil
     let mySqlLibPath: String  = "/usr/local/mysql/lib"
-#else
+#elseif swift(>=5.2) && os(linux)
     let pkgConfig:    String = "mysqlclient"
+    let mySqlLibPath: String = ""
+#else
+    let pkgConfig:    String? = nil
     let mySqlLibPath: String = ""
 #endif
 
@@ -37,10 +40,8 @@ let package = Package(
   platforms: [ .macOS(.v10_15), .tvOS(.v13), ],
   products: [
       .library(name: "SwiftDBC", targets: [ "SwiftDBC" ]),
-      // .executable(name: "DocFixer", targets: [ "DocFixer" ]),
   ],
   dependencies: [
-      .package(name: "PGDocFixer", url: "https://github.com/GalenRhodes/PGDocFixer.git", from: "1.0.1"),
       .package(name: "Rubicon", url: "https://github.com/GalenRhodes/Rubicon.git", from: "0.2.0"),
       .package(name: "BigInt", url: "https://github.com/attaswift/BigInt.git", from: "5.2.0"),
   ],
@@ -49,7 +50,6 @@ let package = Package(
               dependencies: [ "Rubicon", "BigInt", "MySQL" ],
               linkerSettings: [ .unsafeFlags([ "-L\(mySqlLibPath)", "-rpath", mySqlLibPath ], .when(platforms: [ .macOS, .tvOS ])) ]
       ),
-      .target(name: "DocFixer", dependencies: [ "PGDocFixer" ]),
       .testTarget(name: "SwiftDBCTests", dependencies: [ "SwiftDBC" ]),
       .systemLibrary(name: "MySQL", path: "Modules", pkgConfig: pkgConfig, providers: [ .apt([ "libmysqlclient-dev" ]), ]),
   ],
