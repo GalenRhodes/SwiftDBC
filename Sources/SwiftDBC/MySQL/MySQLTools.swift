@@ -30,7 +30,7 @@ let DBResultSetWillClose  = Notification.Name("DBResultSetWillClose")
 let DBStatementWillBeBusy = Notification.Name("DBStatementWillBeBusy")
 
 let cCharAlignment:           Int    = MemoryLayout<CChar>.alignment
-let MySQLDefaultCharacterSet: String = String("utf8mb4".utf8)
+let MySQLDefaultCharacterSet: String = "utf8mb4"
 let MySQLDBCPrefix:           String = "\(SwiftDBCPrefix):mysql"
 
 @inlinable func _get(str: String, result: NSTextCheckingResult, group: Int) -> String? {

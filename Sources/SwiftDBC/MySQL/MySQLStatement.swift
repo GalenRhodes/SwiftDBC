@@ -56,13 +56,11 @@ class MySQLStatement: DBStatement {
     }
 
     func close() {
-        cond.withLockWait(cond: { ((results.count == 0) && !isWorking) }) {
-            _close()
-        }
+        cond.withLockWait(forCondition: { ((results.isEmpty) && !isWorking) }) { _close() }
     }
 
     @inlinable func nextMultiResults() -> MultiResultBlock? {
-        cond.withLockWait(cond: { ((results.count > 0) || !isWorking) }) {
+        cond.withLockWait(forCondition: { ((results.count > 0) || !isWorking) }) {
             () -> MultiResultBlock? in
             ((results.count > 0) ? results.removeFirst() : nil)
         }
@@ -103,7 +101,7 @@ class MySQLStatement: DBStatement {
 
     /*===========================================================================================================================*/
     /// Execute the SQL `statement(s)` and fetch the results.
-    /// 
+    ///
     /// - Parameter sql: the SQL `statement(s)`
     ///
     private func backgroundLoad(_ sql: String) {

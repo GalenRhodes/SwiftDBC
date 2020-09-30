@@ -25,7 +25,6 @@ import Rubicon
 import BigInt
 
 public protocol DBColumn: AnyObject {
-
     var name:          String { get }
     var index:         Int { get }
     var row:           DBRow { get }
@@ -38,13 +37,6 @@ public protocol DBColumn: AnyObject {
     var asTimestamp:   Date? { get }
     var asFloat:       Float? { get }
     var asDouble:      Double? { get }
-    /*===========================================================================================================================*/
-    /// TODO: We're going to have to revisit this because we need a Swift version of Java's BigDecimal class.
-    /// 
-    /// - Parameter index: the column number.
-    /// - Returns: an instance of Decimal or `nil` if the column had a NULL value.
-    /// - Throws: if an error occurs.
-    ///
     var asBigDecimal:  Decimal? { get }
     var asBool:        Bool? { get }
     var asString:      String? { get }
@@ -66,4 +58,6 @@ public extension DBColumn {
     @inlinable var index: Int { metaData.index }
 }
 
-@inlinable public func == (lhs: DBColumn, rhs: DBColumn) -> Bool { ((lhs === rhs) || ((lhs.row == rhs.row) && (lhs.index == rhs.index))) }
+@inlinable public func == (lhs: DBColumn, rhs: DBColumn) -> Bool {
+    ((lhs === rhs) || ((lhs.row == rhs.row) && (lhs.index == rhs.index)))
+}

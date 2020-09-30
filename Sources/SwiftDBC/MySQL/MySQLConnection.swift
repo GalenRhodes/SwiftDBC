@@ -26,13 +26,19 @@ import Rubicon
 
 @usableFromInline typealias MySQLPointer = UnsafeMutablePointer<MYSQL>
 
+fileprivate func _initializeMySQL(_ host: String, _ port: Int, _ database: String?) throws -> MySQLPointer {
+    if let mysql: MySQLPointer = MySQLDriver.lock.withLock(body: { mysql_init(nil) }) { return mysql }
+    else { throw DBError.Connection(description: "Unable to allocate memory for database connection to: \(host):\(port)/\(database ?? "")") }
+}
+
 class MySQLConnection: DBConnection {
 
-    let networkTimeout:   Int  = 30000
-    var isClosed:         Bool = true
-    var driver:           DBDriver { MySQLDriver.defaultDriver }
-    var autoCommit:       Bool { willSet { if isInit { mysql_autocommit(mysql, newValue) } } }
-    var lastErrorMessage: String { getString(cStr: mysql_error(mysql)) ?? "Unknown Error" }
+    let networkTimeout:     Int    = 30000
+    var isClosed:           Bool   = true
+    var driver:             DBDriver { MySQLDriver.defaultDriver }
+    var autoCommit:         Bool { willSet { if isInit { mysql_autocommit(mysql, newValue) } } }
+    var lastErrorMessage:   String { getString(cStr: mysql_error(mysql)) ?? "Unknown Error" }
+    let lastWarningMessage: String = ""
 
     var mysql:    MySQLPointer
     var isInit:   Bool          = false
@@ -56,6 +62,12 @@ class MySQLConnection: DBConnection {
         try connect()
     }
 
+    func currentSchema() throws -> String? { fatalError("currentSchema() has not been implemented") }
+
+    func setCurrentSchema(_ schema: String) throws {}
+
+    func clearWarnings() {}
+
     func reconnect() throws {
         try lock.withLock {
             _close()
@@ -69,7 +81,7 @@ class MySQLConnection: DBConnection {
     func close() { lock.withLock { _close() } }
 
     func doWithBusySet<T>(busyObj: AnyObject, body: () throws -> T) rethrows -> T {
-        try cond.withLockWait(cond: { (isBusy == nil) }) {
+        try cond.withLockWait(forCondition: { (isBusy == nil) }) {
             isBusy = busyObj
             defer { isBusy = nil }
             return try body()
@@ -101,6 +113,28 @@ class MySQLConnection: DBConnection {
         doWithBusySet(busyObj: self) { mysql_rollback(mysql) }
     }
 
+    func escape(str: String) -> String {
+        _escape(str, 39)
+    }
+
+    func escape(str: String, quoteChar: CChar) -> String {
+        _escape(str, quoteChar)
+    }
+
+    private func _escape(_ str: String, _ quote: CChar) -> String {
+        CString(string: str).withNullTerminatedCString { (p: CCharROPointer, length: Int) in
+            let escBuffer: CCharPointer = createMutablePointer(capacity: length + 1)
+            var rLength:   UInt         = mysql_real_escape_string(mysql, escBuffer, p, UInt(bitPattern: length))
+
+            if Int(bitPattern: rLength) == -1 {
+                rLength = mysql_real_escape_string_quote(mysql, escBuffer, p, UInt(bitPattern: length), quote)
+            }
+
+            escBuffer[Int(bitPattern: rLength)] = 0
+            return String(cString: UnsafePointer<CChar>(escBuffer))
+        }
+    }
+
     private func connect() throws {
         var to:   UInt32 = UInt32(networkTimeout / 1000)
         var rc:   Bool   = true
@@ -123,18 +157,10 @@ class MySQLConnection: DBConnection {
 
     @inlinable func _close() {
         if isInit {
-            // Tell anyone who depends on this connection that it is closing.
             NotificationCenter.default.post(name: DBConnectionWillClose, object: self)
-            // Then close it.
             mysql_close(mysql)
-
             isInit = false
             isClosed = true
         }
     }
-}
-
-fileprivate func _initializeMySQL(_ host: String, _ port: Int, _ database: String?) throws -> MySQLPointer {
-    if let _mysql = MySQLDriver.lock.withLock(body: { mysql_init(nil) }) { return _mysql }
-    else { throw DBError.Connection(description: "Unable to allocate memory for database connection to: \(host):\(port)/\(database ?? "")") }
 }

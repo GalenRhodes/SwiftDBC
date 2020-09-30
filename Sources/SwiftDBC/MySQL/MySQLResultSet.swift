@@ -38,7 +38,7 @@ class MySQLResultSet: DBResultSet {
 
     /*===========================================================================================================================*/
     /// Initializes this result set by reading all of the rows returned by the database.
-    /// 
+    ///
     /// - Parameters:
     ///   - stmt: the statement that this result set belongs to.
     ///   - rs: the result set structure returned by the database.
@@ -60,7 +60,10 @@ class MySQLResultSet: DBResultSet {
 
         NotificationCenter.default.addObserver(forName: DBStatementWillClose, object: stmt, queue: nil) {
             [weak self] (notice: Notification) in
-            if let s: MySQLResultSet = self { s.close() }
+
+            if let s: MySQLResultSet = self {
+                s.close()
+            }
         }
     }
 
@@ -71,24 +74,29 @@ class MySQLResultSet: DBResultSet {
         close()
     }
 
-    subscript(rowNumber: Int) -> DBRow { rows[rowNumber] }
+    subscript(rowNumber: Int) -> DBRow {
+        rows[rowNumber]
+    }
 
     /*===========================================================================================================================*/
     /// Close the result set.
     ///
     func close() {
         if !isClosed {
-            // Tell anyone who depends on this result set that it is closing.
             NotificationCenter.default.post(name: DBResultSetWillClose, object: self)
-            // Then close.
             isClosed = true
         }
     }
 
+    /*===========================================================================================================================*/
+    /// Execute the body of the closure with each row of the result set.
+    ///
+    /// - Parameter body: the closure.
+    /// - Returns: Returns false if all the rows were visted.
+    /// - Throws: any exception thrown by the closure.
+    ///
     func withRows(do body: (DBRow) throws -> Bool) throws -> Bool {
-        for row: DBRow in rows {
-            if try body(row) { return true }
-        }
+        for row: DBRow in rows { if try body(row) { return true } }
         return false
     }
 }

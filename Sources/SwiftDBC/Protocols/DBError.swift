@@ -25,11 +25,11 @@ import Rubicon
 
 public enum DBError: Error {
     case Connection(description: String)
-    case Query(description: String)
     case ConnectionClosed
     case StatementClosed
     case ResultSetClosed
-    case ResultSet(description: String)
     case Commit
     case Rollback
+    case Query(description: String)
+    case ResultSet(description: String)
 }
