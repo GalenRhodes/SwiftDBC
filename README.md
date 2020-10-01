@@ -1,3 +1,6 @@
+# Abandoned
+The Vapor project has a much better native implementation of Swift drivers for MySQL than I could have created here so I have decided to not spend anymore time on this.  I'll leave it on GitHub though.
+
 # SwiftDBC
 SwiftDBC is _very_ loosely based on the Java JDBC library. It's aim is to provide a Swift interface to different databases by having an abstraction layer away from vendor specific differences in database access libraries.
 
